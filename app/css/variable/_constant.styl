@@ -25,9 +25,9 @@ $gray--light = #f2efed
 $green = #3dad4b
 
 $main-text-color = #442b15
-$link-color = black
-$link-color-visited = gray
-$link-color-hover = black
+$link-color = $brown--dark
+$link-color-visited = darken($brown--dark,20)
+$link-color-hover = #67d875
 $border-color = #dddddd
 
 //  ============================ Typography ============================
@@ -78,6 +78,7 @@ typeSize(fontSm,font)
 .type--bold
 	font-weight bold
 
+
 h1
 	@extend .type--extra
 h2
@@ -100,19 +101,23 @@ p
 	@extend .type--main
 
 .link--mark
-	color $blue
+	color $green
 	&:hover
-		color darken($blue,20)
+		color #67d875
 	&:visiter
-		color darken($blue,30)
+		color darken(#67d875,10)
 
 .link--main
-	color $link-color
-	hover-underline($link-color)
+	color $brown--dark
+	opacity 0.6
+	tr(all)
+	hover-underline(1px,'solid',$brown--dark)
 	&:hover
-		color darken($link-color,20)
+		color darken($brown--dark,20)
+		opacity 1
 	&:visiter
-		color darken($link-color,30)
+		color darken($brown--dark,30)
+		opacity 1
 
 .link--text
 	color $link-color
@@ -139,27 +144,30 @@ btnStyleLight(br-btn,color-btn)
 
 .btn
 	up()
-	br(4px)
+	br(0px)
 	tr(all)
+	@extend .type--md
 	display inline-block
 	background none
-	border 0px
-	color blue
+	color $brown--dark
 	text-align: center
+	border 1px solid #cbbaac
 	&:hover
 		cursor pointer
+		color $green
+		border 1px solid $green
 
 .btn--sm
 	@extend .btn
-	font-size 10px
-	padding 5px 10px
+	padding 10px 30px
+	min-width 140px
 	.nav-icon
 		size 10px
 
 .btn--md
 	@extend .btn
-	font-size 15px
-	padding 20px 45px
+	padding 20px 55px
+	min-width 210px
 
 .btn--lg
 	@extend .btn
@@ -175,13 +183,16 @@ btnStyleLight(br-btn,color-btn)
 .btn--mark
 	@extend .btn
 	color white
-	background $blue
+	background $green
+	border 1px solid $green
 	.nav-icon
 		fill white
 	&:hover
-		background-color darken($blue,20)
+		background-color lighten($green,10)
+		color white
 	&:active
-		background-color darken($blue,20)
+		background-color lighten($green,10)
+		color white
 	input[type="submit"]
 		border 0
 	.nav-icon
@@ -195,10 +206,12 @@ btnStyleLight(br-btn,color-btn)
 
 .btn--light
 	@extend .btn
-	border 1px solid $border-color
+	border 1px solid $green
 	background-color #ffffff
+	color $green
 	&:hover
-		border 1px solid $blue
+		color white
+		background $green
 	.nav-icon
 		fill blue
 
@@ -267,18 +280,18 @@ button
 .input,.textarea,.select
 	border 0px
 	padding 20px
-	border 1px solid $border-color
+	border 1px solid $gray--light
 	resize: none
 	outline: 0 !important
-	border-radius 4px
 	font-family $v-font
 	display block!important
 	margin-bottom 10px
-	placeholder(#888888)
-	background: #f7f7f8
+	placeholder($brown--dark)
+	background: $gray--light
+	@extend .type--main
 	tr(all)
 	&:focus
-		border 1px solid blue
+		background: none
 
 .style-label
 	display flex
@@ -294,18 +307,17 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 30px
-		height 30px
+		width 32px
+		height 32px
 		position relative
 		display inline-block
 		margin-right 10px
-		background white
-		border 1px solid #cfcfcf
-		br(8px)
+		background #f5f5f5
+		border 1px solid #f5f5f5
 		cp()
 		tr(all)
 		&:hover
-			border 1px solid #8d8d8d
+			border 1px solid $green
 	.icon-check
 		display none
 	.sytle-input
@@ -314,7 +326,7 @@ button
 			color white
 			.icon-check
 				display block
-				fill #000000
+				fill $green
 				size 16px
 
 .style-label--radio
@@ -323,8 +335,8 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 22px
-		height 22px
+		width 24px
+		height 24px
 		position relative
 		display inline-block
 		margin-right 10px
@@ -335,10 +347,18 @@ button
 	.icon-check
 		display none
 	.sytle-input
+		&:hover ~ .sytle-input-element
+			flex(mid)
+			color white
+			border 1px solid $green
+			.icon-radio
+				round()
+				size 8px
+				background $green;
 		&:checked ~ .sytle-input-element
 			flex(mid)
 			color white
 			.icon-radio
 				round()
-				size 14px
-				background blue;
+				size 16px
+				background $green;
