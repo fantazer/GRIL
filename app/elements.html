@@ -54,7 +54,7 @@
 	<!-- - var args = Array.prototype.slice.call(arguments)-->
 	<!-- - for item in args-->
 
-	<body>
+	<body class='page'>
 		<div class="main-cont main-cont--all">
 			<div class="elements-hr"></div>
 			<div class="all-page-color">
@@ -256,6 +256,12 @@
 						<use xlink:href="#car--color"></use>
 					</svg>
 					<div class="element-list-svg__name">car--color</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
+						<use xlink:href="#card"></use>
+					</svg>
+					<div class="element-list-svg__name">card</div>
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
@@ -538,6 +544,7 @@
 		<!--build:js js/combined.js-->
 		<script src="bower/jquery/dist/jquery.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
 		<!--script(src='bower/owl.carousel/dist/owl.carousel.min.js')-->
 		<!--script(src="js/jquery.smoothscroll.js")-->
 		<!-- endbuild-->

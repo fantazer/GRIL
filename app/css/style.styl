@@ -18,3 +18,531 @@ body
 
 .main-cont
 	center(1200px,10px)
+
+.head
+	width:100%
+
+.head-top-wrap
+//.main-cont
+.head-top
+	flex(between)
+.head__logo
+	width: 195px
+	margin-right: 3%
+.head__loc
+	width: 23%
+
+.head__loc-town
+	f()
+	color $brown--dark
+	font-size 20px
+	font-weight 500
+.head__loc-town-el
+	display: inline-block
+	margin-left: 5px
+	color $green
+	margin-bottom: 10px
+.head__loc-text
+	color #37200d99
+
+.head__cont
+	width: 20%
+.head__cont-phone
+	color $brown--dark
+	font-size 20px
+	font-weight 500
+	margin-bottom: 10px
+	display: inline-block
+.head__cont-text
+	color #37200d99
+.head__enter
+	flex(mid)
+	tr(all)
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	margin-left: auto
+	padding: 30px 25px
+	border-left 1px solid $gray
+	border-right 1px solid $gray
+	cp()
+	&:hover
+		color white
+		background: $green
+		border-color $green
+		.icon
+			fill white
+.head__enter-ico
+	margin-right: 15px
+	.icon
+		tr(all)
+		size 26px
+		fill $green
+//.icon
+//.head__enter-text
+.head__auth
+	flex(mid)
+	tr(all)
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	margin-left: auto
+	padding: 30px 25px
+	border-left 1px solid $gray
+	border-right 1px solid $gray
+	cp()
+	&:hover
+		color white
+		background: $green
+		border-color $green
+		.icon
+			fill white
+//.hidden
+.head__auth-ico
+	margin-right: 10px
+	.icon
+		tr(all)
+		size 26px
+		fill $green
+.head__auth-text
+	margin-right: 10px
+.head__auth-val
+	display: block
+	opacity .6
+.head__basket
+	flex(mid)
+	cp()
+	padding: 30px 25px
+	border-left 1px solid $gray
+	border-right 1px solid $gray
+	margin-left: -1px
+	color $brown--dark
+	tr(all)
+	&:hover
+		color white
+		background: $green
+		border-color $green
+		.icon
+			fill white
+.head__basket__icon
+	.icon
+		margin-right: 15px
+		size 26px
+		fill $green
+		tr(all)
+.head__basket__text
+	@extend .type--md
+	font-weight 500
+.head__basket__val
+	opacity:.6
+
+.head-menu-wrap
+	border-top 1px solid $gray
+	border-bottom 1px solid $gray
+.head-menu
+	flex(between)
+.head-list
+	flex(between)
+	width: 62%
+.head-list__el
+	tr(all)
+	padding: 20px 10px
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	&:hover
+		color $green
+//.head-list__el--active
+.head-sub-list
+	flex(between)
+	width: 35%
+	f()
+.head-sub-list-el
+	tr(all)
+	padding: 20px 10px
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	opacity: .6
+	&:hover
+		opacity: 1
+		color $green
+
+.page
+	f()
+	fl()
+	min-height 100vh
+.content
+	flex-grow 1
+	flex-shrink 1
+
+
+@keyframes slideInDown {
+	from {
+		transform: translate3d(0, -100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.head-top__list
+	display: none
+	width: 55%
+.head-top__list-el
+	tr(all)
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	&:hover
+		color $green
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  1s 1 ease-in-out
+	border-bottom 1px solid $gray
+	.head-menu-wrap
+		display: none
+	.head__auth
+		display: none
+	.head__loc
+		display: none
+	.head__cont
+		display: none
+	.head-top__list
+		flex(between)
+
+	.head__basket
+		padding: 10px 20px
+	.head__logo
+		width: 140px
+
+//.footer
+.footer-top-wrap
+	background: #f1e2d6
+.footer-top
+	flex(between)
+//.footer-top__col
+.footer-top__title
+	color $brown--dark
+	@extend .type--xl
+	margin-bottom: 10px
+.footer-top__text
+	opacity .7
+.footer-deliver
+	flex(mid)
+	padding: 40px 45px
+	bg-full()
+	tr(all)
+	background-size 100% 100%
+	&:hover
+		background-size:120% 120%
+.footer-deliver__text
+	@extend .type--xl
+	color white
+	up()
+	margin-right: 20px
+.footer-deliver__ico
+	.icon
+		size 50px
+		fill white
+.footer-main-wrap
+	background: #5e4c41
+.footer-main
+	f()
+	justify-content: space-between
+	padding: 50px 0
+	color white
+.footer-info
+	width: 26%
+.footer-title
+	font-size 20px
+	font-weight 500
+	margin-bottom: 20px
+.footer-politick
+	opacity .6
+	line-height: 1.6
+	margin-bottom: 55px
+	display: block
+	color white
+	tr(all)
+.footer-pay
+	f()
+	align-items: center
+.footer-pay__icon
+	.icon
+		size 28px
+		fill white
+		margin-right: 15px
+//.footer-pay__text
+.footer-list
+	width: 21%
+.footer-list__el
+	tr(all)
+	margin-bottom: 20px
+	opacity:.6
+	display: block
+	color white
+	&:hover
+		opacity:1
+
+.footer-cont
+	width: 30%
+	margin-left: auto
+	border-left 1px solid rgba(255, 255, 255, 0.16)
+	f()
+	fl()
+	align-items: flex-end
+.footer-phone
+	font-size: 20px
+	color white
+	margin-bottom: 15px
+	display: inline-block
+	width: 210px
+	text-align: left
+	tr(all)
+	&:hover
+		color darken(white,20)
+.footer-mail
+	display: block
+	color white
+	margin-bottom: 55px
+	width: 210px
+	text-align: left
+	tr(all)
+	&:hover
+		color darken(white,20)
+.soc-row
+	f()
+.soc-el
+	.icon
+		size 32px
+		margin-right: 10px
+		fill white
+		tr(all)
+		&:hover
+			fill darken(white,30)
+
+//modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+	max-height 100%
+	overflow: auto
+
+.modal-filter
+	+below(640px)
+		background: white
+	position: absolute
+	top: 0
+	left: 0
+	background: #ad9480e6
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal
+	+below(768px)
+		width: 100%
+		box-shadow 0 0 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
+	transform translate(-50%,-350%)
+	position: absolute
+	top 50%
+	left 50%
+	opacity .1
+	transition transform .8s, opacity 1s
+	max-width 550px
+
+.modal-content
+	+below(768px)
+		padding: 20px
+	+below(640px)
+		max-height calc(100vh - 60px)
+		overflow-y scroll
+		padding: 20px 5px
+		width: 100%!important
+	//background: #2b8850
+	background: white
+	position: relative
+	padding: 40px
+	min-width 390px
+	+below(768px)
+		width: 80%
+
+.modal-content--register
+	width: 500px
+	input
+		width: 100%
+		margin-bottom: 20px
+
+.modal__show
+	+below(768px)
+		flex(mid)
+	opacity 1
+	transform translate(-50%,-50%)
+
+.modal-close
+	+below(768px)
+		top 15px
+		right 15px
+	position: absolute
+	top: 20px
+	right: 20px
+	cp()
+	.icon
+		+below(768px)
+			size 15px
+		size 20px
+		fill #cbbaac
+		tr(all)
+		&:hover
+			fill $brown
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-wrap
+	position: relative
+	height: 100%
+
+.modal-title
+	+below(768px)
+		font-size: 20px
+	@extend .type--xxl
+	color $brown
+	margin-bottom: 0px
+	text-align: center
+
+.modal-text
+	+below(768px)
+		width: 100%
+		font-size: 12px
+	text-align: center
+	margin: 20px auto 40px auto
+	//width: 80%
+	font-size: 16px
+	line-height: 1.6
+	color #5f5f5f
+
+.validate-form
+	input,textarea
+		width: 100%
+		margin-bottom: 20px
+
+.modal-send
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	font-weight: 600
+
+.agree-row
+	f()
+	align-items: center
+	margin:10px 0 20px 0
+	a
+		text-decoration: underline
+		display: inline-block
+
+.agree-row__text
+	width: 100%
+	color black
+	font-size: 12px
+	a
+		color #9c9a9a
+		text-decoration: none
+.field-error
+	.error
+		display: none!important
+
+.field-error
+	input
+		border 1px solid #dc3d3d
+.style-label--checkbox.field-error
+	.sytle-input-element
+		border 1px solid #dc3d3d
+
+.modal-content--true
+	flex(mid)
+	fl()
+	br(10px)
+	.icon
+		fill green
+		size 120px
+		margin-bottom: 20px
+.modal-text-true
+	text-align: center
+	font-weight: bold
+//modal===end
+
+.modal-soc-enter-text
+	margin-top: 40px
+	margin-bottom: 20px
+	opacity .6
+	text-align: center
+
+.soc-row--midle
+	flex(mid)
+
+.input-phone
+	position: relative
+	input
+		padding-left: 40px
+	&:before
+		content '+7'
+		position: absolute
+		left 20px
+		top 21px
+.row--mid
+	flex(mid)
+.modal-code-link
+	text-align: center
+	@extend .link--mark
+	margin: 20px auto 40px auto
+	position: relative
+	display: block
+	tr(all)
+	&:hover
+		&:before
+			content ''
+			opacity 0
+	&:before
+		content ''
+		position: absolute
+		top calc(100% + 4px)
+		height: 1px
+		background: #3dad4b
+		width: 100%
+		opacity: 1
+		tr(all)

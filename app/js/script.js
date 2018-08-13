@@ -1,10 +1,85 @@
 $(document).ready(function(){
 
+	//modals
+	$('.modal-content').click(function(event){
+		event.stopPropagation();
+	});
+	var scrollPos = 0;
 
-	/* ###### For only ies  ######*/
-	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
-	//	//code
-	//}
+	var openModal = function () {
+	if(!$('.modal-layer').hasClass('modal-layer-show')){
+		$('.modal-layer').addClass('modal-layer-show');
+	}
+	 scrollPos = $(window).scrollTop();
+		$('body').css({
+			overflow: 'hidden',
+			position: 'fixed',
+			overflowY: 'scroll',
+			top : -scrollPos,
+			width:'100%'
+		});
+		return scrollPos;
+	};
+
+	var closeModal = function () {
+		console.log("scrollPos",scrollPos);
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-fix");
+  	$('body').css({
+			overflow: '',
+			position: '',
+			top: ''
+		})
+    $(window).scrollTop(scrollPos);
+    $('.modal').removeClass('modal__show');
+		$('.enter').removeClass('enter--open');
+		$('.basket').removeClass('basket--open');
+	};
+
+	var initModal = function(el){
+		openModal();
+		$('.modal').each(function () {
+			if ($(this).data('modal')===el){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+		var modalHeightCont = $(window).height();
+		$('.modal-filter').height(modalHeightCont);
+		$('.modal-wrap').css('height',modalHeightCont );
+		$('.modal-wrap').css('minHeight',modalHeightCont );
+	}
+
+	$('.modal-get').click(function (){
+		var currentModal = $(this).data("modal");
+		initModal(currentModal);
+	});
+
+	$('.modal-layer , .modal-close').click(function (){
+		closeModal();
+	});
+
+	//fixed menu
+	var shrinkHeader = 250;
+	var heightHeader=$('.head').height();
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= shrinkHeader ) {
+				//$('body').css('paddingTop',heightHeader);
+				$('.head').addClass('shrink');
+			}
+			else {
+					$('body').css('paddingTop',0);
+					$('.head').removeClass('shrink');
+			}
+	});
+
+	$(window).resize(function(){
+		heightHeader=$('.head').height();
+	});
+	//fixed menu===end
+
 
 	function detectIE() {
 	var ua = window.navigator.userAgent;
@@ -43,7 +118,7 @@ $(document).ready(function(){
 	}
 
 	//for init SVG 
-	svg4everybody();
+	//svg4everybody();
 	// ==== clear storage =====
 	 localStorage.clear();
 	 sessionStorage.clear();

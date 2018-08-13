@@ -1,4 +1,74 @@
 mixin header()
 	//block header
+	.head
+		.head-top-wrap
+			.main-cont
+				.head-top
+					.head__logo
+						img(src="img/logo.svg", alt="")
+					.head-top__list
+						-
+							var items = [
+							'Пицца',
+							'Вок',
+							'Шаурма',
+							'Гриль',
+							'Салаты',
+							'Десерты',
+							'Напитки',
+							'Акции'
+							];
+						each item,index in items
+							a(href="#").head-top__list-el #{item}
+
+					.head__loc
+						.head__loc-town Ваш город:
+							span.head__loc-town-el Барнаул
+						.head__loc-text Среднее время доставки: 43 мин.
+					.head__cont
+						a(href="tel:8 (3852) 57-17-76").head__cont-phone 8 (3852) 57-17-76
+						.head__cont-text Сегодня 11:00 - 24:00
+					.head__enter.hidden
+						.head__enter-ico
+							+icon("pick","icon")
+						.head__enter-text Войти
+					a(href="#").head__auth
+						.head__auth-ico
+							+icon("pick","icon")
+						.head__auth-text Александр
+						.head__auth-val 365 Б
+					.head__basket
+						.head__basket__icon
+							+icon("basket","icon")
+						.head__basket__text.hidden Корзина
+						.head__basket__text 1 923 Р
+							span.head__basket__val (3)
+		.head-menu-wrap
+			.main-cont
+				.head-menu
+					.head-list
+						-
+							var items = [
+								'Пицца',
+								'Вок',
+								'Шаурма',
+								'Гриль',
+								'Салаты',
+								'Десерты',
+								'Напитки',
+								'Акции'
+								];
+						each item,index in items
+							a(href="#" class= index === 0 ? 'head-list__el--active' : null).head-list__el #{item}
+					.head-sub-list
+							-
+								var items = [
+									'О нас',
+									'Вакансии',
+									'Франшиза',
+									'Контакты'
+									];
+							each item in items
+								a(href="#").head-sub-list-el #{item}
 
 	//block header end

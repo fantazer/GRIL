@@ -1,3 +1,102 @@
 mixin footer()
 	//block footer
+	.footer
+		.footer-top-wrap
+			.main-cont
+				.footer-top
+					.footer-top__col
+						.footer-top__title Бесплатная доставка
+						.footer-top__text При заказе от 500 руб. по г.Барнаул
+					.footer-top__col
+						.footer-top__title 43 минуты
+						.footer-top__text Среднее время доставки.
+					.footer-top__col
+						.footer-top__title 300 руб.
+						.footer-top__text Минимальная сумма заказа
+					a(href="#" style="background-image:url('img/map.jpg')").footer-deliver
+						.footer-deliver__text Зона доставки
+						.footer-deliver__ico
+							+icon("compas","icon")
+		.footer-main-wrap
+			.main-cont
+				.footer-main
+					.footer-info
+						.footer-title Гриль №1 © 2018
+						a(href="#").footer-politick  Политика обработки <br> персональных данных
+						.footer-pay
+							.footer-pay__icon
+								+icon("card","icon")
+							.footer-pay__text Опата картой онлайн
+					.footer-list
+						.footer-title Гриль №1 © 2018
+						-
+							var items = [
+								'О нас',
+								'Вакансии',
+								'Отзывы',
+								'Контакты'
+								];
+						each item in items
+							a(href="#").footer-list__el #{item}
+					.footer-list
+						.footer-title Партнерам
+						-
+							var items = [
+							'Ищем поставщиков',
+							'Предложить помещение',
+							'Франшиза'
+							];
+						each item in items
+							a(href="#").footer-list__el #{item}
+					.footer-cont
+						a(href="tel:8 (3852) 57-17-76").footer-phone 8 (3852) 57-17-76
+						a(href="mailto:Manager@grill1.org").footer-mail Manager@grill1.org
+						.soc-row
+							a(href="#").soc-el
+								+icon("vk","icon")
+							a(href="#").soc-el
+								+icon("fb","icon")
+							a(href="#").soc-el
+								+icon("inst","icon")
+							a(href="#").soc-el
+								+icon("twt","icon")
+							a(href="#").soc-el
+								+icon("youtube","icon")
+	.modal-layer
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				.modal(data-modal="enter")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Вход на сайт
+						.modal-text Введите номер телефона <br> на который будет выслан код
+						form.validate-form( action="javascript:void(null);")
+							.input-row.input-phone
+								input(type="text" name="name" data-mask="(000)000-00-00").input
+							input(type="submit" value="Выслать код").modal-send
+						.modal-soc-enter-text Или войдите через соцсети
+						.soc-row.soc-row--midle
+							a(href="#").soc-el
+								+icon("vk--color","icon")
+							a(href="#").soc-el
+								+icon("ok--color","icon")
+							a(href="#").soc-el
+								+icon("fb--color","icon")
+				.modal(data-modal="re-enter")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Вход на сайт
+						.modal-text На указанный номер был <br> выслан код
+						form.validate-form( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Введите код").input
+							input(type="submit" value="Войти").modal-send
+						.row--mid
+							a(href="#").modal-code-link Выслать код еще раз
+
+	a(href="#" data-modal="enter").modal-get Открыть модальное окно
+	a(href="#" data-modal="re-enter").modal-get Открыть модальное окно
 	//block footer end
