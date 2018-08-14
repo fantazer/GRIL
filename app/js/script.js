@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 	//increment field
 		$('.icr-btn').click(function(){
 			$(this).addClass('hidden');
@@ -56,6 +58,7 @@ $(document).ready(function(){
 	});
 
 	//main-slider===end
+
 	//modals
 	$('.modal-content').click(function(event){
 		event.stopPropagation();
@@ -115,6 +118,28 @@ $(document).ready(function(){
 	$('.modal-layer , .modal-close').click(function (){
 		closeModal();
 	});
+
+	//modals === end
+
+	//mobile menu
+	$('.head-toggle').click(function(event){
+				event.stopPropagation();
+				$(this).toggleClass('head-toggle--open');
+				$('.slide-menu').toggleClass('slide-menu--open');
+		});
+		$('.slide-menu').on("click", function (event) {
+			event.stopPropagation();
+		});
+		$(document).on("click", function () {
+				$(this).removeClass('head-toggle--open');
+				$('.slide-menu').removeClass('slide-menu--open');
+		});
+
+
+
+
+
+	//mobile menu===end
 
 	//fixed menu
 	var shrinkHeader = 250;

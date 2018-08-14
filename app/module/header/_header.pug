@@ -37,12 +37,16 @@ mixin header()
 							+icon("pick","icon")
 						.head__auth-text Александр
 						.head__auth-val 365 Б
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
 					.head__basket
 						.head__basket__icon
 							+icon("basket","icon")
 						.head__basket__text.hidden Корзина
 						.head__basket__text 1 923 Р
 							span.head__basket__val (3)
+						.head__basket__val--mobile 3
 		.head-menu-wrap
 			.main-cont
 				.head-menu
@@ -70,5 +74,26 @@ mixin header()
 									];
 							each item in items
 								a(href="#").head-sub-list-el #{item}
+	.slide-menu
+		.slide-menu__list
+			-
+				var items = [
+					'О нас',
+					'Вакансии',
+					'Франшиза',
+					'Контакты'
+					];
+			each item in items
+				a(href="#").slide-menu__list-el #{item}
+		a(href="#").slide-menu-btn
+			.slide-menu-btn__icon
+				+icon("pick","icon")
+			.slide-menu-btn__text Войти
+		a(href="#").slide-menu-btn
+			.slide-menu-btn__text Ваш город: Барнаул
+		.slide-menu__time Среднее время доставки: 43 мин.
+		a(href="tel:8 (3852) 57-17-76").slide-menu__phone 8 (3852) 57-17-76
+		.slide-menu__work 8 (3852) 57-17-76
+
 
 	//block header end
