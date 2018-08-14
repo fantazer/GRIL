@@ -1,5 +1,61 @@
 $(document).ready(function(){
 
+	//increment field
+		$('.icr-btn').click(function(){
+			$(this).addClass('hidden');
+			$(this).next('.elements-icr-block').removeClass('hidden');
+		});
+		$('.incr__minus.incr--one').click(function () {
+					var $input = $(this).parent().find('.incr__val span');
+					var count = parseInt($input.html()) - 1;
+					count = count < 1 ? 0 : count;
+					$input.html(count);
+					if(count < 1 ){
+						$(this).closest('.elements-icr-block').addClass('hidden');
+						$(this).closest('.incr__get-wrap').find('.icr-btn').removeClass('hidden');
+						count = 1;
+						$input.html(count);
+					}
+		});
+
+		$('.incr__plus').click(function () {
+				var $input = $(this).parent().find('.incr__val span');
+				var count = parseInt($input.html()) + 1;
+				count = count > 100 ? 100 : count;
+				$input.html(count);
+		});
+		//increment field end
+
+	//toggle size
+	var toggleSize = function(el){
+		$('.'+el).click(function(){
+			$(this).parent().find('.'+el).removeClass(el+'--active');
+			$(this).addClass(el+'--active');
+		});
+	};
+	toggleSize('pizza__size-el');
+	toggleSize('pizza__dough-el');
+	//toggle size===end
+
+	//main-slider
+	$('.slider').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		speed: 500,
+		vertical:false,
+		arrows:false
+	});
+
+	$('.review-slider').slick({
+		slidesToShow: 1,
+		autoplay: true,
+		speed: 500,
+		vertical:false,
+		arrows:false,
+		dots: true,
+	});
+
+	//main-slider===end
 	//modals
 	$('.modal-content').click(function(event){
 		event.stopPropagation();

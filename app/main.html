@@ -10,45 +10,16 @@
 		<meta name="theme-color" content="#000" />
 		<meta name="msapplication-navbutton-color" content="#000" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
-		<!--icons
-	link(rel="shortcut icon" href="img/fav/favicon.ico")
-	link(rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png")
-	link(rel="apple-touch-icon" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png")
-	link(rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png")
-	link(rel="apple-touch-icon" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png")
-	link(rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png")
-	link(rel="apple-touch-icon" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png")
-	link(rel="apple-touch-icon" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png")
-	link(rel="apple-touch-icon" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png")
-	link(rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon-180x180.png")
-	meta(name="apple-mobile-web-app-capable" content="yes")
-	meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
-	meta(name="apple-mobile-web-app-title" content="My App")
-	link(rel="yandex-tableau-widget" href="img/fav/yandex-browser-manifest.json")
-	link(rel="icon" type="image/png" sizes="228x228" href="img/fav/coast-228x228.png")
-	link(rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png")
-	link(rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png")
-	link(rel="manifest" href="img/fav/manifest.json")
-	meta(name="mobile-web-app-capable" content="yes")
-	meta(name="theme-color" content="#020307")
-	meta(name="application-name" content="My App")
-	meta(name="msapplication-TileColor" content="#020307")
-	meta(name="msapplication-TileImage" content="img/fav/mstile-144x144.png")
-	meta(name="msapplication-config" content="img/fav/browserconfig.xml")
-	
-	-->
 		<!--SEO-->
 		<title>Document</title>
 		<meta name="description" itemprop="description" content="" />
 		<!--build:css css/vendor.css-->
 		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
-		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
-		<!--link(rel="stylesheet", href="bower/owl.carousel/dist/assets/owl.carousel.css")-->
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet" />
 	</head>
 	<!-- mixin nameMixin()-->
 	<!-- - var args = Array.prototype.slice.call(arguments)-->
@@ -138,7 +109,1001 @@
 			</div>
 		</div>
 		<!--block header end-->
-		<div class="content"></div>
+		<div class="content">
+			<!--slider-->
+			<div class="slider">
+				<div class="slider__el" style="background-image:url('img/slider-1.jpg')"></div>
+				<div class="slider__el" style="background-image:url('img/slider-1.jpg')"></div>
+			</div>
+			<!--advant-->
+			<div class="main-cont">
+				<div class="advant">
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon icon-one">
+								<use xlink:href="#one--color"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Настоящая моцарелла</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#pizza--color"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">Сделана из правильного теста</div>
+					</div>
+					<div class="advant__el">
+						<div class="advant__el-icon">
+							<svg class="icon">
+								<use xlink:href="#tomat--color"></use>
+							</svg>
+						</div>
+						<div class="advant__el-text">100% натуральный соус</div>
+					</div>
+				</div>
+			</div>
+			<!--section-->
+			<div class="section">
+				<div class="main-cont">
+					<div class="section-title">Пицца</div>
+					<div class="grid">
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="pizza">
+								<a class="pizza__img-wrap" href="#">
+									<div class="pizza__img" style="background-image:url('img/pizza.png')"></div>
+								</a>
+								<div class="pizza__wrap">
+									<a class="pizza__title" href="#">Гавайская с курицей</a>
+									<div class="pizza__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="pizza__size">
+										<div class="pizza__size-el">25 см</div>
+										<div class="pizza__size-el pizza__size-el--active">30 см</div>
+										<div class="pizza__size-el">35 см</div>
+									</div>
+									<div class="pizza__dough">
+										<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+										<div class="pizza__dough-el">Тонкое</div>
+									</div>
+									<div class="pizza__footer">
+										<div class="pizza__price">380 Р</div>
+										<div class="incr__get-wrap">
+											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="elements-icr-block hidden">
+												<div class="incr">
+													<div class="incr__minus incr--one incr__nav">-</div>
+													<div class="incr__val">
+														<span>1</span>
+														<div class="incr__val-coner"></div>
+													</div>
+													<div class="incr__plus incr__nav">+</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el grid__el--lg">
+							<div class="pizza-lg">
+								<a class="pizza-lg__img" href="#" style="background-image:url('img/pizza-lg.jpg')"></a>
+								<div class="pizza-lg-cont">
+									<div class="pizza-lg__timer">
+										<div class="pizza-lg__timer-val">До конца акции: 23:32</div>
+									</div>
+									<div class="pizza-lg__title">
+										<a href="#">Гавайская с курицей</a>
+										<div class="pizza-lg__title-icon tooltip">
+											<svg class="icon">
+												<use xlink:href="#info"></use>
+											</svg>
+											<div class="top">
+												<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+										</div>
+									</div>
+									<div class="pizza-lg__info">
+										<div class="pizza-lg__toggle">
+											<div class="pizza__size">
+												<div class="pizza__size-el">25 см</div>
+												<div class="pizza__size-el pizza__size-el--active">30 см</div>
+												<div class="pizza__size-el">35 см</div>
+											</div>
+											<div class="pizza__dough">
+												<div class="pizza__dough-el pizza__dough-el--active">Традиционное</div>
+												<div class="pizza__dough-el">Тонкое</div>
+											</div>
+										</div>
+										<div class="pizza-lg__val">
+											<div class="pizza-lg__price">
+												<div class="pizza-lg__price-false">380 Р</div>
+												<div class="pizza-lg__price-true">240 Р</div>
+											</div>
+											<div class="incr__get-wrap">
+												<div class="pizza-lg__get icr-btn">В корзину</div>
+												<div class="elements-icr-block hidden">
+													<div class="incr">
+														<div class="incr__minus incr--one incr__nav">-</div>
+														<div class="incr__val">
+															<span>1</span>
+															<div class="incr__val-coner"></div>
+														</div>
+														<div class="incr__plus incr__nav">+</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--section-->
+			<div class="section">
+				<div class="main-cont">
+					<div class="section-title">Для большой компании</div>
+					<div class="grid grid--three">
+						<div class="grid__el">
+							<div class="item">
+								<a class="item__img-wrap" href="#">
+									<div class="item__img" style="background-image:url(img/item-food.jpg)"></div>
+								</a>
+								<div class="item__wrap">
+									<a class="item__title" href="#">Гавайская с курицей</a>
+									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="item__footer incr__get-wrap">
+										<div class="item__price">380 Р</div>
+										<div class="item__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="item">
+								<a class="item__img-wrap" href="#">
+									<div class="item__img" style="background-image:url(img/item-food.jpg)"></div>
+								</a>
+								<div class="item__wrap">
+									<a class="item__title" href="#">Гавайская с курицей</a>
+									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="item__footer incr__get-wrap">
+										<div class="item__price">380 Р</div>
+										<div class="item__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="item">
+								<a class="item__img-wrap" href="#">
+									<div class="item__img" style="background-image:url(img/item-food.jpg)"></div>
+								</a>
+								<div class="item__wrap">
+									<a class="item__title" href="#">Гавайская с курицей</a>
+									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+									<div class="item__footer incr__get-wrap">
+										<div class="item__price">380 Р</div>
+										<div class="item__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--section-->
+			<div class="section">
+				<div class="main-cont">
+					<div class="section-title">Гриль</div>
+					<div class="grid">
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<a class="item__img-wrap" href="#">
+								<div class="item__img" style="background-image:url(img/grill.jpg)"></div>
+							</a>
+							<div class="item__wrap">
+								<a class="item__title" href="#">Гавайская с курицей</a>
+								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
+								<div class="item__footer incr__get-wrap">
+									<div class="item__price">380 Р</div>
+									<div class="item__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el grid__el--lg">
+							<div class="item-lg">
+								<a class="item-lg__img" href="#" style="background-image:url('img/grill-lg.jpg')"></a>
+								<div class="item-lg-cont">
+									<div class="item-lg__timer">
+										<div class="item-lg__timer-val">До конца акции: 23:32</div>
+									</div>
+									<div class="item-lg-wrap">
+										<div class="item-lg__title">
+											<a href="#">Гавайская с курицей</a>
+										</div>
+										<div class="item-lg__text">Запечённые куриные крылья в маринаде с кусочками перца чили</div>
+									</div>
+									<div class="item-lg__info">
+										<div class="item-lg__val">
+											<div class="item-lg__price">
+												<div class="item-lg__price-false">380 Р</div>
+												<div class="pizza-lg__price-true">240 Р</div>
+											</div>
+											<div class="incr__get-wrap">
+												<div class="pizza-lg__get icr-btn">В корзину</div>
+												<div class="elements-icr-block hidden">
+													<div class="incr">
+														<div class="incr__minus incr--one incr__nav">-</div>
+														<div class="incr__val">
+															<span>1</span>
+															<div class="incr__val-coner"></div>
+														</div>
+														<div class="incr__plus incr__nav">+</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--review-slider-->
+			<div class="review-slider-wrap">
+				<div class="review-slider__title">
+					<span>Что говорят люди
+						<svg class="icon">
+							<use xlink:href="#love"></use>
+						</svg>
+					</span>
+				</div>
+				<div class="review-slider">
+					<div class="review-slider__el">
+						<div class="review-slider__content">
+							<div class="review-slider__el-text">“Очень понравился домашний пирог с курицей в сливочном соусе, ребята это просто божество, спасибо вам большое за такую вкуснотищу!”</div>
+							<div class="review-slider__el-author">Дмитрий</div>
+						</div>
+					</div>
+					<div class="review-slider__el">
+						<div class="review-slider__content">
+							<div class="review-slider__el-text">“Очень понравился домашний пирог с курицей в сливочном соусе, ребята это просто божество, спасибо вам большое за такую вкуснотищу!”</div>
+							<div class="review-slider__el-author">Дмитрий</div>
+						</div>
+					</div>
+					<div class="review-slider__el">
+						<div class="review-slider__content">
+							<div class="review-slider__el-text">“Очень понравился домашний пирог с курицей в сливочном соусе, ребята это просто божество, спасибо вам большое за такую вкуснотищу!”</div>
+							<div class="review-slider__el-author">Дмитрий</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--section-->
+			<div class="section">
+				<div class="main-cont">
+					<div class="section-title">Напитки</div>
+					<div class="grid grid--six">
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="grid__el">
+							<div class="card">
+								<a class="card__img-wrap" href="#">
+									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
+								</a>
+								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+								<div class="card__val">75 Р</div>
+								<div class="incr__get-wrap">
+									<div class="card__get icr-btn">В корзину</div>
+									<div class="elements-icr-block hidden">
+										<div class="incr">
+											<div class="incr__minus incr--one incr__nav">-</div>
+											<div class="incr__val">
+												<span>1</span>
+												<div class="incr__val-coner"></div>
+											</div>
+											<div class="incr__plus incr__nav">+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--form questions -->
+			<div class="form-quest__title">Есть вопросы? Напишите нам</div>
+			<div class="form-quest">
+				<form action="#">
+					<div class="input-row-half">
+						<input class="input" type="text" placeholder="Ваше имя" />
+						<input class="input" type="text" placeholder="Почта или телефон" />
+					</div>
+					<textarea class="input" name="" cols="30" rows="10"></textarea>
+					<div class="form-quest__footer">
+						<div class="form-quest__text">Нажимая кнопку "Отправить" Вы соглашаетесь с политикой обработки персональных данных</div>
+						<input class="form-quest__get" type="submit" value="Отправить" />
+					</div>
+				</form>
+			</div>
+		</div>
 		<!--block footer-->
 		<div class="footer">
 			<div class="footer-top-wrap">
@@ -295,13 +1260,14 @@
 				</div>
 			</div>
 		</div>
-		<a class="modal-get" href="#" data-modal="enter">Открыть модальное окно</a>
-		<a class="modal-get" href="#" data-modal="re-enter">Открыть модальное окно</a>
+		<!--a(href="#" data-modal="enter").modal-get Открыть модальное окно-->
+		<!--a(href="#" data-modal="re-enter").modal-get Открыть модальное окно-->
 		<!--block footer end-->
 		<!--build:js js/combined.js-->
 		<script src="bower/jquery/dist/jquery.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
 		<!--script(src='bower/owl.carousel/dist/owl.carousel.min.js')-->
 		<!--script(src="js/jquery.smoothscroll.js")-->
 		<!-- endbuild-->

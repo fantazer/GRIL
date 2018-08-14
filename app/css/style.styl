@@ -208,6 +208,7 @@ body
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out
 	border-bottom 1px solid $gray
+	z-index 2
 	.head-menu-wrap
 		display: none
 	.head__auth
@@ -224,7 +225,8 @@ body
 	.head__logo
 		width: 140px
 
-//.footer
+.footer
+	margin-top: 100px
 .footer-top-wrap
 	background: #f1e2d6
 .footer-top
@@ -546,3 +548,503 @@ body
 		width: 100%
 		opacity: 1
 		tr(all)
+
+.slider__el
+	width: 100%
+	bg-full()
+	height: 450px
+
+.advant
+	flex(between)
+	padding: 30px 45px
+	border-bottom 1px solid $gray
+	margin-bottom: 35px
+.advant__el
+	f()
+	align-items: center
+.advant__el-icon
+	margin-right: 25px
+	.icon
+		size 50px
+	.icon-one
+		size 80px
+//.advant__el-text
+
+.section
+	margin-bottom: 80px
+.section-title
+	@extend .type--extra
+	color $brown
+	up()
+	margin-bottom: 45px
+
+.grid
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4,1fr);
+
+.grid--three
+	grid-template-columns repeat(3,1fr);
+.grid--six
+	grid-template-columns repeat(6,1fr);
+
+.grid__el
+	align-content stretch
+
+.pizza
+	f()
+	fl()
+	height: 100%
+.pizza__img
+	bg-full()
+	background-size: contain
+	padding: 55% 10%
+	margin-bottom: 15px
+.pizza__title
+	@extend .type--xl
+	color $brown--dark
+	margin-bottom: 15px
+.pizza__text
+	line-height: 1.6
+	opacity 0.7
+	color $brown--dark
+	margin-bottom: 25px
+.pizza__size
+	f()
+	border 1px solid #cbbaac
+	margin-bottom: 10px
+	margin-top:auto
+
+.pizza__size-el
+	width: 100%
+	text-align: center
+	padding: 10px
+	border-right 1px solid #cbbaac
+	margin-right: -1px
+	cp()
+	tr(all)
+	&:hover
+		background-color $gray--light
+
+.pizza__size-el--active
+	background: $gray
+
+.pizza__dough
+	f()
+	border 1px solid #cbbaac
+	margin-bottom: 20px
+.pizza__dough-el
+	width: 100%
+	text-align: center
+	padding: 10px
+	border-left 1px solid #cbbaac
+	margin-left: -1px
+	cp()
+	tr(all)
+	&:hover
+		background-color $gray
+.pizza__dough-el--active
+	background-color $gray
+
+.pizza__footer
+	f()
+	flex(between)
+.pizza__price
+	@extend .type--xl
+	color $brown--dark
+.pizza__get
+	@extend .btn--sm
+	width: 50%
+	padding: 10px
+	@extend .btn--light
+	@extend .type--md
+	font-weight 500
+	height: 40px
+.grid__el--lg
+	grid-column span 2
+	align-content stretch
+
+.pizza-lg
+	f()
+	fl()
+	height: 100%
+	.pizza__dough
+		margin-bottom: 0
+	.pizza__size-el--active
+		background: #cbbaac
+	.pizza__size-el
+		&:hover
+			background: #cbbaac
+	.pizza__dough-el
+		&:hover
+			background: #cbbaac
+	.pizza__dough-el--active
+		background: #cbbaac
+.pizza-lg__img
+	bg-full()
+	padding: 30% 10%
+.pizza-lg-cont
+	position: relative
+	background: #f1e2d6
+	padding: 40px 30px
+	f()
+	fl()
+	flex-grow 1
+.pizza-lg__timer
+	position: absolute
+	background: $green
+	color white
+	top -24px
+	left 0
+	height: 48px
+.pizza-lg__title
+	@extend .type--xxl
+	f()
+	align-items: flex-start
+	margin-bottom: 20px
+	a
+		color $brown
+
+.pizza-lg__timer-val
+	padding: 15px 45px 15px 30px
+	position: relative
+	width: 100%
+	&:before
+		content ''
+		position: absolute
+		right -12px
+		top 0
+		width: 12px
+		height: 100%
+		//bgi('round-border.png')
+.pizza-lg__title-icon
+	margin-left: 10px
+	.icon
+		size 20px
+		fill $brown
+.pizza-lg__info
+	margin-top: auto
+	justify-content: space-between
+	f()
+.pizza-lg__toggle
+	width: 60%
+//.pizza__size
+//.pizza__size-el
+//.pizza__size-el--active
+//.pizza__dough
+//.pizza__dough-el
+//.pizza__dough-el--active
+//.pizza-lg__val
+.pizza-lg__price
+	f()
+	margin-bottom: 20px
+	align-items: center
+.pizza-lg__price-false
+	color $brown
+	margin-right: 10px
+	text-decoration: line-through
+.pizza-lg__price-true
+	color $brown
+	@extend .type--xl
+.pizza-lg__get
+	@extend .btn--sm
+	@extend .btn--mark
+
+.pizza__wrap
+	f()
+	fl()
+	flex-grow 1
+
+
+.item
+	f()
+	fl()
+	height: 100%
+.item__img
+	bg-full()
+	padding: 45% 10%
+	margin-bottom: 15px
+.item__title
+	@extend .type--xl
+	color $brown--dark
+	margin-bottom: 15px
+.item__text
+	line-height: 1.6
+	opacity 0.7
+	color $brown--dark
+	margin-bottom: 25px
+.item__wrap
+	flex-grow 1
+	f()
+	fl()
+.item__footer
+	f()
+	flex(between)
+	margin-top: auto
+.item__price
+	@extend .type--xl
+	color $brown--dark
+.item__get
+	@extend .btn--sm
+	padding: 10px
+	@extend .btn--light
+	@extend .type--md
+	font-weight 500
+	height: 40px
+
+//
+.item-lg
+	f()
+	fl()
+	height: 100%
+.item-lg__img
+	bg-full()
+	padding: 25% 10%
+.item-lg-cont
+	f()
+	justify-content: space-between
+	position: relative
+	background: #f1e2d6
+	padding: 40px 30px
+	flex-grow 1
+
+.item-lg__timer
+	position: absolute
+	background: $green
+	color white
+	top -24px
+	left 0
+	height: 48px
+.item-lg__title
+	@extend .type--xxl
+	f()
+	align-items: center
+	a
+		color $brown
+.item-lg__timer-val
+	padding: 15px 45px 15px 30px
+	position: relative
+	width: 100%
+	&:before
+		content ''
+		position: absolute
+		right -12px
+		top 0
+		width: 12px
+		height: 100%
+		//bgi('round-border.png')
+.item-lg__title-icon
+	margin-left: 10px
+	.icon
+		size 20px
+		fill $brown
+.item-lg__info
+	margin-top: auto
+	justify-content: space-between
+	f()
+	width: 30%
+.item-lg__toggle
+	width: 60%
+.item-lg__val
+	margin-top: 10px
+.item-lg__price
+	f()
+	margin-bottom: 20px
+	align-items: center
+.item-lg__price-false
+	color $brown
+	margin-right: 10px
+	text-decoration: line-through
+.item-lg__price-true
+	color $brown
+	@extend .type--xl
+.item-lg__get
+	@extend .btn--sm
+	@extend .btn--mark
+
+.item-lg-wrap
+	width: 70%
+
+.item-lg__text
+	line-height: 1.6
+
+.incr
+	+below(768px)
+		margin-bottom: 20px
+	f()
+	justify-content: space-between
+	position relative
+	width 120px
+.incr__nav
+	flex(mid)
+	tr(background )
+	size 40px
+	border 1px solid $green
+	color $green
+	font-family Roboto
+	@extend .type--lg
+	&:hover
+		cp()
+		background-color $green
+		border 0
+		color white
+	&:active
+		background-color red
+.incr__val
+	flex(mid)
+	position relative
+	tr(all)
+	font-family Roboto
+	@extend .type--lg
+	font-weight 700
+	size 40px
+//
+
+.tooltip
+	display:inline-block;
+	position:relative;
+	text-align:left;
+	cp()
+
+
+.tooltip .top
+	min-width:240px
+	top:0px
+	left:50%
+	transform:translate(-50%, -100%)
+	padding:10px 20px
+	background-color:#EEEEEE
+	position:absolute
+	z-index:99999999
+	box-sizing:border-box
+	box-shadow 0 10px 15px rgba(0, 0, 0, 0.09)
+	visibility:hidden
+	opacity:0
+	transition:opacity 0.8s
+	color $brown--dark
+	@extend .type--main
+	font-weight 400
+	font-family:Roboto
+	line-height: 1.6
+.tooltip:hover .top
+	visibility:visible
+	opacity:1
+
+.tooltip .top i
+	position:absolute
+	top:100%
+	left:50%
+	margin-left:-12px
+	width:24px
+	height:12px
+	overflow:hidden
+
+.tooltip .top i::after
+	content:''
+	position:absolute
+	width:12px
+	height:12px
+	left:50%
+	transform:translate(-50%,-50%) rotate(45deg)
+	background-color:#EEEEEE
+	box-shadow:0 10px 15px rgba(0, 0, 0, 0.09)
+
+.icr-btn
+	height: 40px
+
+.review-slider-wrap
+	padding: 50px 0
+	background: #f2e5da
+	margin-bottom: 80px
+.review-slider__title
+	flex(mid)
+	margin-bottom: 30px
+	span
+		color $brown
+		@extend .type--xxl
+		position: relative
+		text-align: center
+		.icon
+			position: absolute
+			right: -35px
+			top -15px
+			size 32px
+			fill green
+//.review-slider
+//.review-slider__el
+.review-slider__content
+	max-width 600px
+	margin-left: auto
+	margin-right: auto
+	flex(mid)
+	fl()
+.review-slider__el-text
+	text-align: center
+	@extend .type--main
+	font-style italic
+	line-height: 1.6
+	margin-bottom: 20px
+.review-slider__el-author
+	color $brown--dark
+	opacity .7
+	text-align: center
+	margin-bottom: 20px
+
+.slick-dots li button:before
+	font-size: 10px
+
+.card
+	flex(mid)
+	fl()
+.card__img-wrap
+	width: 100%
+	margin-bottom: 25px
+.card__img
+	bg-full()
+	background-size: contain
+	padding: 55% 10%
+	width: 100%
+.card__text
+	text-align: center
+	line-height: 1.6
+.card__val
+	color $brown--dark
+	@extend .type--xl
+	margin: 20px 0
+.card__get
+	@extend .btn--sm
+	padding: 10px
+	@extend .btn--light
+	@extend .type--md
+	font-weight 500
+	height: 40px
+
+.form-quest
+	max-width 600px
+	margin-left: auto
+	margin-right: auto
+	textarea
+		width: 100%
+.form-quest__title
+	color $brown
+	@extend .type--xxl
+	margin-bottom: 40px
+	text-align: center
+.input-row-half
+	f()
+	justify-content: space-between
+	input
+		width: 49%
+//.input
+.form-quest__footer
+	margin-top: 20px
+	flex(between)
+.form-quest__text
+	width: 50%
+	line-height: 1.6
+	opacity 0.7
+	color #000000
+	@extend .type--sm
+.form-quest__get
+	@extend .btn--sm
+	@extend .btn--mark

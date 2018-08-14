@@ -3,46 +3,90 @@
 // - for item in args
 
 mixin icon(name,cls)
-  svg(class=cls)
-    use(xlink:href="#" + name)
+	svg(class=cls)
+		use(xlink:href="#" + name)
 
 mixin checkbox(text,disable)
-  .check-el
-    if disable
-      label.style-label.style-label--checkbox.style-label--disable
-        input(type="checkbox").sytle-input
-        .sytle-input-element
-          +icon("checked","icon-check")
-        .sytle-input-text=text
-    else
-      label.style-label.style-label--checkbox
-        input(type="checkbox").sytle-input
-        .sytle-input-element
-          +icon("checked","icon-check")
-        .sytle-input-text=text
+	.check-el
+		if disable
+			label.style-label.style-label--checkbox.style-label--disable
+				input(type="checkbox").sytle-input
+				.sytle-input-element
+					+icon("checked","icon-check")
+				.sytle-input-text=text
+		else
+			label.style-label.style-label--checkbox
+				input(type="checkbox").sytle-input
+				.sytle-input-element
+					+icon("checked","icon-check")
+				.sytle-input-text=text
 mixin radio(text,group,disable)
-  .check-el
-    if disable
-      label.style-label.style-label--radio.style-label--disable
-        input(type="radio" name="group").sytle-input
-        .sytle-input-element
-          .icon-radio
-        .sytle-input-text=text
-    else
-      label.style-label.style-label--radio
-        input(type="radio" name="group").sytle-input
-        .sytle-input-element
-          .icon-radio
-        .sytle-input-text=text
+	.check-el
+		if disable
+			label.style-label.style-label--radio.style-label--disable
+				input(type="radio" name="group").sytle-input
+				.sytle-input-element
+					.icon-radio
+				.sytle-input-text=text
+		else
+			label.style-label.style-label--radio
+				input(type="radio" name="group").sytle-input
+				.sytle-input-element
+					.icon-radio
+				.sytle-input-text=text
 
 mixin incr(a)
-  - a = a || 1
-  .elements-icr-block
-    .incr
-      .incr__minus.incr__nav
-        +icon("minus","icon")
-      .incr__val
-        span=a
-        .incr__val-coner
-      .incr__plus.incr__nav
-        +icon("plus","icon")
+	- a = a || 1
+	.elements-icr-block
+		.incr
+			.incr__minus.incr__nav
+				+icon("minus","icon")
+			.incr__val
+				span=a
+				.incr__val-coner
+			.incr__plus.incr__nav
+				+icon("plus","icon")
+
+mixin pizza()
+	.pizza
+		a(href="#").pizza__img-wrap
+			.pizza__img(style="background-image:url('img/pizza.png')")
+		.pizza__wrap
+			a(href="#").pizza__title Гавайская с курицей
+			.pizza__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+			.pizza__size
+				.pizza__size-el 25 см
+				.pizza__size-el.pizza__size-el--active 30 см
+				.pizza__size-el 35 см
+			.pizza__dough
+				.pizza__dough-el.pizza__dough-el--active Традиционное
+				.pizza__dough-el Тонкое
+			.pizza__footer
+				.pizza__price 380 Р
+				.incr__get-wrap
+					.pizza__get.icr-btn В корзину
+					.elements-icr-block.hidden
+						.incr
+							.incr__minus.incr--one.incr__nav -
+							.incr__val
+								span 1
+								.incr__val-coner
+							.incr__plus.incr__nav +
+
+mixin item(img)
+	.item
+		a(href="#").item__img-wrap
+			.item__img(style="background-image:url(img/" + img +")")
+		.item__wrap
+			a(href="#").item__title Гавайская с курицей
+			.item__text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+			.item__footer.incr__get-wrap
+				.item__price 380 Р
+				.item__get.icr-btn В корзину
+				.elements-icr-block.hidden
+					.incr
+						.incr__minus.incr--one.incr__nav -
+						.incr__val
+							span 1
+							.incr__val-coner
+						.incr__plus.incr__nav +
