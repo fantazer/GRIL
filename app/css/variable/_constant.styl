@@ -158,12 +158,17 @@ btnStyleLight(br-btn,color-btn)
 
 .btn--sm
 	@extend .btn
+	+below(480px)
+		min-width auto
+
 	padding 10px 30px
 	min-width 140px
 	.nav-icon
 		size 10px
 
 .btn--md
+	+below(480px)
+		min-width auto
 	@extend .btn
 	padding 20px 55px
 	min-width 210px

@@ -83,7 +83,6 @@ $(document).ready(function(){
 	var closeModal = function () {
 		console.log("scrollPos",scrollPos);
   	$('.modal-layer').removeClass('modal-layer-show');
-  	$("body").removeClass("modal-fix");
   	$('body').css({
 			overflow: '',
 			position: '',
@@ -92,7 +91,6 @@ $(document).ready(function(){
     $(window).scrollTop(scrollPos);
     $('.modal').removeClass('modal__show');
 		$('.enter').removeClass('enter--open');
-		$('.basket').removeClass('basket--open');
 	};
 
 	var initModal = function(el){
@@ -121,24 +119,29 @@ $(document).ready(function(){
 
 	//modals === end
 
+
+
 	//mobile menu
 	$('.head-toggle').click(function(event){
-				event.stopPropagation();
-				$(this).toggleClass('head-toggle--open');
-				$('.slide-menu').toggleClass('slide-menu--open');
-		});
-		$('.slide-menu').on("click", function (event) {
-			event.stopPropagation();
-		});
-		$(document).on("click", function () {
-				$(this).removeClass('head-toggle--open');
-				$('.slide-menu').removeClass('slide-menu--open');
-		});
-
-
-
-
-
+		event.stopPropagation();
+		$(this).toggleClass('head-toggle--open');
+		$('.slide-menu').toggleClass('slide-menu--open');
+		if($('.modal-layer').hasClass('modal-layer-show')){
+			closeModal();
+		}else{
+			openModal();
+		}
+		shrinkHeader = 0
+	});
+	$('.slide-menu').on("click", function (event) {
+		event.stopPropagation();
+	});
+	$(document).on("click", function () {
+			closeModal();
+			$(this).removeClass('head-toggle--open');
+			$('.slide-menu').removeClass('slide-menu--open');
+			shrinkHeader = 250
+	});
 	//mobile menu===end
 
 	//fixed menu
@@ -158,9 +161,9 @@ $(document).ready(function(){
 
 	$(window).resize(function(){
 		heightHeader=$('.head').height();
+
 	});
 	//fixed menu===end
-
 
 	function detectIE() {
 	var ua = window.navigator.userAgent;

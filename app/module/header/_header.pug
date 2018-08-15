@@ -4,22 +4,9 @@ mixin header()
 		.head-top-wrap
 			.main-cont
 				.head-top
-					.head__logo
+					a(href="#").head__logo
 						img(src="img/logo.svg", alt="")
-					.head-top__list
-						-
-							var items = [
-							'Пицца',
-							'Вок',
-							'Шаурма',
-							'Гриль',
-							'Салаты',
-							'Десерты',
-							'Напитки',
-							'Акции'
-							];
-						each item,index in items
-							a(href="#").head-top__list-el #{item}
+
 
 					.head__loc
 						.head__loc-town Ваш город:

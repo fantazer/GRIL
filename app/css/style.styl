@@ -21,14 +21,20 @@ body
 
 .head
 	width:100%
+	z-index 1010
+	background: white
 
 .head-top-wrap
 //.main-cont
 .head-top
+	+below(1024px)
+		position: relative
 	flex(between)
 .head__logo
 	+below(1200px)
 		width: 140px
+	+below(480px)
+		width: 100px
 	width: 195px
 	margin-right: 3%
 .head__loc
@@ -172,9 +178,28 @@ body
 	border 1px solid white
 	right: 5px
 	top 5px
-	+above(1024px)
+	+above(1025px)
 		display: none
+
 .head-menu-wrap
+	+below(640px)
+		white-space: nowrap
+		overflow-x: auto
+		-webkit-overflow-scrolling: touch
+		-ms-overflow-style: -ms-autohiding-scrollbar
+		::-webkit-scrollbar
+			width: 0
+			background: transparent
+			display: none
+		&:before
+			content ''
+			position: absolute
+			right: 0
+			top: 51px
+			height: 48px
+			width 110px
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, #ffffff 100%);
+			z-index 10
 	border-top 1px solid $gray
 	border-bottom 1px solid $gray
 .head-menu
@@ -185,6 +210,9 @@ body
 	flex(between)
 	width: 62%
 .head-list__el
+	+below(1024px)
+		height: 50px
+		flex(mid)
 	tr(all)
 	padding: 20px 10px
 	color $brown--dark
@@ -242,9 +270,22 @@ body
 		color $green
 
 .shrink
-	+below(1024px)
-		.head-top__list
-			display: none!important
+	.head-top__list
+		flex(between)
+		+below(1024px)
+			flex(between)
+			position: absolute
+			top 51px
+			width: calc(100% + 20px)
+			margin-left: -10px
+			padding: 15px 10px
+			background: white
+			height: 50px
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+		+below(640px)
+			@extend .head-menu-wrap
+			width auto
+		display: none
 	position fixed
 	top 0
 	left 0
@@ -253,28 +294,30 @@ body
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out
 	border-bottom 1px solid $gray
-	z-index 2
+	z-index 1010
 	.head-menu-wrap
-		display: none
+		//display: none
 	.head__auth
 		display: none
 	.head__loc
 		display: none
 	.head__cont
 		display: none
-	.head-top__list
-		flex(between)
-
 	.head__basket
 		padding: 10px 20px
 	.head__logo
 		width: 140px
-
+	.head-top__list-el
+		padding: 10px
 .footer
+	+below(480px)
+		margin-top: 30px
 	margin-top: 100px
 .footer-top-wrap
 	background: #f1e2d6
 .footer-top
+	+below(1024px)
+		display: none
 	flex(between)
 //.footer-top__col
 .footer-top__title
@@ -284,6 +327,8 @@ body
 .footer-top__text
 	opacity .7
 .footer-deliver
+	+below(1024px)
+		margin-right: -10px
 	flex(mid)
 	padding: 40px 45px
 	bg-full()
@@ -303,17 +348,29 @@ body
 .footer-main-wrap
 	background: #5e4c41
 .footer-main
+	+below(640px)
+		padding: 30px 0
+		fw()
 	f()
 	justify-content: space-between
 	padding: 50px 0
 	color white
 .footer-info
+	+below(640px)
+		width: 48%
+	+below(480px)
+		width: 100%
 	width: 26%
 .footer-title
+	+below(480px)
+		text-align: center
 	font-size 20px
 	font-weight 500
 	margin-bottom: 20px
 .footer-politick
+	+below(480px)
+		text-align: center
+		margin-bottom: 20px
 	opacity .6
 	line-height: 1.6
 	margin-bottom: 55px
@@ -321,6 +378,9 @@ body
 	color white
 	tr(all)
 .footer-pay
+	+below(480px)
+		flex(mid)
+		margin-bottom: 20px
 	f()
 	align-items: center
 .footer-pay__icon
@@ -330,6 +390,8 @@ body
 		margin-right: 15px
 //.footer-pay__text
 .footer-list
+	+below(1024px)
+		display: none
 	width: 21%
 .footer-list__el
 	tr(all)
@@ -341,6 +403,13 @@ body
 		opacity:1
 
 .footer-cont
+	+below(640px)
+		border-left 0
+		width: 48%
+	+below(480px)
+		width: 100%
+		flex(mid)
+		fl()
 	width: 30.5%
 	margin-left: auto
 	border-left 1px solid rgba(255, 255, 255, 0.16)
@@ -348,6 +417,9 @@ body
 	fl()
 	align-items: flex-end
 .footer-phone
+	+below(480px)
+		width: 100%
+		text-align: center
 	font-size: 20px
 	color white
 	margin-bottom: 15px
@@ -358,6 +430,9 @@ body
 	&:hover
 		color darken(white,20)
 .footer-mail
+	+below(480px)
+		width: 100%
+		text-align: center
 	display: block
 	color white
 	margin-bottom: 55px
@@ -401,8 +476,6 @@ body
 	overflow: auto
 
 .modal-filter
-	+below(640px)
-		background: white
 	position: absolute
 	top: 0
 	left: 0
@@ -594,12 +667,17 @@ body
 		opacity: 1
 		tr(all)
 
+.slider
+	+below(1024px)
+		display: none
 .slider__el
 	width: 100%
 	bg-full()
 	height: 450px
 
 .advant
+	+below(1024px)
+		display: none
 	flex(between)
 	padding: 30px 45px
 	border-bottom 1px solid $gray
@@ -616,30 +694,61 @@ body
 //.advant__el-text
 
 .section
+	+below(1024px)
+		margin: 50px 0
+	+below(480px)
+		max-width 360px
+		margin-left: auto
+		margin-right: auto
 	margin-bottom: 80px
 .section-title
+	+below(1024px)
+		margin-bottom: 30px
 	@extend .type--extra
 	color $brown
 	up()
 	margin-bottom: 45px
 
 .grid
+	+below(1024px)
+		grid-template-columns repeat(3,1fr);
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+	+below(480px)
+		grid-template-columns 1fr
+		grid-column-gap 10px
+		grid-row-gap 30px
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(4,1fr);
 
 .grid--three
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+	+below(480px)
+		grid-template-columns 1fr;
 	grid-template-columns repeat(3,1fr);
 .grid--six
+	+below(1024px)
+		grid-template-columns repeat(auto-fit, minmax(120px, 1fr));
+	+below(480px)
+		grid-template-columns repeat(2,1fr);
 	grid-template-columns repeat(6,1fr);
 
 .grid__el
 	align-content stretch
 
 .pizza
+	+below(480px)
+		flex-flow row
+		justify-content:space-between
 	f()
 	fl()
 	height: 100%
+.pizza__img-wrap
+	+below(480px)
+		width: 28%
+		margin-right: 10px
 .pizza__img
 	bg-full()
 	background-size: contain
@@ -694,10 +803,17 @@ body
 .pizza__footer
 	f()
 	flex(between)
+	+below(480px)
+		.elements-icr-block
+			flex(mid)
 .pizza__price
+	+below(480px)
+		display: none
 	@extend .type--xl
 	color $brown--dark
 .pizza__get
+	+below(480px)
+		width: 100%
 	@extend .btn--sm
 	width: 50%
 	padding: 10px
@@ -706,9 +822,15 @@ body
 	font-weight 500
 	height: 40px
 .grid__el--lg
+	+below(480px)
+		grid-column span 1
+		display: none
 	grid-column span 2
 	align-content stretch
 
+.incr__get-wrap
+	+below(480px)
+		width: 100%
 .pizza-lg
 	f()
 	fl()
@@ -729,6 +851,8 @@ body
 	bg-full()
 	padding: 30% 10%
 .pizza-lg-cont
+	+below(480px)
+		padding: 40px 20px
 	position: relative
 	background: #f1e2d6
 	padding: 40px 30px
@@ -796,15 +920,23 @@ body
 	@extend .btn--mark
 
 .pizza__wrap
+	+below(480px)
+		width: 70%
 	f()
 	fl()
 	flex-grow 1
 
 
 .item
+	+below(480px)
+		flex-flow row
 	f()
 	fl()
 	height: 100%
+.item__img-wrap
+	+below(480px)
+		width: 28%
+		margin-right: 10px
 .item__img
 	bg-full()
 	padding: 45% 10%
@@ -814,11 +946,15 @@ body
 	color $brown--dark
 	margin-bottom: 15px
 .item__text
+	+below(480px)
+		margin-bottom: 15px
 	line-height: 1.6
 	opacity 0.7
 	color $brown--dark
 	margin-bottom: 25px
 .item__wrap
+	+below(480px)
+		width: 75%
 	flex-grow 1
 	f()
 	fl()
@@ -827,15 +963,21 @@ body
 	flex(between)
 	margin-top: auto
 .item__price
+	+below(480px)
+		width: 100%
+		display: none
 	@extend .type--xl
 	color $brown--dark
 .item__get
+	+below(480px)
+		width: 100%
 	@extend .btn--sm
 	padding: 10px
 	@extend .btn--light
 	@extend .type--md
 	font-weight 500
 	height: 40px
+	flex(mid)
 
 //
 .item-lg
@@ -915,8 +1057,7 @@ body
 	line-height: 1.6
 
 .incr
-	+below(768px)
-		margin-bottom: 20px
+
 	f()
 	justify-content: space-between
 	position relative
@@ -1058,6 +1199,8 @@ body
 	@extend .type--xl
 	margin: 20px 0
 .card__get
+	+below(480px)
+		width: 100%
 	@extend .btn--sm
 	padding: 10px
 	@extend .btn--light
@@ -1066,12 +1209,16 @@ body
 	height: 40px
 
 .form-quest
+	+below(640px)
+		display: none
 	max-width 600px
 	margin-left: auto
 	margin-right: auto
 	textarea
 		width: 100%
 .form-quest__title
+	+below(640px)
+		display: none
 	color $brown
 	@extend .type--xxl
 	margin-bottom: 40px
@@ -1100,7 +1247,7 @@ body
 	size 50px
 	flex(mid)
 	cp()
-	+above(1024px)
+	+above(1025px)
 		display: none
 	.icon
 		size 25px
@@ -1115,12 +1262,16 @@ body
 		display: none
 
 .slide-menu
+	+above(1025px)
+		display: none !important
+	+below(480px)
+		width: 100%
 	background: $green
 	color white
 	position: fixed
-	height: calc(100% - 50px)
+	height: calc(100% - 100px)
 	z-index 1100
-	top 50px
+	top 102px
 	right 0
 	padding: 25px
 	width: 320px
@@ -1165,6 +1316,14 @@ body
 .slide-menu__time
 	opacity 0.6
 	margin-bottom: 20px
+	text-align: center
 .slide-menu__work
 	opacity 0.6
 	text-align: center
+
+.desctop-get
+	+below(480px)
+		display: none
+.mobile-price
+	+above(481px)
+		display: none
