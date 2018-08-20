@@ -27,19 +27,9 @@
 			<div class="head-top-wrap">
 				<div class="main-cont">
 					<div class="head-top">
-						<div class="head__logo">
+						<a class="head__logo" href="#">
 							<img src="img/logo.svg" alt="" />
-						</div>
-						<div class="head-top__list">
-							<a class="head-top__list-el" href="#">Пицца</a>
-							<a class="head-top__list-el" href="#">Вок</a>
-							<a class="head-top__list-el" href="#">Шаурма</a>
-							<a class="head-top__list-el" href="#">Гриль</a>
-							<a class="head-top__list-el" href="#">Салаты</a>
-							<a class="head-top__list-el" href="#">Десерты</a>
-							<a class="head-top__list-el" href="#">Напитки</a>
-							<a class="head-top__list-el" href="#">Акции</a>
-						</div>
+						</a>
 						<div class="head__loc">
 							<div class="head__loc-town">Ваш город:
 								<span class="head__loc-town-el">Барнаул</span>
@@ -67,6 +57,14 @@
 							<div class="head__auth-text">Александр</div>
 							<div class="head__auth-val">365 Б</div>
 						</a>
+						<div class="head-toggle">
+							<svg class="icon icon-open">
+								<use xlink:href="#menu"></use>
+							</svg>
+							<svg class="icon icon-close">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
 						<div class="head__basket">
 							<div class="head__basket__icon">
 								<svg class="icon">
@@ -77,6 +75,7 @@
 							<div class="head__basket__text">1 923 Р
 								<span class="head__basket__val">(3)</span>
 							</div>
+							<div class="head__basket__val--mobile">3</div>
 						</div>
 					</div>
 				</div>
@@ -103,6 +102,28 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="slide-menu">
+			<div class="slide-menu__list">
+				<a class="slide-menu__list-el" href="#">О нас</a>
+				<a class="slide-menu__list-el" href="#">Вакансии</a>
+				<a class="slide-menu__list-el" href="#">Франшиза</a>
+				<a class="slide-menu__list-el" href="#">Контакты</a>
+			</div>
+			<a class="slide-menu-btn" href="#">
+				<div class="slide-menu-btn__icon">
+					<svg class="icon">
+						<use xlink:href="#pick"></use>
+					</svg>
+				</div>
+				<div class="slide-menu-btn__text">Войти</div>
+			</a>
+			<a class="slide-menu-btn" href="#">
+				<div class="slide-menu-btn__text">Ваш город: Барнаул</div>
+			</a>
+			<div class="slide-menu__time">Среднее время доставки: 43 мин.</div>
+			<a class="slide-menu__phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+			<div class="slide-menu__work">8 (3852) 57-17-76</div>
 		</div>
 		<!--block header end-->
 		<div class="content">
@@ -139,6 +160,48 @@
 						<div class="advant__el-text">100% натуральный соус</div>
 					</div>
 				</div>
+				<div class="favorite">
+					<div class="favorite__el">
+						<div class="favorite__title">То, что Вы любите</div>
+						<a class="favorite__link" href="#">Вся история заказов</a>
+					</div>
+					<div class="favorite__el favorite__el--item">
+						<div class="favorite__el-get">
+							<div class="favorite__el-btn">В корзину</div>
+						</div>
+						<div class="favorite__el-img-wrap">
+							<div class="favorite__el-img" style="background-image:url('img/small-pizza.png')"></div>
+						</div>
+						<div class="favorite__el-cont">
+							<div class="favorite__el-title">Двойная пепперони</div>
+							<div class="favorite__el-price">380 Р</div>
+						</div>
+					</div>
+					<div class="favorite__el favorite__el--item">
+						<div class="favorite__el-get">
+							<div class="favorite__el-btn">В корзину</div>
+						</div>
+						<div class="favorite__el-img-wrap">
+							<div class="favorite__el-img" style="background-image:url('img/small-pizza.png')"></div>
+						</div>
+						<div class="favorite__el-cont">
+							<div class="favorite__el-title">Двойная пепперони</div>
+							<div class="favorite__el-price">380 Р</div>
+						</div>
+					</div>
+					<div class="favorite__el favorite__el--item">
+						<div class="favorite__el-get">
+							<div class="favorite__el-btn">В корзину</div>
+						</div>
+						<div class="favorite__el-img-wrap">
+							<div class="favorite__el-img" style="background-image:url('img/small-pizza.png')"></div>
+						</div>
+						<div class="favorite__el-cont">
+							<div class="favorite__el-title">Двойная пепперони</div>
+							<div class="favorite__el-price">380 Р</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!--section-->
 			<div class="section">
@@ -165,7 +228,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -201,7 +267,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -237,7 +306,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -273,7 +345,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -309,7 +384,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -345,7 +423,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -381,7 +462,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -417,7 +501,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -453,7 +540,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -489,7 +579,10 @@
 									<div class="pizza__footer">
 										<div class="pizza__price">380 Р</div>
 										<div class="incr__get-wrap">
-											<div class="pizza__get icr-btn">В корзину</div>
+											<div class="pizza__get icr-btn">
+												<div class="desctop-get">В корзину</div>
+												<div class="mobile-price">380 Р</div>
+											</div>
 											<div class="elements-icr-block hidden">
 												<div class="incr">
 													<div class="incr__minus incr--one incr__nav">-</div>
@@ -575,7 +668,10 @@
 									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 									<div class="item__footer incr__get-wrap">
 										<div class="item__price">380 Р</div>
-										<div class="item__get icr-btn">В корзину</div>
+										<div class="item__get icr-btn">
+											<div class="desctop-get">В корзину</div>
+											<div class="mobile-price">380 Р</div>
+										</div>
 										<div class="elements-icr-block hidden">
 											<div class="incr">
 												<div class="incr__minus incr--one incr__nav">-</div>
@@ -600,7 +696,10 @@
 									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 									<div class="item__footer incr__get-wrap">
 										<div class="item__price">380 Р</div>
-										<div class="item__get icr-btn">В корзину</div>
+										<div class="item__get icr-btn">
+											<div class="desctop-get">В корзину</div>
+											<div class="mobile-price">380 Р</div>
+										</div>
 										<div class="elements-icr-block hidden">
 											<div class="incr">
 												<div class="incr__minus incr--one incr__nav">-</div>
@@ -625,7 +724,10 @@
 									<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 									<div class="item__footer incr__get-wrap">
 										<div class="item__price">380 Р</div>
-										<div class="item__get icr-btn">В корзину</div>
+										<div class="item__get icr-btn">
+											<div class="desctop-get">В корзину</div>
+											<div class="mobile-price">380 Р</div>
+										</div>
 										<div class="elements-icr-block hidden">
 											<div class="incr">
 												<div class="incr__minus incr--one incr__nav">-</div>
@@ -657,7 +759,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>
@@ -680,7 +785,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>
@@ -703,7 +811,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>
@@ -726,7 +837,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>
@@ -749,7 +863,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>
@@ -772,7 +889,10 @@
 								<div class="item__text">Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас</div>
 								<div class="item__footer incr__get-wrap">
 									<div class="item__price">380 Р</div>
-									<div class="item__get icr-btn">В корзину</div>
+									<div class="item__get icr-btn">
+										<div class="desctop-get">В корзину</div>
+										<div class="mobile-price">380 Р</div>
+									</div>
 									<div class="elements-icr-block hidden">
 										<div class="incr">
 											<div class="incr__minus incr--one incr__nav">-</div>

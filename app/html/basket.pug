@@ -1,0 +1,110 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	//basket-head
+	.basket-head
+		.main-cont
+			.basket-head__wrap
+				.basket-head__title Корзина
+				.basket-toggle
+					a(href="#").basket-toggle__el.basket-toggle__el--active.basket-toggle__check
+						.basket-toggle__el-val
+							span 1
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Корзина
+					.bakset-line
+					a(href="#").basket-toggle__el
+						.basket-toggle__el-val
+							span 2
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Доставка и оплата
+					.bakset-line
+					a(href="#").basket-toggle__el
+						.basket-toggle__el-val
+							span 3
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Готово
+	.main-cont
+		.basket-wrap
+			.basket-cont
+				//basket-list
+				.basket-list
+					- for (var i=0;i<6;i++)
+						.basket-list__el
+							.basket-list__info
+								.basket-list__title Гавайская с курицей
+								.basket-list__text Традиционное, 25 см
+							.basket-list__incr
+								.elements-icr-block
+									.incr
+										.incr__minus.incr--one.incr__nav -
+										.incr__val
+											span 1
+											.incr__val-coner
+										.incr__plus.incr__nav +
+							.basket-list__price 680 Р
+							.basket-list__remove
+								+icon("close","icon")
+
+				//section
+				.basket-section
+					.section-title Соусы
+						span.section-title--add 1 Бесплатно
+					.grid.grid--four
+						- for (var i=0;i<4;i++)
+							.grid__el
+								.card
+									a(href="#").card__img-wrap
+										.card__img(style="background-image:url('img/card.jpg')")
+									a(href="#").card__text Чай Фьюзти зеленый цитрус, 0,5 л
+									.card__val 75 Р
+									.incr__get-wrap
+										.card__get.icr-btn Добавить
+										.elements-icr-block.hidden
+											.incr
+												.incr__minus.incr--one.incr__nav -
+												.incr__val
+													span 1
+													.incr__val-coner
+												.incr__plus.incr__nav +
+				.basket-section
+					.section-title Рекомендуем
+					.grid.grid--four
+						- for (var i=0;i<4;i++)
+							.grid__el
+								.card
+									a(href="#").card__img-wrap
+										.card__img(style="background-image:url('img/card.jpg')")
+									a(href="#").card__text Чай Фьюзти зеленый цитрус, 0,5 л
+									.card__val 75 Р
+									.incr__get-wrap
+										.card__get.icr-btn В корзину
+										.elements-icr-block.hidden
+											.incr
+												.incr__minus.incr--one.incr__nav -
+												.incr__val
+													span 1
+													.incr__val-coner
+												.incr__plus.incr__nav +
+
+			//panel
+			.panel
+				.panel-wrap
+					.panel-head Ваш заказ
+					.panel-list
+						- for (var i=0;i<6;i++)
+							.panel-list__el(style="background-image:url('img/card.jpg')")
+								.panel-list__el-val x2
+					.panel-total
+						.panel-text Сумма:
+						.panel-val 1 220 Р
+					.panel-footer
+						a(href="#").panel-get Заказать
+						a(href="#").panel-back Вернуться в меню
++footer()
+include ./block_html/_script.pug

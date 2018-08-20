@@ -1,0 +1,52 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	//basket-head
+	.basket-head
+		.main-cont
+			.basket-head__wrap
+				.basket-head__title Корзина
+				.basket-toggle
+					a(href="#").basket-toggle__el.basket-toggle__el--active.basket-toggle__check
+						.basket-toggle__el-val
+							span 1
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Корзина
+					.bakset-line
+					a(href="#").basket-toggle__el
+						.basket-toggle__el-val
+							span 2
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Доставка и оплата
+					.bakset-line
+					a(href="#").basket-toggle__el
+						.basket-toggle__el-val
+							span 3
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Готово
+	.main-cont
+		.basket-wrap
+			.basket-cont
+				.basket-empty
+					.basket-icon
+						+icon("basket--color","icon")
+					.basket-title Ваша корзина пуста =(
+					.basket-text Добавьте что-нибудь из меню
+
+			//panel
+			.panel
+				.panel-wrap
+					.panel-head Ваш заказ
+					.panel-total
+						.panel-text Сумма:
+						.panel-val 0 Р
+					.panel-footer
+						a(href="#").panel-get.btn--disable Заказать
+						a(href="#").panel-back Вернуться в меню
++footer()
+include ./block_html/_script.pug

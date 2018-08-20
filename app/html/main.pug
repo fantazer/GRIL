@@ -23,6 +23,19 @@ include block_html/_include.pug
 				.advant__el-icon
 					+icon("tomat--color","icon")
 				.advant__el-text 100% натуральный соус
+		.favorite
+			.favorite__el
+				.favorite__title То, что Вы любите
+				a(href="#").favorite__link Вся история заказов
+			- for (var i=0;i<3;i++)
+				.favorite__el.favorite__el--item
+					.favorite__el-get
+						.favorite__el-btn В корзину
+					.favorite__el-img-wrap
+						.favorite__el-img(style="background-image:url('img/small-pizza.png')")
+					.favorite__el-cont
+						.favorite__el-title Двойная пепперони
+						.favorite__el-price 380 Р
 
 	//section
 	.section
@@ -163,5 +176,4 @@ include block_html/_include.pug
 				.form-quest__text Нажимая кнопку "Отправить" Вы соглашаетесь с политикой обработки персональных данных
 				input(type="submit" value="Отправить" class="form-quest__get")
 +footer()
-
 include ./block_html/_script.pug

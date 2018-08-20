@@ -1,0 +1,55 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	//section
+	.card-item
+		.card__bg
+			.card__bg-left
+			.card__bg-right
+		.main-cont
+			.card-wrap
+				.card__el
+					.card__el__img(style="background-image:url('img/pizza-lg.png')")
+				.card__info
+					.bread
+						-
+							var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+						each item in items
+							.bread__el #{item}
+					.card__info-wrap
+						.card__info-title Гавайская с курицей
+						.card__info-text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+					.pizza-lg__toggle.pizza-lg__toggle--lg.pizza-lg__toggle--light
+						.pizza__size
+							.pizza__size-el 25 см
+							.pizza__size-el.pizza__size-el--active 30 см
+							.pizza__size-el 35 см
+						.pizza__dough
+							.pizza__dough-el.pizza__dough-el--active Традиционное
+							.pizza__dough-el Тонкое
+					.pizza-lg__val.pizza-lg__val--row
+						.pizza-lg__price
+							.pizza-lg__price--lg 240 Р
+						.incr__get-wrap
+							.pizza-lg__get.icr-btn В корзину
+							.elements-icr-block.hidden
+								.incr
+									.incr__minus.incr--one.incr__nav -
+									.incr__val
+										span 1
+										.incr__val-coner
+									.incr__plus.incr__nav +
+
+	.section
+		.main-cont
+			.section-title Вам может понравиться
+			.grid
+				- for (var i=0;i<4;i++)
+					.grid__el
+						+pizza()
+
+
++footer()
+include ./block_html/_script.pug

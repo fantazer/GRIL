@@ -155,7 +155,6 @@ body
 	.icon
 		+below(1024px)
 			margin-right: 0
-		margin-right: 15px
 		size 26px
 		fill $green
 		tr(all)
@@ -163,6 +162,7 @@ body
 	+below(1024px)
 		display: none
 	@extend .type--md
+	margin-left: 15px
 	font-weight 500
 .head__basket__val
 	opacity:.6
@@ -314,7 +314,8 @@ body
 		margin-top: 30px
 	margin-top: 100px
 .footer-top-wrap
-	background: #f1e2d6
+	bgi('pattern.jpg')
+	background-repeat: repeat
 .footer-top
 	+below(1024px)
 		display: none
@@ -734,6 +735,12 @@ body
 	+below(480px)
 		grid-template-columns repeat(2,1fr);
 	grid-template-columns repeat(6,1fr);
+.grid--four
+	+below(1024px)
+		grid-template-columns repeat(auto-fit, minmax(120px, 1fr));
+	+below(480px)
+		grid-template-columns repeat(2,1fr);
+	grid-template-columns repeat(4,1fr);
 
 .grid__el
 	align-content stretch
@@ -774,7 +781,7 @@ body
 	text-align: center
 	padding: 10px
 	border-right 1px solid #cbbaac
-	margin-right: -1px
+	//margin-right: -1px
 	cp()
 	tr(all)
 	&:hover
@@ -854,7 +861,8 @@ body
 	+below(480px)
 		padding: 40px 20px
 	position: relative
-	background: #f1e2d6
+	bgi('pattern.jpg')
+	background-repeat: repeat
 	padding: 40px 30px
 	f()
 	fl()
@@ -865,7 +873,6 @@ body
 	color white
 	top -24px
 	left 0
-	height: 48px
 .pizza-lg__title
 	@extend .type--xxl
 	f()
@@ -878,14 +885,18 @@ body
 	padding: 15px 45px 15px 30px
 	position: relative
 	width: 100%
+	height: 45px
 	&:before
 		content ''
 		position: absolute
-		right -12px
+		right -11px
 		top 0
-		width: 12px
-		height: 100%
-		//bgi('round-border.png')
+		width: 18px
+		height: 45.5px
+		background-image: url(../img/coner.svg)
+		background-size: contain
+		background-position: top center
+		background-repeat: no-repeat
 .pizza-lg__title-icon
 	margin-left: 10px
 	.icon
@@ -991,7 +1002,8 @@ body
 	f()
 	justify-content: space-between
 	position: relative
-	background: #f1e2d6
+	bgi('pattern.jpg')
+	background-repeat: repeat
 	padding: 40px 30px
 	flex-grow 1
 
@@ -1141,7 +1153,8 @@ body
 
 .review-slider-wrap
 	padding: 50px 0
-	background: #f2e5da
+	bgi('pattern.jpg')
+	background-repeat: repeat
 	margin-bottom: 80px
 .review-slider__title
 	flex(mid)
@@ -1327,3 +1340,456 @@ body
 .mobile-price
 	+above(481px)
 		display: none
+
+.favorite
+	+below(1024px)
+		display: none
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4,1fr);
+	margin-bottom: 40px
+.favorite__el
+	padding: 15px
+//.favorite__el--text
+.favorite__title
+	@extend .type--xl
+	color $brown--dark
+	margin-bottom: 10px
+.favorite__link
+	@extend .link--mark
+	position: relative
+	&:before
+		content ''
+		tr(all)
+		position: absolute
+		top 100%
+		height: 1px
+		width: 100%
+		background: $green
+		opacity 1
+	&:hover
+		&:before
+			content ''
+			opacity 0
+.favorite__el-img-wrap
+	margin-right: 15px
+.favorite__el--item
+	f()
+	tr(all)
+	border 1px solid $gray
+	position: relative
+	box-shadow 0 0 0 rgba(0, 0, 0, 0.11)
+	overflow hidden
+	&:hover
+		box-shadow 0 10px 15px rgba(0, 0, 0, 0.11)
+		.favorite__el-get
+			transform translateX(0%)
+			opacity:1
+
+.favorite__el-img
+	size 70px
+	bg-full()
+.favorite__el-cont
+	margin-top: 10px
+.favorite__el-title
+	opacity 0.7
+	margin-bottom: 10px
+.favorite__el-price
+	@extend .type--lg
+	font-weight 700
+
+.favorite__el-get
+	transition transform .6s
+	flex(mid)
+	opacity:0
+	transform translateX(-100%)
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(255, 255, 255, 0.8);
+	z-index 2
+.favorite__el-btn
+	@extend .btn--sm
+	@extend .btn--mark
+
+.card-item
+	position: relative
+	margin-bottom: 80px
+	+below(640px)
+		margin-bottom: 20px
+//.card__bg
+
+.card__bg-left
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	left 0
+.card__bg-right
+	+below(640px)
+		display: none
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	right 0
+	bgi('pattern.jpg')
+	background-repeat: repeat
+//.main-cont
+.card-wrap
+	+below(640px)
+		fw()
+		max-width 480px
+		margin-left: auto
+		margin-right: auto
+	f()
+.card__el
+	+below(640px)
+		width: 100%
+		padding: 20px 0
+	width: 50%
+	padding: 60px 0
+.card__el__img
+
+	bg-full()
+	background-size: contain
+	padding: 42% 10%
+	max-width 500px
+	max-height 500px
+.card__info
+	+below(1024px)
+		padding: 30px
+	+below(640px)
+		width: 100%
+		padding: 0
+	width: 50%
+	padding: 30px 30px 30px 10%
+	.pizza-lg__toggle
+		margin-bottom: 40px
+.bread
+	+below(640px)
+		margin-bottom: 20px
+	f()
+	fw()
+	margin-bottom: 45px
+.bread__el
+	margin-right: 15px
+	margin-bottom: 10px
+	position: relative
+	@extend .type--sm
+	opacity .3
+	&:after
+		content '-'
+		position: absolute
+		right: -10px
+		top 1px
+	&:last-child
+		&:after
+			content ''
+			display: none
+//.card__info-wrap
+.card__info-title
+	+below(640px)
+		margin-bottom: 20px
+	color $brown
+	@extend .type--extra
+	font-weight 900
+	up()
+	margin-bottom: 30px
+.card__info-text
+	+below(640px)
+		margin-bottom: 20px
+	opacity 0.7
+	color $brown--dark
+	margin-bottom: 40px
+	line-height: 1.6
+//.pizza-lg__toggle
+
+.pizza-lg__toggle--lg
+	width: 100%
+
+.pizza-lg__val--row
+	+below(640px)
+		margin-left: auto
+		.incr__get-wrap
+			width: auto !important
+	flex(between)
+	.pizza-lg__price
+		margin-bottom: 0
+
+.pizza-lg__price--lg
+	color $brown
+	@extend .type--xxl
+
+.pizza-lg__toggle--light
+	.pizza__size-el--active,.pizza__dough-el--active
+		background: white
+
+.basket-head
+	+below(768px)
+		padding: 20px 0
+	+below(640px)
+		margin-bottom: 30px
+	padding: 45px 0
+	bgi('pattern.jpg')
+	background-repeat: repeat
+	margin-bottom: 55px
+	overflow hidden
+//.main-cont
+.basket-head__wrap
+	+below(768px)
+		fw()
+		flex(mid)
+		padding-right: 0px
+	+below(640px)
+		width: 85%
+		margin-left: auto
+		margin-right: auto
+	padding-right: 20px
+	flex(between)
+.basket-head__title
+	+below(768px)
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	color $brown
+	@extend .type--extra
+	font-weight 900
+	up()
+.basket-toggle
+	+below(768px)
+		width: 100%
+		max-width 300px
+	flex(between)
+	width: 40%
+	position: relative
+.basket-toggle__el
+	flex(mid)
+	fl()
+	position: relative
+	pointer-events none
+	&:before
+		content ''
+		position: absolute
+		top 0
+		left 0
+		height: 100%
+		width: 100%
+		z-index 2
+		opacity .6
+		background: white
+
+.basket-toggle__el-icon
+	display: none
+//.icon
+.basket-toggle__el-val
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	size 36px
+	flex(mid)
+	border 1px solid $brown
+.basket-toggle__el-text
+	+below(768px)
+		display: none
+	color $brown--dark
+	@extend .type--md
+	font-weight 500
+	position: absolute
+	width: 150px
+	text-align: center
+	bottom -30px
+	opacity .4
+.bakset-line
+	height: 1px
+	background: $brown
+	opacity .4
+	flex-grow 1
+.basket-toggle__el--active
+	pointer-events initial
+	.basket-toggle__el-text
+		opacity 1
+
+	&:before
+		content ''
+		opacity 1!important
+		background: none
+
+.basket-toggle__check
+	background: $green
+	.basket-toggle__el-val
+		border 0
+	span
+		display: none
+	.basket-toggle__el-icon
+		display: block
+		.icon
+			size 16px
+			fill white
+			margin-top: 4px
+
+.basket-wrap
+	+below(1024px)
+		fw()
+	f()
+	justify-content: space-between
+.basket-cont
+	+below(1024px)
+		width: 100%
+	width: 65%
+.basket-empty
+	+below(1024px)
+		margin: 0px 0 50px 0
+		padding: 0
+	flex(mid)
+	fl()
+	padding-top: 65px
+.basket-icon
+	margin-bottom: 30px
+	.icon
+		size 80px
+.basket-title
+	color $brown
+	@extend .type--xxl
+	font-weight 700
+	text-align: center
+	margin-bottom: 20px
+.basket-text
+	text-align: center
+.panel
+	+below(1024px)
+		flex(mid)
+		width: 100%
+.panel-wrap
+	width: 320px
+	box-shadow 0 10px 20px rgba(0, 0, 0, 0.1)
+	background-color #ffffff
+	padding: 20px 25px 45px 25px
+.panel-head
+	@extend .type--xl
+	font-weight 700
+	padding-bottom: 10px
+	border-bottom 1px solid #f1eeeb
+	margin-bottom: 35px
+.panel-total
+	flex(between)
+	margin-bottom: 20px
+.panel-text
+	@extend .type--lg
+	font-weight 700
+.panel-val
+	color $green
+	@extend .type--xxl
+	font-weight 700
+//.panel-footer
+.panel-get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	margin-bottom: 15px
+.panel-back
+	@extend .btn--md
+	width: 100%
+	padding: 20px
+
+.basket-list
+	+below(1024px)
+		width: 100%
+	+below(640px)
+		margin-bottom: 30px
+	margin-bottom: 50px
+.basket-list__el
+	+below(640px)
+		fw()
+		position: relative
+	padding: 20px
+	margin-bottom: -1px
+	border 1px solid $gray
+	flex(between)
+.basket-list__info
+	+below(640px)
+		width: calc(100% - 55px)
+		margin-bottom: 20px
+		order 1
+	width: 50%
+	padding-right: 10px
+.basket-list__title
+	@extend .type--lg
+	font-weight 700
+	margin-bottom: 5px
+.basket-list__text
+	opacity 0.5
+.basket-list__incr
+	+below(640px)
+		order 3
+	width: 120px
+.basket-list__price
+	+below(640px)
+		order 2
+		margin-left: initial
+	@extend .type--xl
+	font-weight 700
+	margin-left: auto
+	margin-right: 20px
+.basket-list__remove
+	+below(640px)
+		position: absolute
+		right: 20px
+		top: 20px
+	size 24px
+	border 1px solid #cbbaac
+	br(3px)
+	flex(mid)
+	cp()
+	tr(all)
+	&:hover
+		background: #cbbaac
+		.icon
+			fill white
+	.icon
+		size 8px
+		fill #cbbaac
+
+.section-title--add
+	display: inline-block
+	margin-left: 20px
+	color $green
+	@extend .type--lg
+	text-transform: none
+	letter-spacing initial
+
+.basket-section
+	+below(640px)
+		margin-bottom: 30px
+	margin-bottom: 50px
+	.section-title
+		text-transform: none
+		margin-bottom: 25px
+		@extend .type--xxl
+
+.panel-list
+	margin-top: -10px
+	display: grid
+	grid-gap 15px
+	grid-template-columns repeat(auto-fit, minmax(40px, 1fr));
+	padding-bottom: 15px
+	border-bottom 1px solid #f1eeeb
+	margin-bottom: 15px
+.panel-list__el
+	size 40px
+	round()
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+.panel-list__el-val
+	position: absolute
+	right: -8px
+	top -2px
+	size 24px
+	background: $green
+	color white
+	round()
+	flex(mid)
+	@extend .type--sm

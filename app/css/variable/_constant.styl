@@ -151,6 +151,8 @@ btnStyleLight(br-btn,color-btn)
 	color $brown--dark
 	text-align: center
 	border 1px solid #cbbaac
+	position: relative
+	font-weight 500
 	&:hover
 		cursor pointer
 		color $green
@@ -204,9 +206,6 @@ btnStyleLight(br-btn,color-btn)
 
 .btn--disable
 	@extend .disabled
-	border 1px solid $border-color
-	background-color #ffffff
-	color #000000
 
 .btn--light
 	@extend .btn
@@ -366,3 +365,5 @@ button
 				round()
 				size 16px
 				background $green;
+
+
