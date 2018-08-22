@@ -97,14 +97,21 @@ include block_html/_include.pug
 				.panel-wrap
 					.panel-head Ваш заказ
 					.panel-list
-						- for (var i=0;i<6;i++)
+						- for (var i=0;i<4;i++)
 							.panel-list__el(style="background-image:url('img/card.jpg')")
 								.panel-list__el-val x2
+						.panel-list__el.panel-list__el--last(style="background-image:url('img/card.jpg')")
+							.panel-list__el-val +2
 					.panel-total
 						.panel-text Сумма:
 						.panel-val 1 220 Р
 					.panel-footer
 						a(href="#").panel-get Заказать
 						a(href="#").panel-back Вернуться в меню
+.panel-fixed
+	.panel-total
+		.panel-text Сумма:
+		.panel-val 1 220 Р
+	a(href="#").panel-fixed__get Заказать
 +footer()
 include ./block_html/_script.pug

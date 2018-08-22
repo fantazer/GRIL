@@ -1,0 +1,32 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.bread
+			-
+				var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+			each item in items
+				a(href="#").bread__el #{item}
+
+		.section-title доставка и оплата
+		.review
+			.review__el.review__el--active
+				.review__msg-icon
+					+icon("love--color","icon")
+				.review__msg-title Напишите отзыв
+				.review__msg-text Помогите сделать наш сервис еще лучше! =)
+				a(href="#").review__msg-get написать отзыв
+			- for (var j=0;j<7;j++)
+				.review__el
+					.review__el-title Анжелика
+					.review-heart
+						- for (var i=0;i<4;i++)
+							+icon("heart","icon icon-heart--active")
+						+icon("heart-empty","icon icon-heart")
+					.review-text Ваши воки просто божественны! Много мяса и соуса, свежие овощи. Выглядит всё очень аппетитно. Доставка всегда вовремя, а курьеры вежливы даже в сильный мороз))) спасибо вам за вкусную еду, за своевременную доставку и хорошее настроение )) вы лучшие!
+					.review-date 29.03.2017
+
++footer()
+include ./block_html/_script.pug

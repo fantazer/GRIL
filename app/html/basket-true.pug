@@ -1,0 +1,45 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	//basket-head
+	.basket-head
+		.main-cont
+			.basket-head__wrap
+				.basket-head__title Заказ принят
+				.basket-toggle
+					a(href="#").basket-toggle__el.basket-toggle__el--active.basket-toggle__check
+						.basket-toggle__el-val
+							span 1
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Корзина
+					.bakset-line
+					a(href="#").basket-toggle__el.basket-toggle__el--active.basket-toggle__check
+						.basket-toggle__el-val
+							span 2
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Доставка и оплата
+					.bakset-line
+					a(href="#").basket-toggle__el.basket-toggle__el--active
+						.basket-toggle__el-val
+							span 3
+							.basket-toggle__el-icon
+								+icon("check","icon")
+						.basket-toggle__el-text Готово
+	.main-cont
+		.basket-wrap
+			.basket-true__wrap
+				.basket-true__card
+					.basket-true__el
+						.basket-true__icon
+							+icon("fire--color","icon")
+						.basket-true__title Спасибо! <br> Заказ принят :)
+						.basket-true__text Расслабьтесь и наблюдайте <br> за его приготовлением
+						a(href="#").basket-true__get следить за заказом
+						a(href="#").basket-true__back вернуться в меню
+
++footer()
+include ./block_html/_script.pug

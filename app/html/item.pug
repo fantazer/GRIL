@@ -17,7 +17,7 @@ include block_html/_include.pug
 						-
 							var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
 						each item in items
-							.bread__el #{item}
+							a(href="#").bread__el #{item}
 					.card__info-wrap
 						.card__info-title Гавайская с курицей
 						.card__info-text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас

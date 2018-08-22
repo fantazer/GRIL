@@ -1,0 +1,53 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.bread
+			-
+				var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+			each item in items
+				a(href="#").bread__el #{item}
+
+	.main-cont
+		.basket-wrap
+			.basket-cont
+				.basket-video
+					.video
+						iframe(src="https://www.youtube.com/embed/BKHkq7GaXzU" title="PSMF launch video from ITSMF UK" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" height="100%" frameborder="0")
+
+			//panel
+			.panel.panel--show
+				.panel-wrap
+					.panel-head Ваш заказ
+						.panel-head__numb  № 2143
+					.panel-list
+						- for (var i=0;i<4;i++)
+							.panel-list__el(style="background-image:url('img/card.jpg')")
+								.panel-list__el-val x2
+						.panel-list__el.panel-list__el--last(style="background-image:url('img/card.jpg')")
+							.panel-list__el-val +2
+					.panel-row
+						.panel-row__icon
+							+icon("location","icon")
+						.panel-row__text г.Барнаул, ул.Высоковольтная, 9-23  |  На ближайшее время
+					.panel-row
+						.panel-row__icon
+							+icon("coins","icon")
+						.panel-row__text Картой онлайн  |  1 220 руб  | - 36 баллов
+					.panel-total
+						.panel-text Сумма:
+						.panel-val 1 220 Р
+					.panel-bar
+						.panel-bar__el
+							.panel-bar__el-progres(data-bar="60")
+						.panel-bar__info
+							.panel-bar__icon
+								//use icons  === > pillow--color , car--color, present--color
+								+icon("pillow--color","icon")
+							.panel-bar__text Готовится
+
+
++footer()
+include ./block_html/_script.pug

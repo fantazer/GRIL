@@ -20,17 +20,17 @@ mixin checkbox(text,disable)
 				.sytle-input-element
 					+icon("checked","icon-check")
 				.sytle-input-text=text
-mixin radio(text,group,disable)
+mixin radio(text,group,check,disable)
 	.check-el
 		if disable
 			label.style-label.style-label--radio.style-label--disable
-				input(type="radio" name="group").sytle-input
+				input(type="radio" name=group).sytle-input
 				.sytle-input-element
 					.icon-radio
 				.sytle-input-text=text
 		else
 			label.style-label.style-label--radio
-				input(type="radio" name="group").sytle-input
+				input(type="radio" name=group checked=check?'checked':false).sytle-input
 				.sytle-input-element
 					.icon-radio
 				.sytle-input-text=text

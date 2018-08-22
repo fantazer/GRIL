@@ -404,7 +404,7 @@ body
 		opacity:1
 
 .footer-cont
-	+below(640px)
+	+below(768px)
 		border-left 0
 		width: 48%
 	+below(480px)
@@ -704,11 +704,11 @@ body
 	margin-bottom: 80px
 .section-title
 	+below(1024px)
-		margin-bottom: 30px
+		margin: 30px 0
 	@extend .type--extra
 	color $brown
 	up()
-	margin-bottom: 45px
+	margin: 45px 0
 
 .grid
 	+below(1024px)
@@ -1237,15 +1237,25 @@ body
 	margin-bottom: 40px
 	text-align: center
 .input-row-half
+	+below(640px)
+		fw()
 	f()
 	justify-content: space-between
 	input
+		+below(640px)
+			width: 100%
+			margin-bottom: 20px
 		width: 49%
 //.input
 .form-quest__footer
+	+below(640px)
+		fw()
 	margin-top: 20px
 	flex(between)
 .form-quest__text
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 	width: 50%
 	line-height: 1.6
 	opacity 0.7
@@ -1470,10 +1480,12 @@ body
 		margin-bottom: 40px
 .bread
 	+below(640px)
-		margin-bottom: 20px
+		margin-bottom: 20px 0
+		display: none
 	f()
 	fw()
-	margin-bottom: 45px
+	//margin-bottom: 45px
+	margin: 20px 0 10px 0
 .bread__el
 	margin-right: 15px
 	margin-bottom: 10px
@@ -1550,6 +1562,8 @@ body
 	padding-right: 20px
 	flex(between)
 .basket-head__title
+	+below(1024px)
+		font-size: 38px
 	+below(768px)
 		width: 100%
 		text-align: center
@@ -1637,8 +1651,10 @@ body
 	justify-content: space-between
 .basket-cont
 	+below(1024px)
+		width: calc(100% - 340px)
+	width: calc(100% - 380px)
+	+below(768px)
 		width: 100%
-	width: 65%
 .basket-empty
 	+below(1024px)
 		margin: 0px 0 50px 0
@@ -1659,10 +1675,16 @@ body
 .basket-text
 	text-align: center
 .panel
-	+below(1024px)
+	+below(768px)
 		flex(mid)
 		width: 100%
+	+below(768px)
+		display: none
+.panel--show
+	display: flex!important
 .panel-wrap
+	+below(480px)
+		width: 100%
 	width: 320px
 	box-shadow 0 10px 20px rgba(0, 0, 0, 0.1)
 	background-color #ffffff
@@ -1673,7 +1695,14 @@ body
 	padding-bottom: 10px
 	border-bottom 1px solid #f1eeeb
 	margin-bottom: 35px
+	f()
+	align-items: center
+.panel-head__numb
+	margin-left: auto
+	@extend .type--main
 .panel-total
+	//border-top 1px solid #f1eeeb
+	padding-top: 10px
 	flex(between)
 	margin-bottom: 20px
 .panel-text
@@ -1770,14 +1799,18 @@ body
 		@extend .type--xxl
 
 .panel-list
+	+below(480px)
+		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
 	margin-top: -10px
 	display: grid
 	grid-gap 15px
-	grid-template-columns repeat(auto-fit, minmax(40px, 1fr));
-	padding-bottom: 15px
-	border-bottom 1px solid #f1eeeb
+	grid-template-columns repeat(auto-fit, minmax(40px, 40px));
+	padding-bottom: 20px
 	margin-bottom: 15px
+	border-bottom 1px solid #f1eeeb
 .panel-list__el
+	+below(480px)
+		size 35px
 	size 40px
 	round()
 	bg-full()
@@ -1793,3 +1826,544 @@ body
 	round()
 	flex(mid)
 	@extend .type--sm
+
+.panel-list__el--last
+	border 1px solid darken($green,10)
+	.panel-list__el-val
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		opacity .8
+		font-size: 14px
+
+.order
+	+below(1024px)
+		width: 100%
+	+below(768px)
+		margin-bottom: 30px
+	+below(640px)
+		width: 100%
+	width: 70%
+.input-row
+	.input,textarea
+		width: 100%
+	width: 100%
+	margin-bottom: 15px
+.input-row--person
+	+below(640px)
+		margin-bottom: 20px
+	flex(between)
+	margin-bottom: 50px
+	.input-row--name
+		width: 60%
+	.input-row--phone
+		width: 37%
+.order-tab
+	f()
+	border 1px solid $green
+	margin-bottom: 30px
+.order-tab__el
+	padding: 15px 20px
+	width: 50%
+	text-align: center
+	color $green
+	cp()
+.order-tab__el--active
+	background: $green
+	color white
+//.order-cont
+.order-cont__el
+	margin-bottom: 50px
+.input-row--adress
+	+below(640px)
+		fw()
+	flex(between)
+	.input
+		+below(640px)
+			width: 48%
+		width: 23%
+.order-time
+	+below(480px)
+		fl()
+		flex(mid)
+	f()
+	align-items: center
+.order-time__title
+	+below(480px)
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	@extend .type--lg
+	margin-right: 20px
+.radio-list
+	.check-el
+		margin-bottom: 20px
+
+//.order-time__select
+.payment
+	margin-bottom: 50px
+.order-title
+	@extend .type--xxl
+	margin-bottom: 20px
+//.payment__type-tab
+.payment__type__el
+	margin-bottom: 20px
+//.payment__type-cont
+//.payment__type-cont-el
+//.payment-card
+.payment-card__el
+	flex(between)
+	@extend .btn--md
+	@extend .btn--light
+	padding: 20px
+	margin-bottom: 20px
+	width 320px
+	&:hover
+		.icon
+			fill white
+	.icon
+		width 45px
+		height: 15px
+		margin-right: 20px
+		fill $green
+		margin-bottom: -2px
+//.payment-card__el-icon
+//.icon
+//.payment-card__el-val
+.payment-card__other
+	@extend .btn--md
+	@extend .btn--light
+	padding: 20px
+	margin-bottom: 20px
+	width 320px
+.payment-card__el--active
+	background: $green
+	color white
+	.icon
+		fill white
+//.range
+
+.nice-select
+	br(0)
+	display: block
+	color #000000
+	font-size 14px
+	height: auto
+	line-height:auto
+	min-width 220px
+	.list
+		width: calc(100% )
+		left 0px
+		br(0)
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+
+select.select-beauty
+	display: none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+.range-wrap
+	margin-bottom: 50px
+
+.irs-slider
+	background: $green
+	round()
+	border 1px solid darken($green,10)
+.irs-line-left
+	background: #cbbaac
+.irs-line-right
+	background: #cbbaac
+	border-radius 0px 5px 5px 0
+.irs-line-mid
+	background: #cbbaac
+.irs-bar-edge
+	background: $green
+	border-radius  5px 0 0 5px
+.irs-bar
+	background: $green
+.irs-min, .irs-max
+	display: none
+.irs-from, .irs-to, .irs-single
+	background: none
+	color $brown--dark
+	@extend .type--main
+	top 45px
+
+.panel-row
+	f()
+	align-items: center
+	margin-bottom: 20px
+.panel-row__icon
+	margin-right: 20px
+	margin-top: 5px
+	.icon
+		size 24px
+		fill $brown
+.panel-row__text
+	line-height: 1.6
+
+.check-el--agree
+	.style-label
+		align-items: flex-start
+	@extend .type--sm
+	line-height: 1.6
+	margin-bottom: 25px
+
+.panel-fixed
+	+below(769px)
+		f()
+	display: none
+	position: fixed
+	bottom 0
+	left 0
+	width: 100%
+	background: white
+	z-index 5
+	.panel-total
+		width: 50%
+		padding: 10px 20px
+		margin-bottom: 0
+		border-bottom: 1px solid #f1eeeb;
+	.panel-val,.panel-text
+		font-size: 14px
+.panel-fixed__get
+	width: 50%
+	padding: 20px
+	@extend .btn--md
+	@extend .btn--mark
+
+.panel-fixed--true
+	position: initial
+	left initial
+	bottom initial
+
+
+.basket-true__wrap
+	f()
+	align-items: center
+	justify-content: center
+	width: 100%
+.basket-true__card
+	+below(480px)
+		width: 100%
+		padding: 0
+		border 0
+	padding: 30px
+	border 1px solid $gray--light
+	width: 450px
+.basket-true__el
+	+below(480px)
+		padding: 30px 20px
+
+	box-shadow 0 10px 20px rgba(0, 0, 0, 0.07)
+	background: white
+	padding: 65px 60px 70px 65px
+	flex(mid)
+	fl()
+.basket-true__icon
+	margin-bottom: 35px
+	.icon
+		size 95px
+.basket-true__title
+	color $brown
+	@extend .type--xxl
+	text-align: center
+	font-weight:700
+	margin-bottom: 20px
+.basket-true__text
+	margin-bottom: 50px
+	line-height: 1.6
+	text-align: center
+.basket-true__get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 100%
+	padding: 20px
+	margin-bottom: 20px
+
+.basket-true__back
+	@extend .btn--md
+	padding: 20px
+	width: 100%
+
+.video
+	width: 100%
+	height: 450px
+	+below(768px)
+		height: 250px
+	iframe
+		width: 100%
+		height: 100%
+		border 0!important
+
+//.panel-bar
+
+.panel-bar__el
+	height 10px
+	border-radius 5px
+	background-color $gray
+	margin-bottom: 20px
+	overflow: hidden
+.panel-bar__info
+	flex(mid)
+.panel-bar__icon
+	margin-right: 20px
+	.icon
+		size 30px
+
+.panel-bar__el-progres
+	height: 100%
+	background: $green
+	border-radius 5px
+
+.basket-video
+	margin-bottom: 40px
+
+.sale
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+	+below(480px)
+		margin-left: -10px
+		width:calc(100% + 20px)
+		grid-template-columns repeat(1,1fr);
+	display: grid
+	grid-row-gap 40px
+	grid-column-gap 20px
+	grid-template-columns repeat(3,1fr);
+//.sale__el
+.sale__el-img
+	bg-full()
+	padding: 20% 10%
+	margin-bottom: 15px
+.sale__el-title
+	@extend .type--xl
+	margin-bottom: 15px
+.sale__el-text
+	line-height: 1.6
+
+.sale__el-content
+	padding: 0 10px
+
+.book-row__title
+	display table-cell
+	 white-space nowrap
+.book-row__dot
+	display table-cell
+	border-bottom 1px solid $gray--light
+	width 100%
+.book-row__value
+	display table-cell
+	white-space nowrap
+
+.deliver-list
+	+below(768px)
+		grid-template-columns repeat(1,1fr);
+		margin-bottom: 20px
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
+	margin-bottom: 50px
+.deliver-list__el
+	padding: 25px
+	br(5px)
+	border 1px solid $gray
+.deliver-list__el--active
+	background: $green
+	.deliver-list__title
+		color white
+.deliver-list__title
+	@extend .type--xl
+	color $green
+	margin-bottom: 15px
+.deliver-list-wrap
+	fw()
+	f()
+	justify-content: space-between
+	margin-top: 20px
+.deliver-list-col
+	+below(1024px)
+		width: 100%
+	width: 48%
+.deliver-list-col__title
+	+below(1024px)
+		font-size: 14px
+	margin-bottom: 20px
+	color white
+	@extend .type--lg
+.deliver-list-col__text
+	color white
+	margin-bottom: 10px
+	font-size: 12px
+.deliver-list__title-sub
+	margin-bottom: 20px
+	@extend .type--lg
+.deliver-list__title-text
+	line-height: 1.6
+.deliver-map
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	align-items:stretch
+
+.deliver-map__item
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	width: 66%
+.deliver-map__item-el
+	background: $gray--light
+	height: 100%
+.deliver-map__col
+	+below(768px)
+		width: 100%
+	width: 32%
+
+.deliver-map__col-item
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 0px
+	padding-top: 20px
+	border-top 4px solid $green
+	.book-row
+		margin-bottom: 15px
+//.deliver-map__col-item--green
+.deliver-map__text
+	line-height: 1.6
+	margin-top: 20px
+	opacity .7
+.deliver-map__col-item--orange
+	border-color #ff9100
+.deliver-map__col-item--red
+	border-color #d20700
+
+.review
+	+below(1024px)
+		grid-template-columns repeat(3,1fr);
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+	+below(480px)
+		grid-template-columns repeat(1,1fr);
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4,1fr);
+.review__el
+	padding-bottom: 20px
+.review__el--active
+	padding: 30px
+	flex(mid)
+	fl()
+	bgi('pattern.jpg')
+	background-repeat: repeat
+.review__msg-icon
+	margin-bottom: 30px
+	.icon
+		size 50px
+.review__msg-title
+	@extend .type--xl
+	margin-bottom: 10px
+.review__msg-text
+	line-height: 1.6
+	margin-bottom: 40px
+	text-align: center
+.review__msg-get
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 20px
+.review__el-title
+	@extend .type--lg
+	margin-bottom: 10px
+.review-heart
+	f()
+	margin-bottom: 20px
+	padding-bottom: 20px
+	border-bottom 1px solid $gray--light
+	width: 100%
+	.icon
+		size 20px
+		margin-right: 5px
+		fill $green
+//.icon-heart--active
+//.icon-heart
+.review-text
+	line-height: 1.6
+	margin-bottom: 20px
+.review-date
+	opacity .5
+
+.contact
+	+below(768px)
+		margin-bottom: 30px
+	f()
+	justify-content: space-between
+	margin-bottom: 50px
+.contact__info
+	+below(768px)
+		width: 100%
+	width: 30%
+.contact__info-title
+	f()
+	align-items: center
+	margin-bottom: 30px
+.contact__info-icon
+	margin-right: 15px
+	.icon
+		size 27px
+		fill $green
+.contact__info-text
+	@extend .type--xl
+.contact__row
+	margin-bottom: 15px
+	padding-bottom: 15px
+	border-bottom 1px solid $gray--light
+.contact__row__text
+	margin-bottom: 10px
+.contact__map
+	+below(768px)
+		display: none
+	width: 68%
+	background: $gray--light
+
+.contact-footer
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+.contact-phone
+	+below(768px)
+		width: 100%
+		margin-bottom: 30px
+	+below(640px)
+		padding: 20px
+	width: 48%
+	flex(mid)
+	fl()
+	padding: 50px
+	border 1px solid $gray
+.contact-phone__icon
+	margin-bottom: 15px
+	.icon
+		size 66px
+.contact-phone__title
+	+below(1024px)
+		font-size: 28px
+	+below(768px)
+		font-size: 24px
+	@extend .type--xxl
+	margin-bottom: 20px
+.contact-phone__text
+	text-align: center
+	line-height: 1.6
+.contact-form
+	+below(768px)
+		width: 100%
+	width: 48%
+	.form-quest__title,.form-quest
+		display: block !important

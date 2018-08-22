@@ -1,0 +1,22 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.bread
+			-
+				var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+			each item in items
+				a(href="#").bread__el #{item}
+		.section-title акции
+		.sale
+			- for (var i=0;i<7;i++)
+				.sale__el
+					.sale__el-img(style="background-image:url('img/sale.jpg')")
+					.sale__el-content
+						.sale__el-title Мясная пицца в подарок!
+						.sale__el-text Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню
+
++footer()
+include ./block_html/_script.pug

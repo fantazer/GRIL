@@ -1,0 +1,72 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.bread
+			-
+				var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+			each item in items
+				a(href="#").bread__el #{item}
+
+		.section-title доставка и оплата
+
+		.deliver-list
+			.deliver-list__el.deliver-list__el--active
+				.deliver-list__title Режим работы
+				.deliver-list-wrap
+					.deliver-list-col
+						.deliver-list-col__title Доставка
+						.deliver-list-col__text 11.00 - 24.00 (Вс - Чт)
+						.deliver-list-col__text 11.00 - 01.00 (Пт - Сб)
+					.deliver-list-col
+						.deliver-list-col__title Прием заказов
+						.deliver-list-col__text 11.00 - 24.00 (Вс - Чт)
+						.deliver-list-col__text 11.00 - 01.00 (Пт - Сб)
+			.deliver-list__el
+				.deliver-list__title 43 минуты
+				.deliver-list__title-sub Среднее время доставки
+				.deliver-list__title-text Закажите доставку за 2 часа — доставка прибудет в точно указанное время!
+
+			.deliver-list__el
+				.deliver-list__title Бесплатная доставка
+				.deliver-list__title-sub При заказе от 500 руб. по Барнаулу
+				.deliver-list__title-text Минимальная сумма заказа 300 рублей
+
+		.deliver-map
+			.deliver-map__item
+				.deliver-map__item-el map
+			.deliver-map__col
+				.deliver-map__col-item.deliver-map__col-item--green
+					.book-row
+						.book-row__title От 500 руб.
+						.book-row__dot
+						.book-row__value Бесплатно
+					.book-row
+						.book-row__title до 500 руб.
+						.book-row__dot
+						.book-row__value 100 руб
+					.deliver-map__text Докучаево, Солнечная поляна, Урожайный, Сулима, Лазурная (новостройки)
+				.deliver-map__col-item.deliver-map__col-item--orange
+					.book-row
+						.book-row__title От 500 руб.
+						.book-row__dot
+						.book-row__value Бесплатно
+					.book-row
+						.book-row__title до 500 руб.
+						.book-row__dot
+						.book-row__value 100 руб
+					.deliver-map__text Центр, Поток, Павловский тракт, Черемушки
+				.deliver-map__col-item.deliver-map__col-item--red
+					.book-row
+						.book-row__title От 500 руб.
+						.book-row__dot
+						.book-row__value Бесплатно
+					.book-row
+						.book-row__title до 500 руб.
+						.book-row__dot
+						.book-row__value 100 руб
+					.deliver-map__text Гора, Южный, Кирова, Восточный, Научный городок, Спутник, Авиатор, Новосиликатный, Власиха, Октябрьский, Лесной, Куета, Казенная заимка, Гоньба, Затон, Лебяжье
++footer()
+include ./block_html/_script.pug

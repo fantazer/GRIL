@@ -1,6 +1,77 @@
 $(document).ready(function(){
 
 
+	//progress-bar
+		var pogressBar = $('.panel-bar__el-progres').data('bar');
+		$('.panel-bar__el-progres').css('width', pogressBar + "%");
+	//progress-bar===end
+
+
+	//fixed on scroll
+  var footer = $('.footer-main-wrap').offset().top;
+
+  $(document).scroll(function (event) {
+    var panel = $(this).scrollTop() + 680;
+    if (panel >= footer) {
+      $('.panel-fixed').addClass('panel-fixed--true');
+    } else {
+      $('.panel-fixed').removeClass('panel-fixed--true');
+    }
+  });
+	//fixed on scroll==end
+
+	//check agree
+	$('.check-el--agree').click(function(){
+		if($(this).find('input').is(':checked')){
+			$('.panel-get').removeClass('btn--disable');
+		}else {
+			$('.panel-get').addClass('btn--disable');
+		}
+	});
+	//check agree===end
+
+	//order-tabs
+	$('.order-tab__el').click(function(){
+		if(!$(this).hasClass('order-tab__el--active')){
+			$('.order-tab__el').removeClass('order-tab__el--active');
+			$(this).addClass('order-tab__el--active');
+		}
+		var current = $(this).data('tab');
+		$('.order-cont__el').each(function(){
+			if($(this).data('tab')===current){
+				$(this).removeClass('hidden');
+			}else{
+				$(this).addClass('hidden');
+			}
+		})
+	});
+
+	$('.payment-card__el').click(function(){
+		$('.payment-card__el').removeClass('payment-card__el--active')
+		$(this).addClass('payment-card__el--active')
+	});
+
+	$('.payment__type__el ').click(function(){
+		if($(this).data('tab')==='card'){
+				$('.payment__type-cont').removeClass('hidden');
+			}else{
+				$('.payment__type-cont').addClass('hidden');
+		}
+	});
+	//order-tabs===end
+
+	//nice-select
+	$('.select-beauty').niceSelect();
+	//nice-select===end
+
+	//range-slider
+	$(".range").ionRangeSlider({
+ 		min:10,
+ 		max:100,
+ 		postfix: " баллов",
+ 		prefix: "Списать "
+ 	});
+	//range-slider===end
 
 	//increment field
 	$('.icr-btn').click(function(){

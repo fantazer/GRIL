@@ -1,0 +1,43 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.main-cont
+		.bread
+			-
+				var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+			each item in items
+				a(href="#").bread__el #{item}
+
+		.section-title контакты
+		.contact
+			.contact__info
+				.contact__info-title
+					.contact__info-icon
+						+icon("market","icon")
+					.contact__info-text Наши заведения
+				- for (var i=0;i<6;i++)
+					.contact__row
+						.contact__row__text ул. А.Петрова 196а
+						.contact__row__text Предзаказ: 57-17-31
+			.contact__map map
+		.contact-footer
+			.contact-phone
+				.contact-phone__icon
+					+icon("heand-phone","icon")
+				.contact-phone__title +7 (3852) 57-17-76
+				.contact-phone__text Доставка осуществляется с 11.00 до 23.00,  ежедневно <br> Приём заказов с 10:00 до 22:00
+			.contact-form
+				.form-quest__title Есть вопросы? Напишите нам
+				.form-quest
+					form(action="#")
+						.input-row-half
+							input(type="text" placeholder="Ваше имя" class="input")
+							input(type="text" placeholder="Почта или телефон" class="input")
+						textarea(name="", cols="30", rows="10" class="input" placeholder="Сообщение")
+						.form-quest__footer
+							.form-quest__text Нажимая кнопку "Отправить" Вы соглашаетесь с политикой обработки персональных данных
+							input(type="submit" value="Отправить" class="form-quest__get")
++footer()
+include ./block_html/_script.pug

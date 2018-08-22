@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!--create by ANATOLY KUZNETSOV-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+	</head>
+	<!-- mixin nameMixin()-->
+	<!-- - var args = Array.prototype.slice.call(arguments)-->
+	<!-- - for item in args-->
+
+	<body class='page'>
+		<!--block header-->
+		<div class="head">
+			<div class="head-top-wrap">
+				<div class="main-cont">
+					<div class="head-top">
+						<a class="head__logo" href="#">
+							<img src="img/logo.svg" alt="" />
+						</a>
+						<div class="head__loc">
+							<div class="head__loc-town">Ваш город:
+								<span class="head__loc-town-el">Барнаул</span>
+							</div>
+							<div class="head__loc-text">Среднее время доставки: 43 мин.</div>
+						</div>
+						<div class="head__cont">
+							<a class="head__cont-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+							<div class="head__cont-text">Сегодня 11:00 - 24:00</div>
+						</div>
+						<div class="head__enter hidden">
+							<div class="head__enter-ico">
+								<svg class="icon">
+									<use xlink:href="#pick"></use>
+								</svg>
+							</div>
+							<div class="head__enter-text">Войти</div>
+						</div>
+						<a class="head__auth" href="#">
+							<div class="head__auth-ico">
+								<svg class="icon">
+									<use xlink:href="#pick"></use>
+								</svg>
+							</div>
+							<div class="head__auth-text">Александр</div>
+							<div class="head__auth-val">365 Б</div>
+						</a>
+						<div class="head-toggle">
+							<svg class="icon icon-open">
+								<use xlink:href="#menu"></use>
+							</svg>
+							<svg class="icon icon-close">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
+						<div class="head__basket">
+							<div class="head__basket__icon">
+								<svg class="icon">
+									<use xlink:href="#basket"></use>
+								</svg>
+							</div>
+							<div class="head__basket__text hidden">Корзина</div>
+							<div class="head__basket__text">1 923 Р
+								<span class="head__basket__val">(3)</span>
+							</div>
+							<div class="head__basket__val--mobile">3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head-menu-wrap">
+				<div class="main-cont">
+					<div class="head-menu">
+						<div class="head-list">
+							<a class="head-list__el--active head-list__el" href="#">Пицца</a>
+							<a class="head-list__el" href="#">Вок</a>
+							<a class="head-list__el" href="#">Шаурма</a>
+							<a class="head-list__el" href="#">Гриль</a>
+							<a class="head-list__el" href="#">Салаты</a>
+							<a class="head-list__el" href="#">Десерты</a>
+							<a class="head-list__el" href="#">Напитки</a>
+							<a class="head-list__el" href="#">Акции</a>
+						</div>
+						<div class="head-sub-list">
+							<a class="head-sub-list-el" href="#">О нас</a>
+							<a class="head-sub-list-el" href="#">Вакансии</a>
+							<a class="head-sub-list-el" href="#">Франшиза</a>
+							<a class="head-sub-list-el" href="#">Контакты</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide-menu">
+			<div class="slide-menu__list">
+				<a class="slide-menu__list-el" href="#">О нас</a>
+				<a class="slide-menu__list-el" href="#">Вакансии</a>
+				<a class="slide-menu__list-el" href="#">Франшиза</a>
+				<a class="slide-menu__list-el" href="#">Контакты</a>
+			</div>
+			<a class="slide-menu-btn" href="#">
+				<div class="slide-menu-btn__icon">
+					<svg class="icon">
+						<use xlink:href="#pick"></use>
+					</svg>
+				</div>
+				<div class="slide-menu-btn__text">Войти</div>
+			</a>
+			<a class="slide-menu-btn" href="#">
+				<div class="slide-menu-btn__text">Ваш город: Барнаул</div>
+			</a>
+			<div class="slide-menu__time">Среднее время доставки: 43 мин.</div>
+			<a class="slide-menu__phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+			<div class="slide-menu__work">8 (3852) 57-17-76</div>
+		</div>
+		<!--block header end-->
+		<div class="content">
+			<div class="main-cont">
+				<div class="bread">
+					<a class="bread__el" href="#">Главная</a>
+					<a class="bread__el" href="#">Пиццы</a>
+					<a class="bread__el" href="#">Гавайская с курицей</a>
+					<a class="bread__el" href="#">Пиццы</a>
+					<a class="bread__el" href="#">Гавайская с курицей</a>
+					<a class="bread__el" href="#">Пиццы</a>
+					<a class="bread__el" href="#">Гавайская с курицей</a>
+				</div>
+				<div class="section-title">акции</div>
+				<div class="sale">
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+					<div class="sale__el">
+						<div class="sale__el-img" style="background-image:url('img/sale.jpg')"></div>
+						<div class="sale__el-content">
+							<div class="sale__el-title">Мясная пицца в подарок!</div>
+							<div class="sale__el-text">Две оригинальные пиццы 30 см – Четыре Сезона и Гавайская + пара бутылочек Кока-Кола 0,5 л. Самое додоброе и бодрящее сочетание! Выберите комбо в меню</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--block footer-->
+		<div class="footer">
+			<div class="footer-top-wrap">
+				<div class="main-cont">
+					<div class="footer-top">
+						<div class="footer-top__col">
+							<div class="footer-top__title">Бесплатная доставка</div>
+							<div class="footer-top__text">При заказе от 500 руб. по г.Барнаул</div>
+						</div>
+						<div class="footer-top__col">
+							<div class="footer-top__title">43 минуты</div>
+							<div class="footer-top__text">Среднее время доставки.</div>
+						</div>
+						<div class="footer-top__col">
+							<div class="footer-top__title">300 руб.</div>
+							<div class="footer-top__text">Минимальная сумма заказа</div>
+						</div>
+						<a class="footer-deliver" href="#" style="background-image:url('img/map.jpg')">
+							<div class="footer-deliver__text">Зона доставки</div>
+							<div class="footer-deliver__ico">
+								<svg class="icon">
+									<use xlink:href="#compas"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-main-wrap">
+				<div class="main-cont">
+					<div class="footer-main">
+						<div class="footer-info">
+							<div class="footer-title">Гриль №1 © 2018</div>
+							<a class="footer-politick" href="#"> Политика обработки
+								<br> персональных данных</a>
+							<div class="footer-pay">
+								<div class="footer-pay__icon">
+									<svg class="icon">
+										<use xlink:href="#card"></use>
+									</svg>
+								</div>
+								<div class="footer-pay__text">Опата картой онлайн</div>
+							</div>
+						</div>
+						<div class="footer-list">
+							<div class="footer-title">Гриль №1 © 2018</div>
+							<a class="footer-list__el" href="#">О нас</a>
+							<a class="footer-list__el" href="#">Вакансии</a>
+							<a class="footer-list__el" href="#">Отзывы</a>
+							<a class="footer-list__el" href="#">Контакты</a>
+						</div>
+						<div class="footer-list">
+							<div class="footer-title">Партнерам</div>
+							<a class="footer-list__el" href="#">Ищем поставщиков</a>
+							<a class="footer-list__el" href="#">Предложить помещение</a>
+							<a class="footer-list__el" href="#">Франшиза</a>
+						</div>
+						<div class="footer-cont">
+							<a class="footer-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+							<a class="footer-mail" href="mailto:Manager@grill1.org">Manager@grill1.org</a>
+							<div class="soc-row">
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#vk"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#fb"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#inst"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#twt"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#youtube"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-layer">
+			<div class="modal-cont">
+				<div class="modal-filter"></div>
+				<div class="modal-wrap">
+					<div class="modal" data-modal="enter">
+						<div class="modal-content modal-content--fogot">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Вход на сайт</div>
+							<div class="modal-text">Введите номер телефона
+								<br> на который будет выслан код</div>
+							<form class="validate-form" action="javascript:void(null);">
+								<div class="input-row input-phone">
+									<input class="input" type="text" name="name" data-mask="(000)000-00-00" />
+								</div>
+								<input class="modal-send" type="submit" value="Выслать код" />
+							</form>
+							<div class="modal-soc-enter-text">Или войдите через соцсети</div>
+							<div class="soc-row soc-row--midle">
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#vk--color"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#ok--color"></use>
+									</svg>
+								</a>
+								<a class="soc-el" href="#">
+									<svg class="icon">
+										<use xlink:href="#fb--color"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="modal" data-modal="re-enter">
+						<div class="modal-content modal-content--fogot">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Вход на сайт</div>
+							<div class="modal-text">На указанный номер был
+								<br> выслан код</div>
+							<form class="validate-form" action="javascript:void(null);">
+								<div class="input-row">
+									<input class="input" type="text" name="name" placeholder="Введите код" />
+								</div>
+								<input class="modal-send" type="submit" value="Войти" />
+							</form>
+							<div class="row--mid">
+								<a class="modal-code-link" href="#">Выслать код еще раз</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--a(href="#" data-modal="enter").modal-get Открыть модальное окно-->
+		<!--a(href="#" data-modal="re-enter").modal-get Открыть модальное окно-->
+		<!--block footer end-->
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+		<script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+		<!-- endbuild-->
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>
