@@ -1,0 +1,117 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+.content
+	.lk-bg
+		.lk-bg__left
+		.lk-bg__right
+
+	.main-cont
+		.lk
+			.lk-user
+				.bread
+					-
+						var items = ['Главная','Личный кабинет'];
+					each item in items
+						a(href="#").bread__el #{item}
+
+				.lk-title
+					.lk-title__text  мой профиль
+					a(href="#").lk-title__exit выйти
+
+				.user
+					.user-row
+						.user__name Имя:
+						.user__val
+							.user__val-input.hidden
+								input(type="text" placeholder="" value="" class="input input-name")
+								input(type="submit" value="Изменить" class="user__val-send")
+							.user__val-info
+								.user__val-text Александр
+								.user__val-edit Изменить
+
+					.user-row
+						.user__name Телефон:
+						.user__val +7 923 666 7667
+					.user-row
+						.user__name День рождения:
+						.user__val 30 Сентября
+					.user-row
+						.user__name Email:
+						.user__val
+							.user__val--add
+								a(href="#") Добавить
+
+				.lk-title-sub Привязанные карты
+
+				.user-card
+					a(href="#").user-card__el.user-card__el--active
+						.user-card-remove
+							+icon("close","icon")
+						.user-card-icon
+							+icon("visa","icon")
+						.user-card-numb 7878 988* **** 3445
+					- for (var i=0;i<2;i++)
+						.user-card__el.user-card__el--add
+							.user-card__add
+								+icon("plus","icon")
+							.user-card__add-text Привязать карту
+
+
+				.lk-title-sub Адреса
+				.lk-adr
+					a(href="#").lk-adr__el.lk-adr__el--active
+						.lk-adr-remove
+							+icon("close","icon")
+						.lk-adr-text Дом
+						.lk-adr-adress г.Барнаул, пр.Ленина 62-2
+						.lk-adr-edit Редактировать
+					- for (var i=0;i<2;i++)
+						.lk-adr__el.lk-adr__el--add
+							.lk-adr__add
+								+icon("plus","icon")
+							.lk-adr__add-text Добавить адрес
+
+			.lk-order
+				.history-title История заказов
+				.history
+					- for (var j=0;j<3;j++)
+						.history-card
+							.history-info
+								.history-info__head
+									.history-info__head-date 28 Апреля 2017
+									.history-info__head-state Доставлен
+									.history-info__head-numb № 43576
+								- for (var k=0;k<4;k++)
+									.history-info__list
+										.history-info__el
+											a(href="#" style="background-image:url('img/card.jpg')").history-info__el-img
+											.history-info__el-about
+												.history-info__el-title Гавайская с курицей
+												.history-info__el-text Традиционное, 35 см
+											.history-info__el-count x2
+											.history-info__el-price 680 Р
+								.history-info-footer
+									.history-info-total
+										.history-info-total__text Сумма:
+										.history-info-total__val 1 184 Р
+									.history-info-get повторить заказ
+							.history-card__wrap
+								.history-card__info
+									.history-card__date 28 Сентября, 2017
+									.history-card__numb № 43576
+								.history-card__list
+									- for (var i=0;i<3;i++)
+										a(href="#" style="background-image:url('img/card.jpg')").history-card__list-el.tooltip.tooltip--dark
+											.top
+												i
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!
+											.history-card__list-el-val x2
+									.history-card__list-el.history-card__list-el--last(style="background-image:url('img/card.jpg')")
+										.history-card__list-el-val +2
+								.history-card__price 1100 Р
+					.histiry-empty Вы еще не сделали ни одного заказа,лучшее время это исправить и заказать что-то вкусное :)
+
++footer()
+include ./block_html/_script.pug

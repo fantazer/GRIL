@@ -1,5 +1,31 @@
 $(document).ready(function(){
 
+	//history accord
+	$('.history-card').click(function(){
+		var current = $(this);
+		current.find('.history-card__wrap').slideUp(600);
+		//current.find('.history-card__wrap').addClass('history-card__wrap--active');
+		current.find('.history-info').slideDown(600);
+	});
+	//history accord===end
+
+	//edit user name
+	$('.user__val-edit').click(function(){
+		var name = $('.user__val-text').text();
+		$('.user__val-input')
+			.removeClass('hidden')
+			.find('.input-name')
+			.val(name);
+			$('.user__val-info').addClass('hidden');
+	});
+
+	$('.user__val-send').click(function(){
+		var changeName = $('.input-name').val();
+		$('.user__val-text').text(changeName);
+		$('.user__val-input').addClass('hidden');
+		$('.user__val-info').removeClass('hidden')
+	});
+	//edit user name===end
 
 	//progress-bar
 		var pogressBar = $('.panel-bar__el-progres').data('bar');

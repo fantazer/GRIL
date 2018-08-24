@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 1074.4em;
+    background-size: 51.2em 1078.6em;
 }
 
 .no-svg .icon:before {
@@ -386,8 +386,17 @@
 
 
 
-  .icon.present--color:before {
+  .icon.plus:before {
       background-position: 0em -698em;
+      width: 4.2em;
+      height: 4.2em;
+  }
+
+
+
+
+  .icon.present--color:before {
+      background-position: 0em -702.2em;
       width: 2.8em;
       height: 3em;
   }
@@ -396,7 +405,7 @@
 
 
   .icon.share:before {
-      background-position: 0em -701em;
+      background-position: 0em -705.2em;
       width: 48.160000000000004em;
       height: 48.160000000000004em;
   }
@@ -405,7 +414,7 @@
 
 
   .icon.soc-facebook:before {
-      background-position: 0em -749.2em;
+      background-position: 0em -753.4em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -414,7 +423,7 @@
 
 
   .icon.soc-google:before {
-      background-position: 0em -800.4em;
+      background-position: 0em -804.6em;
       width: 9.6669em;
       height: 9.6669em;
   }
@@ -423,7 +432,7 @@
 
 
   .icon.soc-in:before {
-      background-position: 0em -810.1em;
+      background-position: 0em -814.3em;
       width: 43.011700000000005em;
       height: 43.011700000000005em;
   }
@@ -432,7 +441,7 @@
 
 
   .icon.soc-instagram:before {
-      background-position: 0em -853.2em;
+      background-position: 0em -857.4em;
       width: 43.8536em;
       height: 43.8536em;
   }
@@ -441,7 +450,7 @@
 
 
   .icon.soc-ok:before {
-      background-position: 0em -897.1em;
+      background-position: 0em -901.3em;
       width: 9.5481em;
       height: 9.5481em;
   }
@@ -450,7 +459,7 @@
 
 
   .icon.soc-twitter:before {
-      background-position: 0em -906.7em;
+      background-position: 0em -910.9em;
       width: 41.015499999999996em;
       height: 41.015499999999996em;
   }
@@ -459,7 +468,7 @@
 
 
   .icon.soc-vk:before {
-      background-position: 0em -947.8em;
+      background-position: 0em -952em;
       width: 51.2em;
       height: 51.2em;
   }
@@ -468,7 +477,7 @@
 
 
   .icon.soc-youtube:before {
-      background-position: 0em -999em;
+      background-position: 0em -1003.2em;
       width: 6.4em;
       height: 6.4em;
   }
@@ -477,7 +486,7 @@
 
 
   .icon.star:before {
-      background-position: 0em -1005.4em;
+      background-position: 0em -1009.6em;
       width: 49.0727em;
       height: 49.0727em;
   }
@@ -486,7 +495,7 @@
 
 
   .icon.tomat--color:before {
-      background-position: 0em -1054.5em;
+      background-position: 0em -1058.7em;
       width: 5.2em;
       height: 5.2em;
   }
@@ -495,7 +504,7 @@
 
 
   .icon.twt:before {
-      background-position: 0em -1059.7em;
+      background-position: 0em -1063.9em;
       width: 3.2em;
       height: 3.2em;
   }
@@ -504,7 +513,7 @@
 
 
   .icon.visa:before {
-      background-position: 0em -1062.9em;
+      background-position: 0em -1067.1em;
       width: 4.8em;
       height: 1.5em;
   }
@@ -513,7 +522,7 @@
 
 
   .icon.vk:before {
-      background-position: 0em -1064.4em;
+      background-position: 0em -1068.6em;
       width: 3.2em;
       height: 3.2em;
   }
@@ -522,7 +531,7 @@
 
 
   .icon.vk--color:before {
-      background-position: 0em -1067.6em;
+      background-position: 0em -1071.8em;
       width: 3.6em;
       height: 3.6em;
   }
@@ -531,7 +540,7 @@
 
 
   .icon.youtube:before {
-      background-position: 0em -1071.2em;
+      background-position: 0em -1075.4em;
       width: 3.2em;
       height: 3.2em;
   }

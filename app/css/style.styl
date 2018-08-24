@@ -245,7 +245,7 @@ body
 .content
 	flex-grow 1
 	flex-shrink 1
-
+	position: relative
 
 @keyframes slideInDown {
 	from {
@@ -1129,6 +1129,13 @@ body
 	visibility:visible
 	opacity:1
 
+.tooltip--dark
+	.top
+		background-color:$brown--dark
+		color white
+		i
+			&:after
+				background-color:$brown--dark!important
 .tooltip .top i
 	position:absolute
 	top:100%
@@ -2367,3 +2374,359 @@ select.select-beauty
 	width: 48%
 	.form-quest__title,.form-quest
 		display: block !important
+
+//.lk-bg
+.lk-bg__left
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	left 0
+.lk-bg__right
+	+below(640px)
+		display: none
+	width: 50%
+	height: 100%
+	position: absolute
+	top 0
+	right 0
+	background: $gray--light
+.lk
+	f()
+.lk-user
+	width: 50%
+	padding-right: 40px
+.lk-title
+	flex(between)
+	margin-bottom: 70px
+.lk-title__text
+	color $brown
+	@extend .type--extra
+	font-weight 900
+	up()
+.lk-title__exit
+	@extend .btn--md
+	min-width auto
+	padding: 20px 30px
+.user
+	margin-bottom: 50px
+.user-row
+	f()
+	margin-bottom: 35px
+	align-items: center
+.user__name
+	width: 40%
+.user__val
+	@extend .type--lg
+.lk-title-sub
+	color $brown
+	@extend .type--xxl
+	margin-bottom: 30px
+.user-card
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(2,1fr);
+	margin-bottom: 50px
+.user-card__el
+	height: 160px
+	border 1px solid $gray
+	tr(all)
+	&:hover
+		border 1px solid #93908e
+		.user-card__add-text
+			color #93908e
+		.user-card__add
+			border 1px solid #93908e
+			.icon
+				fill #93908e
+.user-card__el--active
+	f()
+	fl()
+	tr(all)
+	padding: 25px 20px
+	background: $green
+	position: relative
+	border 0!important
+	&:hover
+		background: darken($green,5)
+.user-card-remove
+	flex(mid)
+	br(2px)
+	opacity .6
+	size 22px
+	border 1px solid white
+	position: absolute
+	right: 20px
+	top 20px
+	tr(all)
+	&:hover
+		opacity 1
+		.icon
+			opacity 1
+	.icon
+		tr(all)
+		opacity .6
+		size 8px
+		fill white
+.user-card-icon
+	.icon
+		fill white
+		width 50px
+		height: 15px
+.user-card-numb
+	@extend .type--lg
+	color white
+	margin-top: auto
+	margin-bottom: 10px
+.user-card__el--add
+	flex(mid)
+	fl()
+	cp()
+.user-card__add
+	size 40px
+	border 1px solid #e3ddd8
+	flex(mid)
+	br(4px)
+	tr(all)
+	margin-bottom: 5px
+	.icon
+		tr(all)
+		size 18px
+		fill #e3ddd8
+.user-card__add-text
+	color #e3ddd8
+	tr(all)
+.lk-adr
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(2,1fr);
+	margin-bottom: 50px
+.lk-adr__el
+	height: 160px
+	border 1px solid $gray
+	cp()
+	&:hover
+		border 1px solid #93908e
+		.lk-adr__add-text
+			color #93908e
+		.lk-adr__add
+			border 1px solid #93908e
+			.icon
+				fill #93908e
+.lk-adr__el--active
+	padding: 25px 20px
+	position: relative
+	f()
+	fl()
+	border 1px solid $green
+.lk-adr-remove
+	flex(mid)
+	br(2px)
+	opacity .6
+	size 22px
+	border 1px solid #cbbaac
+	position: absolute
+	right: 20px
+	top 20px
+	&:hover
+		border 1px solid $green
+		opacity 1
+		.icon
+			opacity 1
+			fill green
+	.icon
+		tr(all)
+		opacity .6
+		size 8px
+		fill #cbbaac
+.lk-adr-adress
+	margin-top: auto
+	margin-bottom: 10px
+.lk-adr-text
+	tr(all)
+	@extend .type--lg
+	color $green
+//.lk-adr-edit
+.lk-adr__el--add
+	flex(mid)
+	fl()
+	cp()
+.lk-adr__add
+	size 40px
+	border 1px solid #e3ddd8
+	flex(mid)
+	br(4px)
+	tr(all)
+	margin-bottom: 5px
+	.icon
+		tr(all)
+		size 18px
+		fill #e3ddd8
+.lk-adr__add-text
+	tr(all)
+	color #e3ddd8
+.lk-order
+	width: 47%
+	padding: 60px 0 30px 40px
+.user__val-info
+	f()
+
+.user__val-edit
+	margin-left: 20px
+	cp()
+	color $green
+	font-weight: 400
+
+.user__val-input
+	f()
+	.input-name
+		margin-bottom: 0
+.user__val--add
+	a
+		font-weight: 400
+		color $green
+
+.user__val-send
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 10px 20px
+	min-width auto
+	height: 50px
+
+.history-title
+	@extend .type--xxl
+	margin-bottom: 35px
+//.history
+
+.history-card
+	perspective 600px
+.history-card__wrap
+	background: white
+	padding: 20px
+	f()
+	align-items: center
+	transform-style: preserve-3d;
+	cp()
+	//transition all .6s
+	margin-bottom: 20px
+	&:hover
+		box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+.history-card__wrap--active
+	transform rotateX(90deg)
+	backface-visibility hidden
+.history-card__info
+	margin-right: 5%
+//.history-card__date
+.history-card__numb
+	opacity .6
+.history-card__price
+	margin-left: auto
+	@extend .type--lg
+
+.history-card__list
+	+below(480px)
+		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
+	display: grid
+	grid-gap 15px
+	grid-template-columns repeat(4,1fr);
+.history-card__list-el
+	+below(480px)
+		size 35px
+	size 40px
+	round()
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+.history-card__list-el-val
+	position: absolute
+	right: -8px
+	top -2px
+	size 24px
+	background: $green
+	color white
+	round()
+	flex(mid)
+	@extend .type--sm
+
+
+.history-card__list-el--last
+	border 1px solid darken($green,10)
+	.history-card__list-el-val
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		opacity .8
+		font-size: 14px
+//.history-card--open
+
+.history-info
+	box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+	background-color #ffffff
+	padding: 20px
+	margin-bottom: 20px
+	display: none
+
+//.history-card
+
+.history-info__head
+	f()
+	margin-bottom: 20px
+.history-info__head-date
+	margin-right: 15px
+.history-info__head-state
+	color $green
+.history-info__head-numb
+	margin-left: auto
+	opacity .6
+.history-info__list
+	margin-bottom: 25px
+.history-info__el
+	f()
+	margin-bottom: 10px
+	padding-bottom: 20px
+	border-bottom 1px solid $gray--light
+.history-info__el-img
+	+below(480px)
+		size 35px
+	size 40px
+	round()
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+	margin-right: 20px
+//.history-info__el-about
+.history-info__el-title
+	margin-bottom: 5px
+.history-info__el-text
+	opacity .6
+.history-info__el-count
+	size 40px
+	border 1px solid $gray
+	flex(mid)
+	round()
+	margin-left: auto
+	margin-right: 10%
+.history-info__el-price
+	flex(mid)
+	@extend .type--lg
+.history-info-footer
+	f()
+	align-items: center
+.history-info-total
+	f()
+	align-items: center
+.history-info-total__text
+	@extend .type--lg
+	margin-right: 10px
+.history-info-total__val
+	color $green
+	@extend .type--xl
+.history-info-get
+	@extend .btn--md
+	margin-left: auto
+	padding: 20px 30px
+
+.histiry-empty
+	width: 320px
+	line-height: 1.6
