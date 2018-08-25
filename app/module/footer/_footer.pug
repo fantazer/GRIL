@@ -97,6 +97,40 @@ mixin footer()
 						.row--mid
 							a(href="#").modal-code-link Выслать код еще раз
 
+				.modal(data-modal="adress")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Добавить адрес
+						form( action="#")
+							.select-city
+								.select-city__el
+									+radio("Барнаул","payment","check")
+								.select-city__el
+									+radio("Байск","payment")
+							.input-row
+								input(type="text" name="name" placeholder="улица").input
+							.input-row-half
+								input(type="text" name="name" placeholder="Дом").input
+								input(type="text" name="name" placeholder="Квартира").input
+							.input-row-half
+								input(type="text" name="name" placeholder="Подъезд").input
+								input(type="text" name="name" placeholder="Этаж").input
+							.input-row
+								input(type="text" name="name" placeholder="Подпись (например: работа)").input
+							input(type="submit" value="Cохранить").modal-send
+
+				.modal(data-modal="town")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Ваш город
+						.town-list
+							a(href="#").town-list__el Барнаул
+							a(href="#").town-list__el Байск
+
+
+
 	//a(href="#" data-modal="enter").modal-get Открыть модальное окно
 	//a(href="#" data-modal="re-enter").modal-get Открыть модальное окно
 	//block footer end
