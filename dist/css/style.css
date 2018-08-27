@@ -1750,7 +1750,6 @@ body {
   margin: 0;
   -webkit-animation: slideInDown 1s 1 ease-in-out;
           animation: slideInDown 1s 1 ease-in-out;
-  border-bottom: 1px solid #e3ddd8;
   z-index: 1010;
 }
 .shrink .head-top__list {
@@ -2376,7 +2375,7 @@ body {
   content: '+7';
   position: absolute;
   left: 20px;
-  top: 21px;
+  top: 17px;
 }
 .row--mid {
   display: -webkit-box;
