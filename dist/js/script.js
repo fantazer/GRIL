@@ -1,6 +1,26 @@
 $(document).ready(function(){
 
 
+	//slide menu enter
+	$('.slide-menu-btn__enter').click(function(){
+		$('.head').removeClass('head--up');
+		$('.head-toggle').removeClass('head-toggle--open');
+		$('.slide-menu').removeClass('slide-menu--open');
+		shrinkHeader = 250
+	});
+	//slide menu enter===end
+	//slide menu change town
+	$('.slide-menu-btn--town').click(function(){
+		$(this).hide();
+		$('.slide-menu__town').removeClass('hidden');
+	});
+	$('.slide-menu__town .select-city__el').click(function(){
+		var currentTown = $(this).find('.sytle-input-text').text();
+		$('.slide-menu-btn__text-val').text(currentTown);
+		$('.slide-menu__town').addClass('hidden');
+		$('.slide-menu-btn--town').show();
+	});
+	//slide menu change town===end
 	//history accord
 	$('.history-card').click(function(){
 		var current = $(this);
@@ -230,6 +250,7 @@ $(document).ready(function(){
 	//mobile menu
 	$('.head-toggle').click(function(event){
 		event.stopPropagation();
+		$('.head').toggleClass('head--up');
 		$(this).toggleClass('head-toggle--open');
 		$('.slide-menu').toggleClass('slide-menu--open');
 		if($('.modal-layer').hasClass('modal-layer-show')){
@@ -242,10 +263,12 @@ $(document).ready(function(){
 	$('.slide-menu').on("click", function (event) {
 		event.stopPropagation();
 	});
+
 	$(document).on("click", function () {
 			/*if($('.modal-layer').hasClass('modal-layer-show')){
 				closeModal();
 			}*/
+			$('.head').removeClass('head--up');
 			$(this).removeClass('head-toggle--open');
 			$('.slide-menu').removeClass('slide-menu--open');
 			shrinkHeader = 250
@@ -258,7 +281,7 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 		var scroll = $(this).scrollTop();
 		if ( scroll >= shrinkHeader ) {
-				//$('body').css('paddingTop',heightHeader);
+				$('body').css('paddingTop',heightHeader);
 				$('.head').addClass('shrink');
 			}
 			else {

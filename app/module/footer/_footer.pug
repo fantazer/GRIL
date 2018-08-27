@@ -128,7 +128,15 @@ mixin footer()
 						.town-list
 							a(href="#").town-list__el Барнаул
 							a(href="#").town-list__el Байск
-
+				.modal(data-modal="mail")
+					.modal-content.modal-content--fogot
+						.modal-close
+							+icon("close","icon")
+						.modal-title Добавить e-mail
+						form( action="#")
+							.input-row.input-row--add-mail
+								input(type="text" name="name" placeholder="Ваша почта").input
+							input(type="submit" value="Cохранить").modal-send
 
 
 	//a(href="#" data-modal="enter").modal-get Открыть модальное окно

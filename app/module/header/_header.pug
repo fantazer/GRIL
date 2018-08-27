@@ -4,10 +4,8 @@ mixin header()
 		.head-top-wrap
 			.main-cont
 				.head-top
-					a(href="#").head__logo
+					a(href="/").head__logo
 						img(src="img/logo.svg", alt="")
-
-
 					.head__loc
 						.head__loc-town.modal-get(data-modal="town") Ваш город:
 							span.head__loc-town-el Барнаул
@@ -72,15 +70,23 @@ mixin header()
 					];
 			each item in items
 				a(href="#").slide-menu__list-el #{item}
-		a(href="#").slide-menu-btn
+		.slide-menu-btn.slide-menu-btn__enter.modal-get(data-modal="enter")
 			.slide-menu-btn__icon
 				+icon("pick","icon")
 			.slide-menu-btn__text Войти
-		a(href="#").slide-menu-btn
-			.slide-menu-btn__text Ваш город: Барнаул
+		.slide-menu-btn.slide-menu-btn--town
+			.slide-menu-btn__text Ваш город:
+				span.slide-menu-btn__text-val Барнаул
+		.slide-menu__town.hidden
+			.slide-menu__town-title Выберите Ваш город
+			.select-city
+				.select-city__el
+					+radio("Барнаул","payment","check")
+				.select-city__el
+					+radio("Байск","payment")
 		.slide-menu__time Среднее время доставки: 43 мин.
 		a(href="tel:8 (3852) 57-17-76").slide-menu__phone 8 (3852) 57-17-76
-		.slide-menu__work 8 (3852) 57-17-76
+		.slide-menu__work Сегодня 11:00 - 24:00
 
 
 	//block header end

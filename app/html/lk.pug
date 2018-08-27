@@ -2,7 +2,7 @@ include block_html/_style.pug
 include block_html/_include.pug
 
 +header()
-.content
+.content.content--lk
 	.lk-bg
 		.lk-bg__left
 		.lk-bg__right
@@ -41,8 +41,7 @@ include block_html/_include.pug
 						.user-row
 							.user__name Email:
 							.user__val
-								.user__val--add
-									a(href="#") Добавить
+								.user__val--add.modal-get(data-modal="mail") Добавить
 
 					.lk-title-sub Привязанные карты
 

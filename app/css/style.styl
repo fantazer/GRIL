@@ -23,8 +23,11 @@ body
 	width:100%
 	z-index 1010
 	background: white
+.head--up
+	z-index 1250!important
 
 .head-top-wrap
+	overflow hidden
 //.main-cont
 .head-top
 	+below(1024px)
@@ -193,6 +196,7 @@ body
 			background: transparent
 			display: none
 		&:before
+			display: none
 			content ''
 			position: absolute
 			right: 0
@@ -209,7 +213,7 @@ body
 	+below(1024px)
 		width: 100%
 	flex(between)
-	width: 62%
+	width: 63.5%
 .head-list__el
 	+below(1024px)
 		height: 50px
@@ -247,7 +251,10 @@ body
 	flex-grow 1
 	flex-shrink 1
 	position: relative
-
+.content--lk
+	+below(1024px)
+		margin-bottom: -30px
+	margin-bottom: -100px
 @keyframes slideInDown {
 	from {
 		transform: translate3d(0, -100%, 0);
@@ -358,7 +365,7 @@ body
 	padding: 50px 0
 	color white
 .footer-info
-	+below(640px)
+	+below(768px)
 		width: 48%
 	+below(480px)
 		width: 100%
@@ -502,18 +509,19 @@ body
 .modal-content
 	+below(768px)
 		padding: 20px
+		width: 80%
 	+below(640px)
 		max-height calc(100vh - 60px)
 		overflow-y scroll
-		padding: 20px 5px
-		width: 100%!important
+		padding: 20px 15px
+		width: 95%!important
+		min-width auto
 	//background: #2b8850
 	background: white
 	position: relative
 	padding: 40px
 	min-width 390px
-	+below(768px)
-		width: 80%
+
 
 .modal-content--register
 	width: 500px
@@ -629,7 +637,7 @@ body
 //modal===end
 
 .modal-soc-enter-text
-	margin-top: 40px
+	margin-top: 20px
 	margin-bottom: 20px
 	opacity .6
 	text-align: center
@@ -703,6 +711,9 @@ body
 		margin-left: auto
 		margin-right: auto
 	margin-bottom: 80px
+.section--mobile
+	+below(1024px)
+		margin-top: 0
 .section-title
 	+below(1024px)
 		margin: 30px 0
@@ -755,7 +766,7 @@ body
 	height: 100%
 .pizza__img-wrap
 	+below(480px)
-		width: 28%
+		width: 35%
 		margin-right: 10px
 .pizza__img
 	bg-full()
@@ -781,12 +792,14 @@ body
 	width: 100%
 	text-align: center
 	padding: 10px
-	border-right 1px solid #cbbaac
 	//margin-right: -1px
 	cp()
 	tr(all)
+	border-right 1px solid #cbbaac
 	&:hover
 		background-color $gray--light
+	&:last-child
+		margin-right: -1px
 
 .pizza__size-el--active
 	background: $gray
@@ -838,6 +851,7 @@ body
 
 .incr__get-wrap
 	+below(480px)
+		flex(mid)
 		width: 100%
 .pizza-lg
 	f()
@@ -909,6 +923,7 @@ body
 	f()
 .pizza-lg__toggle
 	width: 60%
+	overflow hidden
 //.pizza__size
 //.pizza__size-el
 //.pizza__size-el--active
@@ -947,7 +962,7 @@ body
 	height: 100%
 .item__img-wrap
 	+below(480px)
-		width: 28%
+		width: 35%
 		margin-right: 10px
 .item__img
 	bg-full()
@@ -971,9 +986,12 @@ body
 	f()
 	fl()
 .item__footer
+	+below(640px)
+		flex(mid)
 	f()
 	flex(between)
 	margin-top: auto
+	
 .item__price
 	+below(480px)
 		width: 100%
@@ -1158,7 +1176,7 @@ body
 
 .icr-btn
 	height: 40px
-
+	flex(mid)
 .review-slider-wrap
 	padding: 50px 0
 	bgi('pattern.jpg')
@@ -1204,6 +1222,7 @@ body
 .card
 	flex(mid)
 	fl()
+	height: 100%
 .card__img-wrap
 	width: 100%
 	margin-bottom: 25px
@@ -1215,10 +1234,11 @@ body
 .card__text
 	text-align: center
 	line-height: 1.6
+	margin-bottom: 20px
 .card__val
 	color $brown--dark
 	@extend .type--xl
-	margin: 20px 0
+	margin: auto 0 20px 0
 .card__get
 	+below(480px)
 		width: 100%
@@ -1258,12 +1278,15 @@ body
 .form-quest__footer
 	+below(640px)
 		fw()
+		flex(mid)
+		fl()
 	margin-top: 20px
 	flex(between)
 .form-quest__text
 	+below(640px)
 		width: 100%
 		margin-bottom: 20px
+		text-align: center
 	width: 50%
 	line-height: 1.6
 	opacity 0.7
@@ -1301,7 +1324,7 @@ body
 	color white
 	position: fixed
 	height: calc(100% - 100px)
-	z-index 1100
+	z-index 1250
 	top 102px
 	right 0
 	padding: 25px
@@ -1435,6 +1458,7 @@ body
 .card-item
 	position: relative
 	margin-bottom: 80px
+	border-bottom 1px solid $gray--light
 	+below(640px)
 		margin-bottom: 20px
 //.card__bg
@@ -1459,12 +1483,13 @@ body
 .card-wrap
 	+below(640px)
 		fw()
-		max-width 480px
-		margin-left: auto
-		margin-right: auto
+
 	f()
 .card__el
 	+below(640px)
+		max-width 480px
+		margin-left: auto
+		margin-right: auto
 		width: 100%
 		padding: 20px 0
 	width: 50%
@@ -1480,12 +1505,24 @@ body
 	+below(1024px)
 		padding: 30px
 	+below(640px)
-		width: 100%
-		padding: 0
+		bgi('pattern.jpg')
+		background-repeat: repeat
+		margin-left: -10px
+		margin-right: -10px
+		padding: 30px 10px
+		width calc(100% + 20px)
 	width: 50%
 	padding: 30px 30px 30px 10%
 	.pizza-lg__toggle
+		+below(768px)
+			margin-bottom: 20px
 		margin-bottom: 40px
+
+.card__info-cont
+	+below(640px)
+		max-width 480px
+		margin-left: auto
+		margin-right: auto
 .bread
 	+below(640px)
 		margin-bottom: 20px 0
@@ -1518,6 +1555,7 @@ body
 	font-weight 900
 	up()
 	margin-bottom: 30px
+	word-break break-word
 .card__info-text
 	+below(640px)
 		margin-bottom: 20px
@@ -1861,11 +1899,16 @@ body
 .input-row--person
 	+below(640px)
 		margin-bottom: 20px
+		fw()
 	flex(between)
 	margin-bottom: 50px
 	.input-row--name
+		+below(640px)
+			width: 100%
 		width: 60%
 	.input-row--phone
+		+below(640px)
+			width: 100%
 		width: 37%
 .order-tab
 	f()
@@ -1921,6 +1964,8 @@ body
 //.payment__type-cont-el
 //.payment-card
 .payment-card__el
+	+below(380px)
+		width: 100%
 	flex(between)
 	@extend .btn--md
 	@extend .btn--light
@@ -1940,6 +1985,8 @@ body
 //.icon
 //.payment-card__el-val
 .payment-card__other
+	+below(380px)
+		width: 100%
 	@extend .btn--md
 	@extend .btn--light
 	padding: 20px
@@ -1979,7 +2026,6 @@ select.select-beauty
 
 .range-wrap
 	margin-bottom: 50px
-
 .irs-slider
 	background: $green
 	round()
@@ -2027,6 +2073,7 @@ select.select-beauty
 .panel-fixed
 	+below(769px)
 		f()
+
 	display: none
 	position: fixed
 	bottom 0
@@ -2034,6 +2081,7 @@ select.select-beauty
 	width: 100%
 	background: white
 	z-index 5
+	border-top 1px solid $gray--light
 	.panel-total
 		width: 50%
 		padding: 10px 20px
@@ -2051,7 +2099,9 @@ select.select-beauty
 	position: initial
 	left initial
 	bottom initial
-
+	margin-bottom: -100!important
+	+below(480px)
+		margin-bottom: -30px
 
 .basket-true__wrap
 	f()
@@ -2227,6 +2277,8 @@ select.select-beauty
 		margin-bottom: 20px
 	width: 66%
 .deliver-map__item-el
+	+below(768px)
+		height: 350px
 	background: $gray--light
 	height: 100%
 .deliver-map__col
@@ -2308,13 +2360,23 @@ select.select-beauty
 
 .contact
 	+below(768px)
+		fw()
+		max-width 640px
+		margin-left: auto
+		margin-right: auto
 		margin-bottom: 30px
 	f()
 	justify-content: space-between
 	margin-bottom: 50px
+.section-title--contact
+	+below(768px)
+		max-width 640px
+		margin-left: auto
+		margin-right: auto
 .contact__info
 	+below(768px)
 		width: 100%
+		order 2
 	width: 30%
 .contact__info-title
 	f()
@@ -2335,7 +2397,11 @@ select.select-beauty
 	margin-bottom: 10px
 .contact__map
 	+below(768px)
-		display: none
+		width: 100%
+		order 1
+		height: 250px
+		margin-bottom: 20px
+		//display: none
 	width: 68%
 	background: $gray--light
 
@@ -2359,6 +2425,7 @@ select.select-beauty
 	margin-bottom: 15px
 	.icon
 		size 66px
+		fill $green
 .contact-phone__title
 	+below(1024px)
 		font-size: 28px
@@ -2618,9 +2685,9 @@ select.select-beauty
 	.input-name
 		margin-bottom: 0
 .user__val--add
-	a
-		font-weight: 400
-		color $green
+	font-weight: 400
+	color $green
+	cp()
 
 .user__val-send
 	+below(640px)
@@ -2640,7 +2707,7 @@ select.select-beauty
 .history
 	width: 100%
 	+below(640px)
-		max-width 320px
+		max-width 340px
 		margin-left: auto
 		margin-right: auto
 .history-card
@@ -2850,3 +2917,20 @@ select.select-beauty
 	margin-top: -1px
 	@extend .type--lg
 	display: block
+
+.card-cont
+	fl()
+	flex(mid)
+	flex-grow 1
+
+.input-row--add-mail
+	margin-top: 30px
+
+.irs-hidden-input
+	opacity 0
+
+.slide-menu__town-title
+	@extend .type--lg
+.slide-menu__town
+	.select-city
+		margin-top: 20px

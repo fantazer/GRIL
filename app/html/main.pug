@@ -38,7 +38,7 @@ include block_html/_include.pug
 						.favorite__el-price 380 Р
 
 	//section
-	.section
+	.section.section--mobile
 		.main-cont
 			.section-title Пицца
 			.grid
@@ -152,17 +152,18 @@ include block_html/_include.pug
 						.card
 							a(href="#").card__img-wrap
 								.card__img(style="background-image:url('img/card.jpg')")
-							a(href="#").card__text Чай Фьюзти зеленый цитрус, 0,5 л
-							.card__val 75 Р
-							.incr__get-wrap
-								.card__get.icr-btn В корзину
-								.elements-icr-block.hidden
-									.incr
-										.incr__minus.incr--one.incr__nav -
-										.incr__val
-											span 1
-											.incr__val-coner
-										.incr__plus.incr__nav +
+							.card-cont
+								a(href="#").card__text Чай Фьюзти зеленый цитрус, 0,5 л
+								.card__val 75 Р
+								.incr__get-wrap
+									.card__get.icr-btn В корзину
+									.elements-icr-block.hidden
+										.incr
+											.incr__minus.incr--one.incr__nav -
+											.incr__val
+												span 1
+												.incr__val-coner
+											.incr__plus.incr__nav +
 	
 	//form questions 
 	.form-quest__title Есть вопросы? Напишите нам

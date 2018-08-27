@@ -13,36 +13,37 @@ include block_html/_include.pug
 				.card__el
 					.card__el__img(style="background-image:url('img/pizza-lg.png')")
 				.card__info
-					.bread
-						-
-							var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
-						each item in items
-							a(href="#").bread__el #{item}
-					.card__info-wrap
-						.card__info-title Гавайская с курицей
-						.card__info-text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
-					.pizza-lg__toggle.pizza-lg__toggle--lg.pizza-lg__toggle--light
-						.pizza__size
-							.pizza__size-el 25 см
-							.pizza__size-el.pizza__size-el--active 30 см
-							.pizza__size-el 35 см
-						.pizza__dough
-							.pizza__dough-el.pizza__dough-el--active Традиционное
-							.pizza__dough-el Тонкое
-					.pizza-lg__val.pizza-lg__val--row
-						.pizza-lg__price
-							.pizza-lg__price--lg 240 Р
-						.incr__get-wrap
-							.pizza-lg__get.icr-btn В корзину
-							.elements-icr-block.hidden
-								.incr
-									.incr__minus.incr--one.incr__nav -
-									.incr__val
-										span 1
-										.incr__val-coner
-									.incr__plus.incr__nav +
+					.card__info-cont
+						.bread
+							-
+								var items = ['Главная','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей','Пиццы','Гавайская с курицей'];
+							each item in items
+								a(href="#").bread__el #{item}
+						.card__info-wrap
+							.card__info-title Гавайская с курицей
+							.card__info-text Сыр, пицца-соус, ананас, сыр, перец болгарский, куриное филе, пицца-соус, ананас
+						.pizza-lg__toggle.pizza-lg__toggle--lg.pizza-lg__toggle--light
+							.pizza__size
+								.pizza__size-el 25 см
+								.pizza__size-el.pizza__size-el--active 30 см
+								.pizza__size-el 35 см
+							.pizza__dough
+								.pizza__dough-el.pizza__dough-el--active Традиционное
+								.pizza__dough-el Тонкое
+						.pizza-lg__val.pizza-lg__val--row
+							.pizza-lg__price
+								.pizza-lg__price--lg 240 Р
+							.incr__get-wrap
+								.pizza-lg__get.icr-btn В корзину
+								.elements-icr-block.hidden
+									.incr
+										.incr__minus.incr--one.incr__nav -
+										.incr__val
+											span 1
+											.incr__val-coner
+										.incr__plus.incr__nav +
 
-	.section
+	.section.section--mobile
 		.main-cont
 			.section-title Вам может понравиться
 			.grid

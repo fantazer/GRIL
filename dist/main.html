@@ -27,7 +27,7 @@
 			<div class="head-top-wrap">
 				<div class="main-cont">
 					<div class="head-top">
-						<a class="head__logo" href="#">
+						<a class="head__logo" href="/">
 							<img src="img/logo.svg" alt="" />
 						</a>
 						<div class="head__loc">
@@ -110,20 +110,49 @@
 				<a class="slide-menu__list-el" href="#">Франшиза</a>
 				<a class="slide-menu__list-el" href="#">Контакты</a>
 			</div>
-			<a class="slide-menu-btn" href="#">
+			<div class="slide-menu-btn slide-menu-btn__enter modal-get" data-modal="enter">
 				<div class="slide-menu-btn__icon">
 					<svg class="icon">
 						<use xlink:href="#pick"></use>
 					</svg>
 				</div>
 				<div class="slide-menu-btn__text">Войти</div>
-			</a>
-			<a class="slide-menu-btn" href="#">
-				<div class="slide-menu-btn__text">Ваш город: Барнаул</div>
-			</a>
+			</div>
+			<div class="slide-menu-btn slide-menu-btn--town">
+				<div class="slide-menu-btn__text">Ваш город:
+					<span class="slide-menu-btn__text-val">Барнаул</span>
+				</div>
+			</div>
+			<div class="slide-menu__town hidden">
+				<div class="slide-menu__town-title">Выберите Ваш город</div>
+				<div class="select-city">
+					<div class="select-city__el">
+						<div class="check-el">
+							<label class="style-label style-label--radio">
+								<input class="sytle-input" type="radio" name="payment" checked="checked" />
+								<div class="sytle-input-element">
+									<div class="icon-radio"></div>
+								</div>
+								<div class="sytle-input-text">Барнаул</div>
+							</label>
+						</div>
+					</div>
+					<div class="select-city__el">
+						<div class="check-el">
+							<label class="style-label style-label--radio">
+								<input class="sytle-input" type="radio" name="payment" />
+								<div class="sytle-input-element">
+									<div class="icon-radio"></div>
+								</div>
+								<div class="sytle-input-text">Байск</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="slide-menu__time">Среднее время доставки: 43 мин.</div>
 			<a class="slide-menu__phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
-			<div class="slide-menu__work">8 (3852) 57-17-76</div>
+			<div class="slide-menu__work">Сегодня 11:00 - 24:00</div>
 		</div>
 		<!--block header end-->
 		<div class="content">
@@ -204,7 +233,7 @@
 				</div>
 			</div>
 			<!--section-->
-			<div class="section">
+			<div class="section section--mobile">
 				<div class="main-cont">
 					<div class="section-title">Пицца</div>
 					<div class="grid">
@@ -986,18 +1015,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1008,18 +1039,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1030,18 +1063,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1052,18 +1087,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1074,18 +1111,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1096,18 +1135,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1118,18 +1159,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1140,18 +1183,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1162,18 +1207,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1184,18 +1231,20 @@
 								<a class="card__img-wrap" href="#">
 									<div class="card__img" style="background-image:url('img/card.jpg')"></div>
 								</a>
-								<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
-								<div class="card__val">75 Р</div>
-								<div class="incr__get-wrap">
-									<div class="card__get icr-btn">В корзину</div>
-									<div class="elements-icr-block hidden">
-										<div class="incr">
-											<div class="incr__minus incr--one incr__nav">-</div>
-											<div class="incr__val">
-												<span>1</span>
-												<div class="incr__val-coner"></div>
+								<div class="card-cont">
+									<a class="card__text" href="#">Чай Фьюзти зеленый цитрус, 0,5 л</a>
+									<div class="card__val">75 Р</div>
+									<div class="incr__get-wrap">
+										<div class="card__get icr-btn">В корзину</div>
+										<div class="elements-icr-block hidden">
+											<div class="incr">
+												<div class="incr__minus incr--one incr__nav">-</div>
+												<div class="incr__val">
+													<span>1</span>
+													<div class="incr__val-coner"></div>
+												</div>
+												<div class="incr__plus incr__nav">+</div>
 											</div>
-											<div class="incr__plus incr__nav">+</div>
 										</div>
 									</div>
 								</div>
@@ -1436,6 +1485,22 @@
 								<a class="town-list__el" href="#">Барнаул</a>
 								<a class="town-list__el" href="#">Байск</a>
 							</div>
+						</div>
+					</div>
+					<div class="modal" data-modal="mail">
+						<div class="modal-content modal-content--fogot">
+							<div class="modal-close">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+							<div class="modal-title">Добавить e-mail</div>
+							<form action="#">
+								<div class="input-row input-row--add-mail">
+									<input class="input" type="text" name="name" placeholder="Ваша почта" />
+								</div>
+								<input class="modal-send" type="submit" value="Cохранить" />
+							</form>
 						</div>
 					</div>
 				</div>
