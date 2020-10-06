@@ -520,7 +520,9 @@ body
 	background: white
 	position: relative
 	padding: 40px
-	min-width 390px
+	width 390px
+
+
 
 
 .modal-content--register
@@ -572,7 +574,7 @@ body
 		font-size: 20px
 	@extend .type--xxl
 	color $brown
-	margin-bottom: 0px
+	margin-bottom: 20px
 	text-align: center
 
 .modal-text
@@ -2934,3 +2936,70 @@ select.select-beauty
 .slide-menu__town
 	.select-city
 		margin-top: 20px
+
+
+//upload
+.upload-wrap
+	flex(mid)
+	fw()
+	margin-bottom: 20px
+.upload
+	f()
+	cp()
+	br(10px)
+	align-items: flex-start
+	justify-content: center
+	border 1px solid $border-color
+	box-shadow 0px 3px 14px white
+	tr(all)
+	margin-bottom: 10px
+	&:hover
+		bsh()
+.upload__icon
+	padding: 10px
+	border-right 1px solid $border-color
+	height: 50px
+	flex(mid)
+	.icon
+		size 25px
+		fill red
+.upload__text
+	height: 50px
+	margin-left: -1px
+	padding: 15px
+	width: auto
+	flex(mid)
+.upload-img
+	flex(mid)
+.upload-img__el
+	size 50px
+	br(10px)
+	border 1px solid $border-color
+	margin-right: 10px
+	margin-bottom: 10px
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	overflow: hidden
+	cp()
+	&:hover
+		&:before
+			content 'X'
+			opacity:1
+
+	&:before
+		content 'X'
+		position: absolute
+		background: #000000b3
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		flex(mid)
+		color white
+		opacity:0
+		tr(all)
+.upload-btn
+	position: absolute
+	left -9999px
+

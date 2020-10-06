@@ -1,807 +1,857 @@
 <!DOCTYPE html>
 <html lang='en'>
-	<!--create by ANATOLY KUZNETSOV-->
+<!--create by ANATOLY KUZNETSOV-->
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="format-detection" content="telephone=no" />
-		<!--colors-tabs-->
-		<meta name="theme-color" content="#000" />
-		<meta name="msapplication-navbutton-color" content="#000" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
-		<!--SEO-->
-		<title>Document</title>
-		<meta name="description" itemprop="description" content="" />
-		<!--build:css css/vendor.css-->
-		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
-		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
-		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
-		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
-		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-		<!--endbuild-->
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/style-edit.css" />
-	</head>
-	<!-- mixin nameMixin()-->
-	<!-- - var args = Array.prototype.slice.call(arguments)-->
-	<!-- - for item in args-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
+    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-edit.css" />
+</head>
+<!-- mixin nameMixin()-->
+<!-- - var args = Array.prototype.slice.call(arguments)-->
+<!-- - for item in args-->
 
-	<body class='page'>
-		<!--block header-->
-		<div class="head">
-			<div class="head-top-wrap">
-				<div class="main-cont">
-					<div class="head-top">
-						<a class="head__logo" href="/">
-							<img src="img/logo.svg" alt="" />
-						</a>
-						<div class="head__loc">
-							<div class="head__loc-town modal-get" data-modal="town">Ваш город:
-								<span class="head__loc-town-el">Барнаул</span>
-							</div>
-							<div class="head__loc-text">Среднее время доставки: 43 мин.</div>
-						</div>
-						<div class="head__cont">
-							<a class="head__cont-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
-							<div class="head__cont-text">Сегодня 11:00 - 24:00</div>
-						</div>
-						<div class="head__enter hidden">
-							<div class="head__enter-ico">
-								<svg class="icon">
-									<use xlink:href="#pick"></use>
-								</svg>
-							</div>
-							<div class="head__enter-text">Войти</div>
-						</div>
-						<a class="head__auth" href="#">
-							<div class="head__auth-ico">
-								<svg class="icon">
-									<use xlink:href="#pick"></use>
-								</svg>
-							</div>
-							<div class="head__auth-text">Александр</div>
-							<div class="head__auth-val">365 Б</div>
-						</a>
-						<div class="head-toggle">
-							<svg class="icon icon-open">
-								<use xlink:href="#menu"></use>
-							</svg>
-							<svg class="icon icon-close">
-								<use xlink:href="#close"></use>
-							</svg>
-						</div>
-						<div class="head__basket">
-							<div class="head__basket__icon">
-								<svg class="icon">
-									<use xlink:href="#basket"></use>
-								</svg>
-							</div>
-							<div class="head__basket__text hidden">Корзина</div>
-							<div class="head__basket__text">1 923 Р
-								<span class="head__basket__val">(3)</span>
-							</div>
-							<div class="head__basket__val--mobile">3</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="head-menu-wrap">
-				<div class="main-cont">
-					<div class="head-menu">
-						<div class="head-list">
-							<a class="head-list__el--active head-list__el" href="#">Пицца</a>
-							<a class="head-list__el" href="#">Вок</a>
-							<a class="head-list__el" href="#">Шаурма</a>
-							<a class="head-list__el" href="#">Гриль</a>
-							<a class="head-list__el" href="#">Салаты</a>
-							<a class="head-list__el" href="#">Десерты</a>
-							<a class="head-list__el" href="#">Напитки</a>
-							<a class="head-list__el" href="#">Акции</a>
-						</div>
-						<div class="head-sub-list">
-							<a class="head-sub-list-el" href="#">О нас</a>
-							<a class="head-sub-list-el" href="#">Вакансии</a>
-							<a class="head-sub-list-el" href="#">Франшиза</a>
-							<a class="head-sub-list-el" href="#">Контакты</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide-menu">
-			<div class="slide-menu__list">
-				<a class="slide-menu__list-el" href="#">О нас</a>
-				<a class="slide-menu__list-el" href="#">Вакансии</a>
-				<a class="slide-menu__list-el" href="#">Франшиза</a>
-				<a class="slide-menu__list-el" href="#">Контакты</a>
-			</div>
-			<div class="slide-menu-btn slide-menu-btn__enter modal-get" data-modal="enter">
-				<div class="slide-menu-btn__icon">
-					<svg class="icon">
-						<use xlink:href="#pick"></use>
-					</svg>
-				</div>
-				<div class="slide-menu-btn__text">Войти</div>
-			</div>
-			<div class="slide-menu-btn slide-menu-btn--town">
-				<div class="slide-menu-btn__text">Ваш город:
-					<span class="slide-menu-btn__text-val">Барнаул</span>
-				</div>
-			</div>
-			<div class="slide-menu__town hidden">
-				<div class="slide-menu__town-title">Выберите Ваш город</div>
-				<div class="select-city">
-					<div class="select-city__el">
-						<div class="check-el">
-							<label class="style-label style-label--radio">
-								<input class="sytle-input" type="radio" name="payment" checked="checked" />
-								<div class="sytle-input-element">
-									<div class="icon-radio"></div>
-								</div>
-								<div class="sytle-input-text">Барнаул</div>
-							</label>
-						</div>
-					</div>
-					<div class="select-city__el">
-						<div class="check-el">
-							<label class="style-label style-label--radio">
-								<input class="sytle-input" type="radio" name="payment" />
-								<div class="sytle-input-element">
-									<div class="icon-radio"></div>
-								</div>
-								<div class="sytle-input-text">Байск</div>
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="slide-menu__time">Среднее время доставки: 43 мин.</div>
-			<a class="slide-menu__phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
-			<div class="slide-menu__work">Сегодня 11:00 - 24:00</div>
-		</div>
-		<!--block header end-->
-		<div class="content content--lk">
-			<div class="lk-bg">
-				<div class="lk-bg__left"></div>
-				<div class="lk-bg__right"></div>
-			</div>
-			<div class="main-cont">
-				<div class="lk">
-					<div class="lk-user">
-						<div class="lk-user__wrap">
-							<div class="bread">
-								<a class="bread__el" href="#">Главная</a>
-								<a class="bread__el" href="#">Личный кабинет</a>
-							</div>
-							<div class="lk-title">
-								<div class="lk-title__text"> мой профиль</div>
-								<a class="lk-title__exit" href="#">выйти</a>
-							</div>
-							<div class="user">
-								<div class="user-row">
-									<div class="user__name">Имя:</div>
-									<div class="user__val">
-										<div class="user__val-input hidden">
-											<input class="input input-name" type="text" placeholder="" value="" />
-											<input class="user__val-send" type="submit" value="Изменить" />
-										</div>
-										<div class="user__val-info">
-											<div class="user__val-text">Александр</div>
-											<div class="user__val-edit">Изменить</div>
-										</div>
-									</div>
-								</div>
-								<div class="user-row">
-									<div class="user__name">Телефон:</div>
-									<div class="user__val">+7 923 666 7667</div>
-								</div>
-								<div class="user-row">
-									<div class="user__name">День рождения:</div>
-									<div class="user__val">30 Сентября</div>
-								</div>
-								<div class="user-row">
-									<div class="user__name">Email:</div>
-									<div class="user__val">
-										<div class="user__val--add modal-get" data-modal="mail">Добавить</div>
-									</div>
-								</div>
-							</div>
-							<div class="lk-title-sub">Привязанные карты</div>
-							<div class="user-card">
-								<a class="user-card__el user-card__el--active" href="#">
-									<div class="user-card-remove">
-										<svg class="icon">
-											<use xlink:href="#close"></use>
-										</svg>
-									</div>
-									<div class="user-card-icon">
-										<svg class="icon">
-											<use xlink:href="#visa"></use>
-										</svg>
-									</div>
-									<div class="user-card-numb">7878 988* **** 3445</div>
-								</a>
-								<div class="user-card__el user-card__el--add">
-									<div class="user-card__add">
-										<svg class="icon">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</div>
-									<div class="user-card__add-text">Привязать карту</div>
-								</div>
-								<div class="user-card__el user-card__el--add">
-									<div class="user-card__add">
-										<svg class="icon">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</div>
-									<div class="user-card__add-text">Привязать карту</div>
-								</div>
-							</div>
-							<div class="lk-title-sub">Адреса</div>
-							<div class="lk-adr">
-								<a class="lk-adr__el lk-adr__el--active" href="#">
-									<div class="lk-adr-remove">
-										<svg class="icon">
-											<use xlink:href="#close"></use>
-										</svg>
-									</div>
-									<div class="lk-adr-text">Дом</div>
-									<div class="lk-adr-adress">г.Барнаул, пр.Ленина 62-2</div>
-									<div class="lk-adr-edit">Редактировать</div>
-								</a>
-								<div class="lk-adr__el lk-adr__el--add modal-get" data-modal="adress">
-									<div class="lk-adr__add">
-										<svg class="icon">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</div>
-									<div class="lk-adr__add-text">Добавить адрес</div>
-								</div>
-								<div class="lk-adr__el lk-adr__el--add modal-get" data-modal="adress">
-									<div class="lk-adr__add">
-										<svg class="icon">
-											<use xlink:href="#plus"></use>
-										</svg>
-									</div>
-									<div class="lk-adr__add-text">Добавить адрес</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="lk-order">
-						<div class="lk-order__wrap">
-							<div class="history-title">История заказов</div>
-							<div class="history">
-								<div class="history-card">
-									<div class="history-info">
-										<div class="history-info__head">
-											<div class="history-info__head-date">28 Апреля 2017</div>
-											<div class="history-info__head-state">Доставлен</div>
-											<div class="history-info__head-numb">№ 43576</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info-footer">
-											<div class="history-info-total">
-												<div class="history-info-total__text">Сумма:</div>
-												<div class="history-info-total__val">1 184 Р</div>
-											</div>
-											<div class="history-info-get">повторить заказ</div>
-										</div>
-									</div>
-									<div class="history-card__wrap">
-										<div class="history-card__info">
-											<div class="history-card__date">28 Сентября, 2017</div>
-											<div class="history-card__numb">№ 43576</div>
-										</div>
-										<div class="history-card__list">
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-												<div class="history-card__list-el-val">+2</div>
-											</div>
-										</div>
-										<div class="history-card__price">
-											<div class="history-card__price_text">Сумма:</div>
-											<div class="history-card__price_val">1100 Р</div>
-										</div>
-									</div>
-								</div>
-								<div class="history-card">
-									<div class="history-info">
-										<div class="history-info__head">
-											<div class="history-info__head-date">28 Апреля 2017</div>
-											<div class="history-info__head-state">Доставлен</div>
-											<div class="history-info__head-numb">№ 43576</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info-footer">
-											<div class="history-info-total">
-												<div class="history-info-total__text">Сумма:</div>
-												<div class="history-info-total__val">1 184 Р</div>
-											</div>
-											<div class="history-info-get">повторить заказ</div>
-										</div>
-									</div>
-									<div class="history-card__wrap">
-										<div class="history-card__info">
-											<div class="history-card__date">28 Сентября, 2017</div>
-											<div class="history-card__numb">№ 43576</div>
-										</div>
-										<div class="history-card__list">
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-												<div class="history-card__list-el-val">+2</div>
-											</div>
-										</div>
-										<div class="history-card__price">
-											<div class="history-card__price_text">Сумма:</div>
-											<div class="history-card__price_val">1100 Р</div>
-										</div>
-									</div>
-								</div>
-								<div class="history-card">
-									<div class="history-info">
-										<div class="history-info__head">
-											<div class="history-info__head-date">28 Апреля 2017</div>
-											<div class="history-info__head-state">Доставлен</div>
-											<div class="history-info__head-numb">№ 43576</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info__list">
-											<div class="history-info__el">
-												<a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
-												<div class="history-info__el-about">
-													<div class="history-info__el-title">Гавайская с курицей</div>
-													<div class="history-info__el-text">Традиционное, 35 см</div>
-												</div>
-												<div class="history-info__el-count">x2</div>
-												<div class="history-info__el-price">680 Р</div>
-											</div>
-										</div>
-										<div class="history-info-footer">
-											<div class="history-info-total">
-												<div class="history-info-total__text">Сумма:</div>
-												<div class="history-info-total__val">1 184 Р</div>
-											</div>
-											<div class="history-info-get">повторить заказ</div>
-										</div>
-									</div>
-									<div class="history-card__wrap">
-										<div class="history-card__info">
-											<div class="history-card__date">28 Сентября, 2017</div>
-											<div class="history-card__numb">№ 43576</div>
-										</div>
-										<div class="history-card__list">
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
-												<div class="top">
-													<i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
-												<div class="history-card__list-el-val">x2</div>
-											</a>
-											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-												<div class="history-card__list-el-val">+2</div>
-											</div>
-										</div>
-										<div class="history-card__price">
-											<div class="history-card__price_text">Сумма:</div>
-											<div class="history-card__price_val">1100 Р</div>
-										</div>
-									</div>
-								</div>
-								<div class="histiry-empty">Вы еще не сделали ни одного заказа,лучшее время это исправить и заказать что-то вкусное :)</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--block footer-->
-		<div class="footer">
-			<div class="footer-top-wrap">
-				<div class="main-cont">
-					<div class="footer-top">
-						<div class="footer-top__col">
-							<div class="footer-top__title">Бесплатная доставка</div>
-							<div class="footer-top__text">При заказе от 500 руб. по г.Барнаул</div>
-						</div>
-						<div class="footer-top__col">
-							<div class="footer-top__title">43 минуты</div>
-							<div class="footer-top__text">Среднее время доставки.</div>
-						</div>
-						<div class="footer-top__col">
-							<div class="footer-top__title">300 руб.</div>
-							<div class="footer-top__text">Минимальная сумма заказа</div>
-						</div>
-						<a class="footer-deliver" href="#" style="background-image:url('img/map.jpg')">
-							<div class="footer-deliver__text">Зона доставки</div>
-							<div class="footer-deliver__ico">
-								<svg class="icon">
-									<use xlink:href="#compas"></use>
-								</svg>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer-main-wrap">
-				<div class="main-cont">
-					<div class="footer-main">
-						<div class="footer-info">
-							<div class="footer-title">Гриль №1 © 2018</div>
-							<a class="footer-politick" href="#"> Политика обработки
-								<br> персональных данных</a>
-							<div class="footer-pay">
-								<div class="footer-pay__icon">
-									<svg class="icon">
-										<use xlink:href="#card"></use>
-									</svg>
-								</div>
-								<div class="footer-pay__text">Опата картой онлайн</div>
-							</div>
-						</div>
-						<div class="footer-list">
-							<div class="footer-title">Гриль №1 © 2018</div>
-							<a class="footer-list__el" href="#">О нас</a>
-							<a class="footer-list__el" href="#">Вакансии</a>
-							<a class="footer-list__el" href="#">Отзывы</a>
-							<a class="footer-list__el" href="#">Контакты</a>
-						</div>
-						<div class="footer-list">
-							<div class="footer-title">Партнерам</div>
-							<a class="footer-list__el" href="#">Ищем поставщиков</a>
-							<a class="footer-list__el" href="#">Предложить помещение</a>
-							<a class="footer-list__el" href="#">Франшиза</a>
-						</div>
-						<div class="footer-cont">
-							<a class="footer-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
-							<a class="footer-mail" href="mailto:Manager@grill1.org">Manager@grill1.org</a>
-							<div class="soc-row">
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#vk"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#fb"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#inst"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#twt"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#youtube"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal-layer">
-			<div class="modal-cont">
-				<div class="modal-filter"></div>
-				<div class="modal-wrap">
-					<div class="modal" data-modal="enter">
-						<div class="modal-content modal-content--fogot">
-							<div class="modal-close">
-								<svg class="icon">
-									<use xlink:href="#close"></use>
-								</svg>
-							</div>
-							<div class="modal-title">Вход на сайт</div>
-							<div class="modal-text">Введите номер телефона
-								<br> на который будет выслан код</div>
-							<form class="validate-form" action="javascript:void(null);">
-								<div class="input-row input-phone">
-									<input class="input" type="text" name="name" data-mask="(000)000-00-00" />
-								</div>
-								<input class="modal-send" type="submit" value="Выслать код" />
-							</form>
-							<div class="modal-soc-enter-text">Или войдите через соцсети</div>
-							<div class="soc-row soc-row--midle">
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#vk--color"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#ok--color"></use>
-									</svg>
-								</a>
-								<a class="soc-el" href="#">
-									<svg class="icon">
-										<use xlink:href="#fb--color"></use>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="modal" data-modal="re-enter">
-						<div class="modal-content modal-content--fogot">
-							<div class="modal-close">
-								<svg class="icon">
-									<use xlink:href="#close"></use>
-								</svg>
-							</div>
-							<div class="modal-title">Вход на сайт</div>
-							<div class="modal-text">На указанный номер был
-								<br> выслан код</div>
-							<form class="validate-form" action="javascript:void(null);">
-								<div class="input-row">
-									<input class="input" type="text" name="name" placeholder="Введите код" />
-								</div>
-								<input class="modal-send" type="submit" value="Войти" />
-							</form>
-							<div class="row--mid">
-								<a class="modal-code-link" href="#">Выслать код еще раз</a>
-							</div>
-						</div>
-					</div>
-					<div class="modal" data-modal="adress">
-						<div class="modal-content modal-content--fogot">
-							<div class="modal-close">
-								<svg class="icon">
-									<use xlink:href="#close"></use>
-								</svg>
-							</div>
-							<div class="modal-title">Добавить адрес</div>
-							<form action="#">
-								<div class="select-city">
-									<div class="select-city__el">
-										<div class="check-el">
-											<label class="style-label style-label--radio">
-												<input class="sytle-input" type="radio" name="payment" checked="checked" />
-												<div class="sytle-input-element">
-													<div class="icon-radio"></div>
-												</div>
-												<div class="sytle-input-text">Барнаул</div>
-											</label>
-										</div>
-									</div>
-									<div class="select-city__el">
-										<div class="check-el">
-											<label class="style-label style-label--radio">
-												<input class="sytle-input" type="radio" name="payment" />
-												<div class="sytle-input-element">
-													<div class="icon-radio"></div>
-												</div>
-												<div class="sytle-input-text">Байск</div>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="input-row">
-									<input class="input" type="text" name="name" placeholder="улица" />
-								</div>
-								<div class="input-row-half">
-									<input class="input" type="text" name="name" placeholder="Дом" />
-									<input class="input" type="text" name="name" placeholder="Квартира" />
-								</div>
-								<div class="input-row-half">
-									<input class="input" type="text" name="name" placeholder="Подъезд" />
-									<input class="input" type="text" name="name" placeholder="Этаж" />
-								</div>
-								<div class="input-row">
-									<input class="input" type="text" name="name" placeholder="Подпись (например: работа)" />
-								</div>
-								<input class="modal-send" type="submit" value="Cохранить" />
-							</form>
-						</div>
-					</div>
-					<div class="modal" data-modal="town">
-						<div class="modal-content modal-content--fogot">
-							<div class="modal-close">
-								<svg class="icon">
-									<use xlink:href="#close"></use>
-								</svg>
-							</div>
-							<div class="modal-title">Ваш город</div>
-							<div class="town-list">
-								<a class="town-list__el" href="#">Барнаул</a>
-								<a class="town-list__el" href="#">Байск</a>
-							</div>
-						</div>
-					</div>
-					<div class="modal" data-modal="mail">
-						<div class="modal-content modal-content--fogot">
-							<div class="modal-close">
-								<svg class="icon">
-									<use xlink:href="#close"></use>
-								</svg>
-							</div>
-							<div class="modal-title">Добавить e-mail</div>
-							<form action="#">
-								<div class="input-row input-row--add-mail">
-									<input class="input" type="text" name="name" placeholder="Ваша почта" />
-								</div>
-								<input class="modal-send" type="submit" value="Cохранить" />
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--a(href="#" data-modal="enter").modal-get Открыть модальное окно-->
-		<!--a(href="#" data-modal="re-enter").modal-get Открыть модальное окно-->
-		<!--block footer end-->
-		<!--build:js js/combined.js-->
-		<script src="bower/jquery/dist/jquery.js"></script>
-		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
-		<script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
-		<script src="bower/slick-carousel/slick/slick.js"></script>
-		<script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
-		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-		<!-- endbuild-->
-		<script src="js/script.js"></script>
-		<script src="js/script-edit.js"></script>
-	</body>
+<body class='page'>
+    <!--block header-->
+    <div class="head">
+        <div class="head-top-wrap">
+            <div class="main-cont">
+                <div class="head-top">
+                    <a class="head__logo" href="/">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="head__loc">
+                        <div class="head__loc-town modal-get" data-modal="town">Ваш город:
+                            <span class="head__loc-town-el">Барнаул</span>
+                        </div>
+                        <div class="head__loc-text">Среднее время доставки: 43 мин.</div>
+                    </div>
+                    <div class="head__cont">
+                        <a class="head__cont-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+                        <div class="head__cont-text">Сегодня 11:00 - 24:00</div>
+                    </div>
+                    <!--remove hidden to show unauthorized User-->
+                    <div class="head__enter hidden">
+                        <div class="head__enter-ico">
+                            <svg class="icon">
+                                <use xlink:href="#pick"></use>
+                            </svg>
+                        </div>
+                        <div class="head__enter-text">Войти</div>
+                    </div>
+                    <a class="head__auth" href="#">
+                        <div class="head__auth-ico">
+                            <svg class="icon">
+                                <use xlink:href="#pick"></use>
+                            </svg>
+                        </div>
+                        <div class="head__auth-text">Александр</div>
+                        <div class="head__auth-val">365 Б</div>
+                    </a>
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="head__basket">
+                        <div class="head__basket__icon">
+                            <svg class="icon">
+                                <use xlink:href="#basket"></use>
+                            </svg>
+                        </div>
+                        <div class="head__basket__text hidden">Корзина</div>
+                        <div class="head__basket__text">1 923 Р
+                            <span class="head__basket__val">(3)</span>
+                        </div>
+                        <div class="head__basket__val--mobile">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="head-menu-wrap">
+            <div class="main-cont">
+                <div class="head-menu">
+                    <div class="head-list">
+                        <a class="head-list__el--active head-list__el" href="#">Пицца</a>
+                        <a class="head-list__el" href="#">Вок</a>
+                        <a class="head-list__el" href="#">Шаурма</a>
+                        <a class="head-list__el" href="#">Гриль</a>
+                        <a class="head-list__el" href="#">Салаты</a>
+                        <a class="head-list__el" href="#">Десерты</a>
+                        <a class="head-list__el" href="#">Напитки</a>
+                        <a class="head-list__el" href="#">Акции</a>
+                    </div>
+                    <div class="head-sub-list">
+                        <a class="head-sub-list-el" href="#">О нас</a>
+                        <a class="head-sub-list-el" href="#">Вакансии</a>
+                        <a class="head-sub-list-el" href="#">Франшиза</a>
+                        <a class="head-sub-list-el" href="#">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-menu">
+        <div class="slide-menu__list">
+            <a class="slide-menu__list-el" href="#">О нас</a>
+            <a class="slide-menu__list-el" href="#">Вакансии</a>
+            <a class="slide-menu__list-el" href="#">Франшиза</a>
+            <a class="slide-menu__list-el" href="#">Контакты</a>
+        </div>
+        <div class="slide-menu-btn slide-menu-btn__enter modal-get" data-modal="enter">
+            <div class="slide-menu-btn__icon">
+                <svg class="icon">
+                    <use xlink:href="#pick"></use>
+                </svg>
+            </div>
+            <div class="slide-menu-btn__text">Войти</div>
+        </div>
+        <div class="slide-menu-btn slide-menu-btn--town">
+            <div class="slide-menu-btn__text">Ваш город:
+                <span class="slide-menu-btn__text-val">Барнаул</span>
+            </div>
+        </div>
+        <div class="slide-menu__town hidden">
+            <div class="slide-menu__town-title">Выберите Ваш город</div>
+            <div class="select-city">
+                <div class="select-city__el">
+                    <div class="check-el">
+                        <label class="style-label style-label--radio">
+                            <input class="sytle-input" type="radio" name="payment" checked="checked" />
+                            <div class="sytle-input-element">
+                                <div class="icon-radio"></div>
+                            </div>
+                            <div class="sytle-input-text">Барнаул</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="select-city__el">
+                    <div class="check-el">
+                        <label class="style-label style-label--radio">
+                            <input class="sytle-input" type="radio" name="payment" />
+                            <div class="sytle-input-element">
+                                <div class="icon-radio"></div>
+                            </div>
+                            <div class="sytle-input-text">Байск</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-menu__time">Среднее время доставки: 43 мин.</div>
+        <a class="slide-menu__phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+        <div class="slide-menu__work">Сегодня 11:00 - 24:00</div>
+    </div>
+    <!--block header end-->
+    <div class="content content--lk">
+        <div class="lk-bg">
+            <div class="lk-bg__left"></div>
+            <div class="lk-bg__right"></div>
+        </div>
+        <div class="main-cont">
+            <div class="lk">
+                <div class="lk-user">
+                    <div class="lk-user__wrap">
+                        <div class="bread">
+                            <a class="bread__el" href="#">Главная</a>
+                            <a class="bread__el" href="#">Личный кабинет</a>
+                        </div>
+                        <div class="lk-title">
+                            <div class="lk-title__text">мой профиль</div>
+                            <a class="lk-title__exit" href="#">выйти</a>
+                        </div>
+                        <div class="user">
+                            <div class="user-row">
+                                <div class="user__name">Имя:</div>
+                                <div class="user__val">
+                                    <div class="user__val-input hidden">
+                                        <input class="input input-name" type="text" placeholder="" value="" />
+                                        <input class="user__val-send" type="submit" value="Изменить" />
+                                    </div>
+                                    <div class="user__val-info">
+                                        <div class="user__val-text">Александр</div>
+                                        <div class="user__val-edit">Изменить</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-row">
+                                <div class="user__name">Телефон:</div>
+                                <div class="user__val">+7 923 666 7667</div>
+                            </div>
+                            <div class="user-row">
+                                <div class="user__name">День рождения:</div>
+                                <div class="user__val">30 Сентября</div>
+                            </div>
+                            <div class="user-row">
+                                <div class="user__name">Email:</div>
+                                <div class="user__val">
+                                    <div class="user__val--add modal-get" data-modal="mail">Добавить</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk-title-sub">Привязанные карты</div>
+                        <div class="user-card">
+                            <a class="user-card__el user-card__el--active" href="#">
+                                <div class="user-card-remove">
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <div class="user-card-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#visa"></use>
+                                    </svg>
+                                </div>
+                                <div class="user-card-numb">7878 988* **** 3445</div>
+                            </a>
+                            <div class="user-card__el user-card__el--add">
+                                <div class="user-card__add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="user-card__add-text">Привязать карту</div>
+                            </div>
+                            <div class="user-card__el user-card__el--add">
+                                <div class="user-card__add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="user-card__add-text">Привязать карту</div>
+                            </div>
+                        </div>
+                        <div class="lk-title-sub">Адреса</div>
+                        <div class="lk-adr">
+                            <a class="lk-adr__el lk-adr__el--active" href="#">
+                                <div class="lk-adr-remove">
+                                    <svg class="icon">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                </div>
+                                <div class="lk-adr-text">Дом</div>
+                                <div class="lk-adr-adress">г.Барнаул, пр.Ленина 62-2</div>
+                                <div class="lk-adr-edit">Редактировать</div>
+                            </a>
+                            <div class="lk-adr__el lk-adr__el--add modal-get" data-modal="adress">
+                                <div class="lk-adr__add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="lk-adr__add-text">Добавить адрес</div>
+                            </div>
+                            <div class="lk-adr__el lk-adr__el--add modal-get" data-modal="adress">
+                                <div class="lk-adr__add">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                                <div class="lk-adr__add-text">Добавить адрес</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-order">
+                    <div class="lk-order__wrap">
+                        <div class="history-title">История заказов</div>
+                        <div class="history">
+                            <div class="history-card">
+                                <div class="history-info">
+                                    <div class="history-info__head">
+                                        <div class="history-info__head-date">28 Апреля 2017</div>
+                                        <div class="history-info__head-state">Доставлен</div>
+                                        <div class="history-info__head-numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info-footer">
+                                        <div class="history-info-total">
+                                            <div class="history-info-total__text">Сумма:</div>
+                                            <div class="history-info-total__val">1 184 Р</div>
+                                        </div>
+                                        <div class="history-info-get">повторить заказ</div>
+                                    </div>
+                                </div>
+                                <div class="history-card__wrap">
+                                    <div class="history-card__info">
+                                        <div class="history-card__date">28 Сентября, 2017</div>
+                                        <div class="history-card__numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-card__list">
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+                                            <div class="history-card__list-el-val">+2</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-card__price">
+                                        <div class="history-card__price_text">Сумма:</div>
+                                        <div class="history-card__price_val">1100 Р</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history-card">
+                                <div class="history-info">
+                                    <div class="history-info__head">
+                                        <div class="history-info__head-date">28 Апреля 2017</div>
+                                        <div class="history-info__head-state">Доставлен</div>
+                                        <div class="history-info__head-numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info-footer">
+                                        <div class="history-info-total">
+                                            <div class="history-info-total__text">Сумма:</div>
+                                            <div class="history-info-total__val">1 184 Р</div>
+                                        </div>
+                                        <div class="history-info-get">повторить заказ</div>
+                                    </div>
+                                </div>
+                                <div class="history-card__wrap">
+                                    <div class="history-card__info">
+                                        <div class="history-card__date">28 Сентября, 2017</div>
+                                        <div class="history-card__numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-card__list">
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+                                            <div class="history-card__list-el-val">+2</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-card__price">
+                                        <div class="history-card__price_text">Сумма:</div>
+                                        <div class="history-card__price_val">1100 Р</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="history-card">
+                                <div class="history-info">
+                                    <div class="history-info__head">
+                                        <div class="history-info__head-date">28 Апреля 2017</div>
+                                        <div class="history-info__head-state">Доставлен</div>
+                                        <div class="history-info__head-numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info__list">
+                                        <div class="history-info__el">
+                                            <a class="history-info__el-img" href="#" style="background-image:url('img/card.jpg')"></a>
+                                            <div class="history-info__el-about">
+                                                <div class="history-info__el-title">Гавайская с курицей</div>
+                                                <div class="history-info__el-text">Традиционное, 35 см</div>
+                                            </div>
+                                            <div class="history-info__el-count">x2</div>
+                                            <div class="history-info__el-price">680 Р</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-info-footer">
+                                        <div class="history-info-total">
+                                            <div class="history-info-total__text">Сумма:</div>
+                                            <div class="history-info-total__val">1 184 Р</div>
+                                        </div>
+                                        <div class="history-info-get">повторить заказ</div>
+                                    </div>
+                                </div>
+                                <div class="history-card__wrap">
+                                    <div class="history-card__info">
+                                        <div class="history-card__date">28 Сентября, 2017</div>
+                                        <div class="history-card__numb">№ 43576</div>
+                                    </div>
+                                    <div class="history-card__list">
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <a class="history-card__list-el tooltip tooltip--dark" href="#" style="background-image:url('img/card.jpg')">
+                                            <div class="top">
+                                                <i></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, laudantium!</div>
+                                            <div class="history-card__list-el-val">x2</div>
+                                        </a>
+                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+                                            <div class="history-card__list-el-val">+2</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-card__price">
+                                        <div class="history-card__price_text">Сумма:</div>
+                                        <div class="history-card__price_val">1100 Р</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="histiry-empty">Вы еще не сделали ни одного заказа,лучшее время это исправить и заказать что-то вкусное :)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="footer">
+        <div class="footer-top-wrap">
+            <div class="main-cont">
+                <div class="footer-top">
+                    <div class="footer-top__col">
+                        <div class="footer-top__title">Бесплатная доставка</div>
+                        <div class="footer-top__text">При заказе от 500 руб. по г.Барнаул</div>
+                    </div>
+                    <div class="footer-top__col">
+                        <div class="footer-top__title">43 минуты</div>
+                        <div class="footer-top__text">Среднее время доставки.</div>
+                    </div>
+                    <div class="footer-top__col">
+                        <div class="footer-top__title">300 руб.</div>
+                        <div class="footer-top__text">Минимальная сумма заказа</div>
+                    </div>
+                    <a class="footer-deliver" href="#" style="background-image:url('img/map.jpg')">
+                        <div class="footer-deliver__text">Зона доставки</div>
+                        <div class="footer-deliver__ico">
+                            <svg class="icon">
+                                <use xlink:href="#compas"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-main-wrap">
+            <div class="main-cont">
+                <div class="footer-main">
+                    <div class="footer-info">
+                        <div class="footer-title">Гриль №1 © 2018</div>
+                        <a class="footer-politick" href="#">Политика обработки
+                            <br>персональных данных</a>
+                        <div class="footer-pay">
+                            <div class="footer-pay__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#card"></use>
+                                </svg>
+                            </div>
+                            <div class="footer-pay__text">Опата картой онлайн</div>
+                        </div>
+                    </div>
+                    <div class="footer-list">
+                        <div class="footer-title">Гриль №1 © 2018</div>
+                        <a class="footer-list__el" href="#">О нас</a>
+                        <a class="footer-list__el" href="#">Вакансии</a>
+                        <a class="footer-list__el" href="#">Отзывы</a>
+                        <a class="footer-list__el" href="#">Контакты</a>
+                    </div>
+                    <div class="footer-list">
+                        <div class="footer-title">Партнерам</div>
+                        <a class="footer-list__el" href="#">Ищем поставщиков</a>
+                        <a class="footer-list__el" href="#">Предложить помещение</a>
+                        <a class="footer-list__el" href="#">Франшиза</a>
+                    </div>
+                    <div class="footer-cont">
+                        <a class="footer-phone" href="tel:8 (3852) 57-17-76">8 (3852) 57-17-76</a>
+                        <a class="footer-mail" href="mailto:Manager@grill1.org">Manager@grill1.org</a>
+                        <div class="soc-row">
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#fb"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#inst"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#twt"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-layer">
+        <div class="modal-cont">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <div class="modal" data-modal="enter">
+                    <div class="modal-content modal-content--fogot">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход на сайт</div>
+                        <div class="modal-text">Введите номер телефона
+                            <br>на который будет выслан код</div>
+                        <form class="validate-form" action="javascript:void(null);">
+                            <div class="input-row input-phone">
+                                <input class="input" type="text" name="name" data-mask="(000)000-00-00" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Выслать код" />
+                        </form>
+                        <div class="modal-soc-enter-text">Или войдите через соцсети</div>
+                        <div class="soc-row soc-row--midle">
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#vk--color"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#ok--color"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#fb--color"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" data-modal="re-enter">
+                    <div class="modal-content modal-content--fogot">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Вход на сайт</div>
+                        <div class="modal-text">На указанный номер был
+                            <br>выслан код</div>
+                        <form class="validate-form" action="javascript:void(null);">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Введите код" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Войти" />
+                        </form>
+                        <div class="row--mid">
+                            <a class="modal-code-link" href="#">Выслать код еще раз</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" data-modal="adress">
+                    <div class="modal-content modal-content--fogot">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Добавить адрес</div>
+                        <form action="#">
+                            <div class="select-city">
+                                <div class="select-city__el">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--radio">
+                                            <input class="sytle-input" type="radio" name="payment" checked="checked" />
+                                            <div class="sytle-input-element">
+                                                <div class="icon-radio"></div>
+                                            </div>
+                                            <div class="sytle-input-text">Барнаул</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="select-city__el">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--radio">
+                                            <input class="sytle-input" type="radio" name="payment" />
+                                            <div class="sytle-input-element">
+                                                <div class="icon-radio"></div>
+                                            </div>
+                                            <div class="sytle-input-text">Байск</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="улица" />
+                            </div>
+                            <div class="input-row-half">
+                                <input class="input" type="text" name="name" placeholder="Дом" />
+                                <input class="input" type="text" name="name" placeholder="Квартира" />
+                            </div>
+                            <div class="input-row-half">
+                                <input class="input" type="text" name="name" placeholder="Подъезд" />
+                                <input class="input" type="text" name="name" placeholder="Этаж" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Подпись (например: работа)" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <div class="modal" data-modal="town">
+                    <div class="modal-content modal-content--fogot">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Ваш город</div>
+                        <div class="town-list">
+                            <a class="town-list__el" href="#">Барнаул</a>
+                            <a class="town-list__el" href="#">Байск</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" data-modal="mail">
+                    <div class="modal-content modal-content--fogot">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Добавить e-mail</div>
+                        <form action="#">
+                            <div class="input-row input-row--add-mail">
+                                <input class="input" type="text" name="name" placeholder="Ваша почта" />
+                            </div>
+                            <input class="modal-send" type="submit" value="Cохранить" />
+                        </form>
+                    </div>
+                </div>
+                <div class="modal" data-modal="request">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Отправить чек</div>
+                        <!--.modal-text Для помощи вам просим прислать необходимую информацию-->
+                        <form class="validate-form" action="javascript:void(null);">
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Вашe имя" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Ваш телефон" />
+                            </div>
+                            <div class="input-row">
+                                <input class="input" type="text" name="name" placeholder="Ваша почта" />
+                            </div>
+                            <div class="input-row">
+                                <textarea class="input" name="text" cols="10" rows="6" placeholder="Комментарий"></textarea>
+                            </div>
+                            <div class="upload-wrap">
+                                <div class="upload-img upload-img--doc"></div>
+                                <label class="upload">
+                                    <div class="upload__icon">
+                                        <svg class="icon">
+                                            <use xlink:href="#receipt"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="upload__text">Добавить фото чека</div>
+                                    <input class="upload-btn" type="file" />
+                                </label>
+                            </div>
+                            <div class="check-el check-el--agree">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="sytle-input" type="checkbox" name="agree" />
+                                    <div class="sytle-input-element">
+                                        <svg class="icon icon-check">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="sytle-input-text">Согласен с условиями
+                                        <br>обработки персональных данных</div>
+                                </label>
+                            </div>
+                            <input class="modal-send" type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--a(href="#" data-modal="re-enter").modal-get Повторный вход-->
+    <!--block footer end-->
+    <!--build:js js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/svg4everybody/dist/svg4everybody.js"></script>
+    <script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <!-- endbuild-->
+    <script src="js/script.js"></script>
+    <script src="js/script-edit.js"></script>
+</body>
 
 </html>

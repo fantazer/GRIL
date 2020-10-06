@@ -138,7 +138,34 @@ mixin footer()
 								input(type="text" name="name" placeholder="Ваша почта").input
 							input(type="submit" value="Cохранить").modal-send
 
-
-	//a(href="#" data-modal="enter").modal-get Открыть модальное окно
-	//a(href="#" data-modal="re-enter").modal-get Открыть модальное окно
+				.modal(data-modal="request")
+					.modal-content
+						.modal-close
+							+icon("close","icon")
+						.modal-title Отправить чек
+						//.modal-text Для помощи вам просим прислать необходимую информацию
+						form.validate-form( action="javascript:void(null);")
+							.input-row
+								input(type="text" name="name" placeholder="Вашe имя").input
+							.input-row
+								input(type="text" name="name" placeholder="Ваш телефон").input
+							.input-row
+								input(type="text" name="name" placeholder="Ваша почта").input
+							.input-row
+								textarea(name="text", cols="10", rows="6" class="input" placeholder="Комментарий")
+							.upload-wrap
+								.upload-img.upload-img--doc
+								label.upload
+									.upload__icon
+										+icon("receipt","icon")
+									.upload__text Добавить фото чека
+									input(type="file").upload-btn
+							.check-el.check-el--agree
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("check","icon icon-check")
+									.sytle-input-text Согласен с условиями <br> обработки персональных данных
+							input(type="submit" value="Отправить").modal-send
+	//a(href="#" data-modal="re-enter").modal-get Повторный вход
 	//block footer end
