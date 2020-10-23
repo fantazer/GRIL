@@ -577,56 +577,36 @@
                         </form>
                     </div>
                 </div>
-                <div class="modal" data-modal="request">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title">Отправить чек</div>
-                        <!--.modal-text Для помощи вам просим прислать необходимую информацию-->
-                        <form class="validate-form" action="javascript:void(null);">
-                            <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Вашe имя" />
-                            </div>
-                            <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Ваш телефон" />
-                            </div>
-                            <div class="input-row">
-                                <input class="input" type="text" name="name" placeholder="Ваша почта" />
-                            </div>
-                            <div class="input-row">
-                                <textarea class="input" name="text" cols="10" rows="6" placeholder="Комментарий"></textarea>
-                            </div>
-                            <div class="upload-wrap">
-                                <div class="upload-img upload-img--doc"></div>
-                                <label class="upload">
-                                    <div class="upload__icon">
-                                        <svg class="icon">
-                                            <use xlink:href="#receipt"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="upload__text">Добавить фото чека</div>
-                                    <input class="upload-btn" type="file" />
-                                </label>
-                            </div>
-                            <div class="check-el check-el--agree">
-                                <label class="style-label style-label--checkbox">
-                                    <input class="sytle-input" type="checkbox" name="agree" />
-                                    <div class="sytle-input-element">
-                                        <svg class="icon icon-check">
-                                            <use xlink:href="#check"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="sytle-input-text">Согласен с условиями
-                                        <br>обработки персональных данных</div>
-                                </label>
-                            </div>
-                            <input class="modal-send" type="submit" value="Отправить" />
-                        </form>
-                    </div>
-                </div>
+                <!--.modal(data-modal="request")
+			.modal-content
+				.modal-close
+					+icon("close","icon")
+				.modal-title Отправить чек
+				//.modal-text Для помощи вам просим прислать необходимую информацию
+				form.validate-form( action="javascript:void(null);")
+					.input-row
+						input(type="text" name="name" placeholder="Вашe имя").input
+					.input-row
+						input(type="text" name="name" placeholder="Ваш телефон").input
+					.input-row
+						input(type="text" name="name" placeholder="Ваша почта").input
+					.input-row
+						textarea(name="text", cols="10", rows="6" class="input" placeholder="Комментарий")
+					.upload-wrap
+						.upload-img.upload-img--doc
+						label.upload
+							.upload__icon
+								+icon("receipt","icon")
+							.upload__text Добавить фото чека
+							input(type="file").upload-btn
+					.check-el.check-el--agree
+						label.style-label.style-label--checkbox
+							input(type="checkbox" name="agree").sytle-input
+							.sytle-input-element
+								+icon("check","icon icon-check")
+							.sytle-input-text Согласен с условиями <br> обработки персональных данных
+					input(type="submit" value="Отправить").modal-send
+			-->
             </div>
         </div>
     </div>
